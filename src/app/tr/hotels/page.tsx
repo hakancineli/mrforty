@@ -50,26 +50,26 @@ export default function TrHotelsPage() {
       description: 'Kapadokyanın kalbinde eşsiz mağara otel deneyimi'
     },
     {
-      id: 5,
-      name: 'Mardan Palace',
+      id: 4,
+      name: 'Titanic Mardan Palace',
       location: 'Antalya, Türkiye',
-      rating: 4.7,
-      reviews: 298,
-      price: 350,
-      image: '/hotels/mardan-palace.jpg',
-      amenities: ['wifi', 'pool', 'spa', 'beach-access', 'golf'],
-      description: 'Özel plajlı Akdeniz kıyısındaki lüks resort'
+      rating: 4.8,
+      reviews: 523,
+      price: 320,
+      image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+      description: 'Akdeniz kıyısındaki lüks saray tarzı resort'
     },
     {
-      id: 6,
-      name: 'Hillside Beach Club',
+      id: 5,
+      name: 'The Land of Legends',
       location: 'Bodrum, Türkiye',
       rating: 4.8,
       reviews: 167,
-      price: 420,
-      image: '/hotels/hillside-beach.jpg',
-      amenities: ['wifi', 'pool', 'spa', 'beach-club', 'water-sports'],
-      description: 'Ege Denizi manzaralı özel plaj resort'
+      price: 350,
+      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+      description: 'Ege Denizi manzaralı özel sahil tesisi'
     }
   ]
 

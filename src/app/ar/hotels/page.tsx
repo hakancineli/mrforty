@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'الفنادق - MrForty | السفر الفاخر',
@@ -89,28 +90,42 @@ export default function HotelsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: 'فندق سيراجان اسطنبول',
+                name: 'ذا ريتز كارلتون اسطنبول',
                 location: 'اسطنبول',
                 rating: 4.8,
-                price: '₺2,500',
-                image: '/images/destinations/istanbul.jpg'
+                price: '₺450',
+                image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
               },
               {
-                name: 'منتجع ماردين كابادوكيا',
-                location: 'كبادوكيا',
-                rating: 4.9,
-                price: '₺3,200',
-                image: '/images/destinations/cappadocia.jpg'
-              },
-              {
-                name: 'فندق ريجنس كايا أنطاليا',
-                location: 'أنطاليا',
+                name: 'سويسوتيل البوسفور',
+                location: 'اسطنبول',
                 rating: 4.7,
-                price: '₺2,800',
-                image: '/images/destinations/antalya.jpg'
+                price: '₺380',
+                image: '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg'
+              },
+              {
+                name: 'منتجع كهوف كابادوكيا',
+                location: 'كابادوكيا',
+                rating: 4.9,
+                price: '₺280',
+                image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg'
+              },
+              {
+                name: 'تيتانيك ماردان بالاس',
+                location: 'أنطاليا',
+                rating: 4.8,
+                price: '₺320',
+                image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg'
+              },
+              {
+                name: 'ذا لاند أوف ليجندز',
+                location: 'بودروم',
+                rating: 4.8,
+                price: '₺350',
+                image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'
               }
             ].map((hotel, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <Link href={`/ar/hotels/${index + 1}`} key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="relative h-48">
                   <img
                     src={hotel.image}
@@ -131,7 +146,7 @@ export default function HotelsPage() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

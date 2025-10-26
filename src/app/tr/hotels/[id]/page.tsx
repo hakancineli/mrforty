@@ -259,7 +259,7 @@ const hotelsData = {
   },
   5: {
     id: 5,
-    name: 'The Land of Legends Kingdom',
+    name: 'The Land of Legends',
     location: 'Bodrum, Türkiye',
     rating: 4.8,
     reviews: 167,

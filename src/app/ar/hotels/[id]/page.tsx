@@ -259,7 +259,7 @@ const hotelsData = {
   },
   5: {
     id: 5,
-    name: 'ذا لاند أوف ليجندز كينغدوم',
+    name: 'ذا لاند أوف ليجندز',
     location: 'بودروم، تركيا',
     rating: 4.8,
     reviews: 167,

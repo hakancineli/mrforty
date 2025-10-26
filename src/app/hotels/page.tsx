@@ -50,25 +50,25 @@ export default function HotelsPage() {
       description: 'Unique cave hotel experience in the heart of Cappadocia'
     },
     {
-      id: 5,
-      name: 'Mardan Palace',
+      id: 4,
+      name: 'Titanic Mardan Palace',
       location: 'Antalya, Turkey',
-      rating: 4.7,
-      reviews: 298,
-      price: 350,
-      image: '/hotels/mardan-palace.jpg',
-      amenities: ['wifi', 'pool', 'spa', 'beach-access', 'golf'],
-      description: 'Luxury resort on the Mediterranean coast with private beach'
+      rating: 4.8,
+      reviews: 523,
+      price: 320,
+      image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+      description: 'Luxurious palace-style resort on Mediterranean coast with world-class amenities'
     },
     {
-      id: 6,
-      name: 'Hillside Beach Club',
+      id: 5,
+      name: 'The Land of Legends',
       location: 'Bodrum, Turkey',
       rating: 4.8,
       reviews: 167,
-      price: 420,
-      image: '/hotels/hillside-beach.jpg',
-      amenities: ['wifi', 'pool', 'spa', 'beach-club', 'water-sports'],
+      price: 350,
+      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
       description: 'Exclusive beachfront resort with stunning Aegean Sea views'
     }
   ]
