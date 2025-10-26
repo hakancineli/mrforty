@@ -14,11 +14,11 @@ const hotelsData = {
     price: 450,
     image: '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
     gallery: [
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg'
+      '/hotels/ritz-carlton-1.jpg',
+      '/hotels/ritz-carlton-2.jpg',
+      '/hotels/ritz-carlton-3.jpg',
+      '/hotels/ritz-carlton-4.jpg',
+      '/hotels/ritz-carlton-5.jpg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
     description: 'Zamansız zarafetin modern sofistikasyonla buluştuğu İstanbulun kalbinde benzersiz lüks deneyimi.',
