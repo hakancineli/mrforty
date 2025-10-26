@@ -143,7 +143,7 @@ export default function FlightsPage() {
             
             <div className="relative">
               <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none">
+              <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none" title="Passengers">
                 <option>1 Passenger</option>
                 <option>2 Passengers</option>
                 <option>3+ Passengers</option>
@@ -152,7 +152,7 @@ export default function FlightsPage() {
             </div>
             
             <div className="relative">
-              <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none">
+              <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none" title="Class">
                 <option>Economy</option>
                 <option>Premium Economy</option>
                 <option>Business</option>

@@ -31,6 +31,7 @@ export default function Header() {
     if (currentLang === 'tr') {
       return [
         { name: 'Ana Sayfa', href: langPrefix ? `/${langPrefix}` : '/' },
+        { name: 'Uçuşlar', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'Oteller', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'Turlar', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
         { name: 'Deneyimler', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },
@@ -40,6 +41,7 @@ export default function Header() {
     } else if (currentLang === 'ar') {
       return [
         { name: 'الرئيسية', href: langPrefix ? `/${langPrefix}` : '/' },
+        { name: 'الرحلات الجوية', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'الفنادق', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'الجولات', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
         { name: 'التجارب', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },
@@ -49,6 +51,7 @@ export default function Header() {
     } else {
       return [
         { name: 'Home', href: langPrefix ? `/${langPrefix}` : '/' },
+        { name: 'Flights', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'Hotels', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'Tours', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
         { name: 'Experiences', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },

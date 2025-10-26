@@ -9,7 +9,7 @@ export default function HomePage() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-bg.jpg"
+            src="/images/hero-bg.jpg"
             alt="Luxury Travel Background"
             fill
             className="object-cover"
@@ -36,6 +36,7 @@ export default function HomePage() {
                   type="text"
                   placeholder="Where to?"
                   className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  title="Destination"
                 />
               </div>
               
@@ -44,12 +45,13 @@ export default function HomePage() {
                 <input
                   type="date"
                   className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  title="Departure Date"
                 />
               </div>
               
               <div className="relative">
                 <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none">
+                <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none" title="Guests">
                   <option>2 Guests</option>
                   <option>3 Guests</option>
                   <option>4 Guests</option>
@@ -70,14 +72,20 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Premium Services</h2>
+            <h2 className="text-4xl font-bold mb-4" data-translate="true">Our Premium Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From luxury accommodations to exclusive tours, we provide everything you need for an unforgettable journey
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+              {
+                icon: Plane,
+                title: 'Flights',
+                description: 'Best flight deals and convenient booking options for your Turkish journey',
+                link: '/flights'
+              },
               {
                 icon: Hotel,
                 title: 'Luxury Hotels',
@@ -85,7 +93,7 @@ export default function HomePage() {
                 link: '/hotels'
               },
               {
-                icon: Plane,
+                icon: Camera,
                 title: 'Exclusive Tours',
                 description: 'Private guided tours and unique experiences tailored to your preferences',
                 link: '/tours'
@@ -101,6 +109,18 @@ export default function HomePage() {
                 title: 'Experiences',
                 description: 'Unique activities and adventures in every destination',
                 link: '/experiences'
+              },
+              {
+                icon: Users,
+                title: 'About Us',
+                description: 'Learn more about MrForty and our commitment to luxury travel in Turkey',
+                link: '/about'
+              },
+              {
+                icon: MapPin,
+                title: 'Contact',
+                description: 'Get in touch with our travel experts for personalized assistance',
+                link: '/contact'
               }
             ].map((service, index) => (
               <div key={index} className="card group cursor-pointer">
@@ -138,37 +158,37 @@ export default function HomePage() {
             {[
               {
                 name: 'Istanbul',
-                image: '/destinations/istanbul.jpg',
+                image: '/images/destinations/istanbul.jpg',
                 tours: 45,
                 rating: 4.8
               },
               {
                 name: 'Cappadocia',
-                image: '/destinations/cappadocia.jpg',
+                image: '/images/destinations/cappadocia.jpg',
                 tours: 32,
                 rating: 4.9
               },
               {
                 name: 'Antalya',
-                image: '/destinations/antalya.jpg',
+                image: '/images/destinations/antalya.jpg',
                 tours: 28,
                 rating: 4.7
               },
               {
                 name: 'Bodrum',
-                image: '/destinations/bodrum.jpg',
+                image: '/images/destinations/bodrum.jpg',
                 tours: 24,
                 rating: 4.8
               },
               {
                 name: 'Pamukkale',
-                image: '/destinations/pamukkale.jpg',
+                image: '/images/destinations/pamukkale.jpg',
                 tours: 18,
                 rating: 4.9
               },
               {
                 name: 'Fethiye',
-                image: '/destinations/fethiye.jpg',
+                image: '/images/destinations/fethiye.jpg',
                 tours: 22,
                 rating: 4.7
               }

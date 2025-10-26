@@ -27,6 +27,7 @@ export default function Footer() {
       { name: 'Press', href: '/press' },
     ],
     services: [
+      { name: 'Flights', href: '/flights' },
       { name: 'Luxury Hotels', href: '/hotels' },
       { name: 'Private Tours', href: '/tours' },
       { name: 'VIP Transfers', href: '/transfers' },
