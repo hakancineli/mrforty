@@ -11,7 +11,7 @@ export default function ArPage() {
       rating: 4.8,
       reviews: 324,
       price: 450,
-      image: '/images/destinations/istanbul.jpg',
+      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'تجربة فاخرة لا مثيل لها في قلب اسطنبول حيث يلتقي الأناقة الخالدة بالرقي المعاصر.'
     },
@@ -22,7 +22,7 @@ export default function ArPage() {
       rating: 4.7,
       reviews: 256,
       price: 380,
-      image: '/images/destinations/istanbul.jpg',
+      image: '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
       description: 'فندق أنيق يطل على البوسفور مع مرافق عالمية.'
     },
@@ -33,7 +33,7 @@ export default function ArPage() {
       rating: 4.9,
       reviews: 412,
       price: 280,
-      image: '/images/destinations/cappadocia.jpg',
+      image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
       amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
       description: 'تجربة فاخرة للإقامة في الكهوف السحرية في قلب كابادوكيا.'
     },
@@ -44,7 +44,7 @@ export default function ArPage() {
       rating: 4.7,
       reviews: 298,
       price: 350,
-      image: '/images/destinations/antalya.jpg',
+      image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
       amenities: ['wifi', 'pool', 'spa', 'beach-access', 'golf'],
       description: 'منتجع فاخر على الساحل المتوسطي مع شاطئ خاصة.'
     },
@@ -66,7 +66,7 @@ export default function ArPage() {
       rating: 4.6,
       reviews: 189,
       price: 320,
-      image: '/images/destinations/istanbul.jpg',
+      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
       description: 'فندق بوتيك في منطقة السلطانة التاريخية.'
     }
