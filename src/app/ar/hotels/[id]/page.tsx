@@ -14,20 +14,20 @@ const hotelsData = {
     price: 450,
     image: '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
     gallery: [
-      '/hotels/ritz-carlton-1.jpg',
-      '/hotels/ritz-carlton-2.jpg',
-      '/hotels/ritz-carlton-3.jpg',
-      '/hotels/ritz-carlton-4.jpg',
-      '/hotels/ritz-carlton-5.jpg'
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
     description: 'تجربة فاخرة لا مثيل لها في قلب اسطنبول حيث يلتقي الأناقة الخالدة بالرقي المعاصر.',
-    fullDescription: 'يقع فندق ذا ريتز كارلتون اسطنبول في قلب اسطنبول النابض بالحياة، وهو ملاذ للفاخر المكرس والخدمة لا تشوبها شائبة. يجمع فندقنا بين الأناقة الخالدة والراحة المعاصرة، مقدمًا للضيوف تجربة لا تُنسى في إحدى أكثر مدن العالم سحراً. من تراسنا على السطح مع إطلالات بانورامية على البوسفور إلى سبانا العالمية والمطاعم لدينا، تم تصميم كل جانب من إقامتك لتتجاوز التوقعات.',
+    fullDescription: 'يقع فندق ذا ريتز كارلتون اسطنبول في قلب اسطنبول النابض بالحياة، وهو ملاذ للرفاهية الفاخرة والخدمة لا تشوبها شائبة. يجمع فندقنا بين الأناقة الخالدة والراحة المعاصرة، مقدمًا للضيوف تجربة لا تُنسى في إحدى أكثر مدن العالم سحراً. من تراسنا على السطح مع إطلالات بانورامية على البوسفور إلى سبا العالمية ومواقع الطعام لدينا، تم تصميم كل جانب من إقامتك لتجاوز التوقعات.',
     features: [
-      'غرف وأجنحة فاخرة مع إطلالات على البوسفور',
+      'غرف فاخرة وأجنحة مع إطلالات على البوسفور',
       'منتجع صحي ورفاهية حائز على جوائز',
       'مطاعم راقية متعددة',
-      'تراس على السطح بإطلالات بانورامية على المدينة',
+      'تراس على السطح مع إطلالات بانورامية على المدينة',
       'مركز لياقة بدنية مجهز بأحدث التقنيات',
       'مسبح داخلي',
       'خدمة غرف على مدار 24 ساعة',
@@ -36,28 +36,28 @@ const hotelsData = {
     roomTypes: [
       {
         name: 'غرفة ديلوكس',
-        size: '45 م²',
+        size: '45 متر مربع',
         maxGuests: 2,
         price: 450,
         features: ['سرير كينج', 'إطلالة على المدينة', 'حمام رخام', 'منطقة عمل']
       },
       {
         name: 'غرفة كلوب',
-        size: '55 م²',
+        size: '55 متر مربع',
         maxGuests: 3,
         price: 580,
         features: ['سرير كينج', 'إطلالة على البوسفور', 'وصول إلى صالة الكلوب', 'حمام رخام']
       },
       {
         name: 'جنحة تنفيذية',
-        size: '85 م²',
+        size: '85 متر مربع',
         maxGuests: 4,
         price: 850,
         features: ['منطقة جلوس منفصلة', 'إطلالة على البوسفور', 'وصول إلى صالة الكلوب', 'حمام ضيوف']
       },
       {
         name: 'جنحة رئاسية',
-        size: '180 م²',
+        size: '180 متر مربع',
         maxGuests: 6,
         price: 2500,
         features: ['غرفتا نوم', 'مطبخ كامل', 'إطلالة على البوسفور', 'تراس خاص', 'خدمة بوتلر']
@@ -67,6 +67,68 @@ const hotelsData = {
       phone: '+90 212 334 4444',
       email: 'istanbul.reservations@ritzcarlton.com',
       address: 'شارع سراسلفيلر رقم 58، 34367 بشيكتاش، اسطنبول، تركيا'
+    }
+  },
+  2: {
+    id: 2,
+    name: 'فندق سويسوتل البوسفور',
+    location: 'اسطنبول، تركيا',
+    rating: 4.7,
+    reviews: 256,
+    price: 380,
+    image: '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
+    gallery: [
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-2.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-3.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-4.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
+    description: 'فندق أنيق يطل على البوسفور مع مرافق عالمية.',
+    fullDescription: 'يقدم فندق سويسوتل البوسفور في اسطنبول إقامة أنيقة مع إطلالات خلابة على مضيق البوسفور. يتميز فندقنا بغرف حديثة ومرافق راقية، مصممة لجعل إقامتك مريحة ولا تُنسى.',
+    features: [
+      'إطلالات على مضيق البوسفور',
+      'غرف حديثة مع وسائل الراحة المميزة',
+      'مطاعم وبار متعددة',
+      'مسبح داخلي',
+      'منتجع صحي ورفاهية',
+      'مركز لياقة بدنية'
+    ],
+    roomTypes: [
+      {
+        name: 'غرفة قياسية',
+        size: '35 متر مربع',
+        maxGuests: 2,
+        price: 380,
+        features: ['سرير كوين', 'إطلالة على المدينة', 'حمام رخام']
+      },
+      {
+        name: 'غرفة ديلوكس',
+        size: '45 متر مربع',
+        maxGuests: 2,
+        price: 450,
+        features: ['سرير كينج', 'إطلالة على البوسفور', 'حمام رخام', 'منطقة عمل']
+      },
+      {
+        name: 'جنحة جونيور',
+        size: '65 متر مربع',
+        maxGuests: 3,
+        price: 580,
+        features: ['سرير كينج', 'إطلالة على البوسفور', 'منطقة جلوس منفصلة', 'حمام رخام']
+      },
+      {
+        name: 'جنحة تنفيذية',
+        size: '85 متر مربع',
+        maxGuests: 4,
+        price: 850,
+        features: ['سرير كينج', 'إطلالة على البوسفور', 'منطقة جلوس منفصلة', 'حمام ضيوف']
+      }
+    ],
+    contact: {
+      phone: '+90 212 326 1100',
+      email: 'bosphorus@swissotel.com',
+      address: 'شارع بايلديم رقم 2، 34357 بشيكتاش، اسطنبول، تركيا'
     }
   }
 }
@@ -122,7 +184,7 @@ export default function HotelDetailPage({ params }: { params: { id: string } }) 
               <div className="flex items-center gap-1">
                 <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 <span>{hotel.rating}</span>
-                <span className="text-gray-300">({hotel.reviews} تقييم)</span>
+                <span className="text-gray-300">({hotel.reviews}) تقييم</span>
               </div>
             </div>
           </div>
@@ -164,7 +226,7 @@ export default function HotelDetailPage({ params }: { params: { id: string } }) 
                     <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                       <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                         <div>
-                          <h4 className="text-xl font-semibold text-gray-900">{room.name}</h4>
+                          <h4 className="text-xl font-semibold text-gray-900 mb-1">{room.name}</h4>
                           <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
                             <span>{room.size}</span>
                             <span>•</span>
@@ -173,7 +235,7 @@ export default function HotelDetailPage({ params }: { params: { id: string } }) 
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-primary-600">€{room.price}</div>
-                          <div className="text-sm text-gray-600">لليلة الواحدة</div>
+                          <div className="text-sm text-gray-600">لليلة</div>
                         </div>
                       </div>
                       <div className="flex flex-wrap gap-2 mb-4">
@@ -215,7 +277,7 @@ export default function HotelDetailPage({ params }: { params: { id: string } }) 
               <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4">
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-primary-600">€{hotel.price}</div>
-                  <div className="text-gray-600">لليلة الواحدة</div>
+                  <div className="text-gray-600">لليلة</div>
                 </div>
                 
                 <div className="space-y-4 mb-6">

@@ -14,14 +14,14 @@ const hotelsData = {
     price: 450,
     image: '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
     gallery: [
-      '/hotels/ritz-carlton-1.jpg',
-      '/hotels/ritz-carlton-2.jpg',
-      '/hotels/ritz-carlton-3.jpg',
-      '/hotels/ritz-carlton-4.jpg',
-      '/hotels/ritz-carlton-5.jpg'
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
-    description: 'Experience unparalleled luxury at The Ritz-Carlton Istanbul, where timeless elegance meets modern sophistication in the heart of the city.',
+    description: 'Experience unparalleled luxury in the heart of Istanbul where timeless elegance meets modern sophistication.',
     fullDescription: 'Nestled in the vibrant heart of Istanbul, The Ritz-Carlton Istanbul offers a sanctuary of refined luxury and impeccable service. Our hotel combines timeless elegance with contemporary comfort, providing guests with an unforgettable experience in one of the world\'s most captivating cities. From our stunning rooftop terrace with panoramic Bosphorus views to our world-class spa and dining venues, every aspect of your stay is designed to exceed expectations.',
     features: [
       'Luxurious rooms and suites with Bosphorus views',
@@ -67,6 +67,68 @@ const hotelsData = {
       phone: '+90 212 334 4444',
       email: 'istanbul.reservations@ritzcarlton.com',
       address: 'Sıraselviler Cad. No:58, 34367 Beşiktaş, Istanbul, Turkey'
+    }
+  },
+  2: {
+    id: 2,
+    name: 'Swissotel The Bosphorus',
+    location: 'Istanbul, Turkey',
+    rating: 4.7,
+    reviews: 256,
+    price: 380,
+    image: '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
+    gallery: [
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-2.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-3.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-4.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
+    description: 'Elegant hotel overlooking the Bosphorus with world-class amenities.',
+    fullDescription: 'Swissotel The Bosphorus, Istanbul offers elegant accommodation with stunning views of the Bosphorus Strait. Our hotel features modern rooms, exceptional dining options, and a range of facilities designed to make your stay comfortable and memorable.',
+    features: [
+      'Bosphorus Strait views',
+      'Modern rooms with premium amenities',
+      'Multiple restaurants and bars',
+      'Indoor swimming pool',
+      'Full-service spa',
+      'Fitness center'
+    ],
+    roomTypes: [
+      {
+        name: 'Standard Room',
+        size: '35 sqm',
+        maxGuests: 2,
+        price: 380,
+        features: ['Queen bed', 'City view', 'Marble bathroom']
+      },
+      {
+        name: 'Deluxe Room',
+        size: '45 sqm',
+        maxGuests: 2,
+        price: 450,
+        features: ['King bed', 'Bosphorus view', 'Marble bathroom', 'Work desk']
+      },
+      {
+        name: 'Junior Suite',
+        size: '65 sqm',
+        maxGuests: 3,
+        price: 580,
+        features: ['King bed', 'Bosphorus view', 'Separate living area', 'Marble bathroom']
+      },
+      {
+        name: 'Executive Suite',
+        size: '85 sqm',
+        maxGuests: 4,
+        price: 850,
+        features: ['King bed', 'Bosphorus view', 'Separate living area', 'Guest bathroom']
+      }
+    ],
+    contact: {
+      phone: '+90 212 326 1100',
+      email: 'bosphorus@swissotel.com',
+      address: 'Bayıldım Cad. No:2, 34357 Beşiktaş, Istanbul, Turkey'
     }
   }
 }
@@ -164,7 +226,7 @@ export default function HotelDetailPage({ params }: { params: { id: string } }) 
                     <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                       <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                         <div>
-                          <h4 className="text-xl font-semibold text-gray-900">{room.name}</h4>
+                          <h4 className="text-xl font-semibold text-gray-900 mb-1">{room.name}</h4>
                           <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
                             <span>{room.size}</span>
                             <span>•</span>

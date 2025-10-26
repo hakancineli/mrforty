@@ -14,15 +14,15 @@ const hotelsData = {
     price: 450,
     image: '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
     gallery: [
-      '/hotels/ritz-carlton-1.jpg',
-      '/hotels/ritz-carlton-2.jpg',
-      '/hotels/ritz-carlton-3.jpg',
-      '/hotels/ritz-carlton-4.jpg',
-      '/hotels/ritz-carlton-5.jpg'
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+      '/hotels/the ritz carlton/the-ritz-carlton.jpeg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
-    description: 'Zamansız zarafetin modern sofistikasyonla buluştuğu İstanbulun kalbinde benzersiz lüks deneyimi.',
-    fullDescription: 'İstanbulun canlı kalbinde yer alan The Ritz-Carlton İstanbul, rafine lüks ve kusursuz hizmetin sığınağıdır. Otelimiz, zamansız zarafeti çağdaş konforla birleştirerek, dünyanın en büyüleyici şehirlerinden birinde konuklar için unutulmaz bir deneyim sunuyor. Panoramik Boğaz manzaralı çatı terasımızdan dünya standartlarındaki spamız ve yemek mekanlarımıza kadar, konaklamanızın her aspecti beklentileri aşmak üzere tasarlanmıştır.',
+    description: 'İstanbulun kalbinde Boğaz manzaralı lüks otel',
+    fullDescription: 'İstanbulun canlı kalbinde yer alan The Ritz-Carlton İstanbul, zamansız zarafetin modern sofistikasyonla birleştiği sunan rafine lüks bir sığınağıdır. Otelimiz, dünyanın en büyüleyici şehirlerinden birinde konuklar için unutulmaz bir deneyim sağlamak üzere zamansız zarafeti çağdaş konforla birleştirir. İstanbulun büyüsünü sudan deneyimlemek için lüks Boğaz turumuzdan panoramik şehir manzaralı çatı terasımıza kadar, dünya standartlarındaki spamız ve yemek mekanlarımızdan her aspectini beklentileri aşmak üzere tasarlanmıştır.',
     features: [
       'Boğaz manzaralı lüks odalar ve suitler',
       'Ödüllü spa ve wellness merkezi',
@@ -67,6 +67,68 @@ const hotelsData = {
       phone: '+90 212 334 4444',
       email: 'istanbul.reservations@ritzcarlton.com',
       address: 'Sıraselviler Cad. No:58, 34367 Beşiktaş, İstanbul, Türkiye'
+    }
+  },
+  2: {
+    id: 2,
+    name: 'Swissotel The Bosphorus',
+    location: 'İstanbul, Türkiye',
+    rating: 4.7,
+    reviews: 256,
+    price: 380,
+    image: '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
+    gallery: [
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-2.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-3.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-4.jpeg',
+      '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
+    description: 'Boğaz manzaralı, dünya standartlarında olanaklara sahip şık otel',
+    fullDescription: 'Swissotel The Bosphorus, İstanbul, Boğaz Boğazı\'na bakan zarif konaklama ve dünya standartlarında olanaklar sunan zarif bir oteldir. Otelimiz, modern odalar, istisneli yemek seçenekleri ve konforunuzu sağlamak için tasarlanmış bir dizi olanak sunmaktadır.',
+    features: [
+      'Boğaz Boğazı manzarası',
+      'Modern odalar ve premium olanaklar',
+      'Birden fazla restoran ve bar',
+      'Kapalı yüzme havuzu',
+      'Tam hizmetli spa',
+      'Fitness merkezi'
+    ],
+    roomTypes: [
+      {
+        name: 'Standart Oda',
+        size: '35 m²',
+        maxGuests: 2,
+        price: 380,
+        features: ['Queen yatak', 'Şehir manzarası', 'Mermer banyo']
+      },
+      {
+        name: 'Deluxe Oda',
+        size: '45 m²',
+        maxGuests: 2,
+        price: 450,
+        features: ['King yatak', 'Boğaz manzarası', 'Mermer banyo', 'Çalışma masası']
+      },
+      {
+        name: 'Junior Suit',
+        size: '65 m²',
+        maxGuests: 3,
+        price: 580,
+        features: ['King yatak', 'Boğaz manzarası', 'Ayrı oturma alanı', 'Mermer banyo']
+      },
+      {
+        name: 'Executive Suit',
+        size: '85 m²',
+        maxGuests: 4,
+        price: 850,
+        features: ['King yatak', 'Boğaz manzarası', 'Ayrı oturma alanı', 'Misafir banyosu']
+      }
+    ],
+    contact: {
+      phone: '+90 212 326 1100',
+      email: 'bosphorus@swissotel.com',
+      address: 'Bayıldım Cad. No:2, 34357 Beşiktaş, İstanbul, Türkiye'
     }
   }
 }
@@ -122,7 +184,7 @@ export default function HotelDetailPage({ params }: { params: { id: string } }) 
               <div className="flex items-center gap-1">
                 <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 <span>{hotel.rating}</span>
-                <span className="text-gray-300">({hotel.reviews} değerlendirme)</span>
+                <span className="text-gray-300">({hotel.reviews}) değerlendirme</span>
               </div>
             </div>
           </div>
@@ -164,7 +226,7 @@ export default function HotelDetailPage({ params }: { params: { id: string } }) 
                     <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                       <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                         <div>
-                          <h4 className="text-xl font-semibold text-gray-900">{room.name}</h4>
+                          <h4 className="text-xl font-semibold text-gray-900 mb-1">{room.name}</h4>
                           <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
                             <span>{room.size}</span>
                             <span>•</span>
