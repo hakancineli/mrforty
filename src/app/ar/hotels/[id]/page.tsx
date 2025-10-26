@@ -12,13 +12,13 @@ const hotelsData = {
     rating: 4.8,
     reviews: 324,
     price: 450,
-    image: '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
     gallery: [
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg'
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
     description: 'تجربة فاخرة لا مثيل لها في قلب اسطنبول حيث يلتقي الأناقة الخالدة بالرقي المعاصر.',
@@ -64,8 +64,8 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 212 334 4444',
-      email: 'istanbul.reservations@ritzcarlton.com',
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
       address: 'شارع سراسلفيلر رقم 58، 34367 بشيكتاش، اسطنبول، تركيا'
     }
   },
@@ -126,9 +126,199 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 212 326 1100',
-      email: 'bosphorus@swissotel.com',
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
       address: 'شارع بايلديم رقم 2، 34357 بشيكتاش، اسطنبول، تركيا'
+    }
+  },
+  3: {
+    id: 3,
+    name: 'منتجع كهوف كابادوكيا',
+    location: 'كابادوكيا، تركيا',
+    rating: 4.9,
+    reviews: 412,
+    price: 280,
+    image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+    gallery: [
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-2.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-3.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-4 .jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-5 .jpeg'
+    ],
+    amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
+    description: 'تجربة فريدة من نوعها في فندق الكهوف في قلب كابادوكيا.',
+    fullDescription: 'استمتع بإقامة فاخرة في الكهوف السحرية لكابادوكيا. يقدم منتجع الكهوف الخاص بنا تجربة أصيلة مع وسائل الراحة الحديثة، مما يجمع بين سحر الكهوف الفريد والراحة المعاصرة. تم تصميم كل غرفة بعناية لتوفير إقامة لا تُنسى في هذه المنطقة الرائعة.',
+    features: [
+      'غرف كهوف أصلية مع وسائل راحة حديثة',
+      'إطلالات خلابة على المداخن الخيالية',
+      'مطعم يقدم المطبخ التركي التقليدي',
+      'منتجع صحي كامل الخدمات',
+      'مكتب سياحي لتنظيم الأنشطة',
+      'واي فاي مجاني في جميع أنحاء المنتجع'
+    ],
+    roomTypes: [
+      {
+        name: 'جناح الكهف',
+        size: '40 متر مربع',
+        maxGuests: 2,
+        price: 280,
+        features: ['سرير كوين', 'إطلالة على المداخن الخيالية', 'حمام حجري', 'ديكور تقليدي']
+      },
+      {
+        name: 'جناح ديلوكس في الكهف',
+        size: '55 متر مربع',
+        maxGuests: 3,
+        price: 350,
+        features: ['سرير كينج', 'إطلالة على المداخن الخيالية', 'حمام حجري', 'ديكور تقليدي', 'منطقة جلوس منفصلة']
+      },
+      {
+        name: 'جناح عائلي في الكهف',
+        size: '75 متر مربع',
+        maxGuests: 4,
+        price: 450,
+        features: ['سرير كينج', 'سرير كوين', 'إطلالة على المداخن الخيالية', 'حمام حجري', 'ديكور تقليدي', 'منطقة جلوس منفصلة']
+      },
+      {
+        name: 'جناح مميز في الكهف',
+        size: '90 متر مربع',
+        maxGuests: 4,
+        price: 550,
+        features: ['سرير كينج', 'سرير كوين', 'إطلالة على المداخن الخيالية', 'حمام حجري', 'ديكور تقليدي', 'منطقة جلوس منفصلة', 'جاكوزي']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'حديقة غوريم الوطنية، 50180 غوريم، نيفشير، تركيا'
+    }
+  },
+  4: {
+    id: 4,
+    name: 'تيتانيك ماردان بالاس',
+    location: 'أنطاليا، تركيا',
+    rating: 4.8,
+    reviews: 523,
+    price: 320,
+    image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+    gallery: [
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-2.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-3.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-4.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+    description: 'منتجع فاخر على طراز القصور على ساحل البحر الأبيض المتوسط مع مرافق عالمية.',
+    fullDescription: 'تيتانيك ماردان بالاس هو منتجع رائع على طراز القصور يقع على ساحل البحر الأبيض المتوسط الخلاب في أنطاليا. باعتباره أندق فندق في تركيا، يقدم تجربة لا مثيل لها مع هندسته المعمارية المستوحاة من الإمبراطورية العثمانية، ومسابحه الشاسعة، وشاطئه الخاص، وتناول الطعام على مستوى عالمي. يتميز المنتجع بغرف وأجنحة فاخرة، ومنتجع صحي كامل الخدمات، ومسابح سباحة متعددة بما في ذلك واحد مع ألعاب مائية، وخدمة استثنائية تتجاوز جميع التوقعات.',
+    features: [
+      'هندسة معمارية على طراز القصور بتصميم مستوحى من العثمانية',
+      'شاطئ خاص بمياه البحر الأبيض المتوسط البلورية',
+      'مسابح سباحة متعددة بما في ذلك ألعاب مائية',
+      'منتجع صحي ورفاهية عالمي المستوى',
+      'مطاعم راقية مع مطبخ دولي',
+      'نادي أطفال وأنشطة مناسبة للعائلات',
+      'مركز لياقة بدنية مجهز بأحدث التقنيات',
+      'ترفيه مسائي وعروض'
+    ],
+    roomTypes: [
+      {
+        name: 'غرفة قياسية',
+        size: '45 متر مربع',
+        maxGuests: 2,
+        price: 320,
+        features: ['سرير كينج', 'إطلالة على الحديقة', 'حمام رخام', 'شرفة']
+      },
+      {
+        name: 'غرفة ديلوكس',
+        size: '55 متر مربع',
+        maxGuests: 3,
+        price: 420,
+        features: ['سرير كينج', 'إطلالة على البحر', 'حمام رخام', 'شرفة', 'منطقة جلوس']
+      },
+      {
+        name: 'غرفة عائلية',
+        size: '75 متر مربع',
+        maxGuests: 4,
+        price: 580,
+        features: ['سرير كينج', 'سرير كوين', 'إطلالة على البحر', 'حمام رخام', 'شرفة', 'منطقة جلوس منفصلة']
+      },
+      {
+        name: 'جنحة ملكية',
+        size: '120 متر مربع',
+        maxGuests: 6,
+        price: 1200,
+        features: ['سرير كينج', 'سرير كوين', 'إطلالة على البحر', 'حمام رخام', 'شرفة', 'منطقة جلوس منفصلة', 'وصول للمسبح الخاص']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'كيمر، 07980 أنطاليا، تركيا'
+    }
+  },
+  5: {
+    id: 5,
+    name: 'ذا لاند أوف ليجندز كينغدوم',
+    location: 'بودروم، تركيا',
+    rating: 4.8,
+    reviews: 167,
+    price: 350,
+    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    gallery: [
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+    description: 'منتجع شاطئي حصري مع إطلالات خلابة على بحر إيجة',
+    fullDescription: 'ذا لاند أوف ليجندز كينغدوم هو منتجع شاطئي حصري يقدم إطلالات خلابة على بحر إيجة. هذه الوجهة الفاخرة تجمع بين المرافق عالمية المستوى والخدمة الاستثنائية لخلق تجربة لا تُنسى. من الشواطئ النقية إلى المطاعم الراقية وخيارات الترفيه المثيرة، تم تصميم كل جانب من إقامتك لتجاوز التوقعات وخلق ذكريات دائمة.',
+    features: [
+      'موقع شاطئي حصري مع إطلالات على بحر إيجة',
+      'مسابح سباحة متعددة بما في ذلك ألعاب مائية',
+      'منتجع صحي ورفاهية عالمي المستوى',
+      'مطاعم راقية مع مطبخ دولي',
+      'مركز لياقة بدنية مجهز بأحدث التقنيات',
+      'نادي أطفال مع أنشطة تحت الإشراف',
+      'ترفيه مسائي وعروض',
+      'وصول إلى الشاطئ الخاص مع وسائل راقية'
+    ],
+    roomTypes: [
+      {
+        name: 'غرفة قياسية',
+        size: '35 متر مربع',
+        maxGuests: 2,
+        price: 350,
+        features: ['سرير كينج', 'إطلالة على الحديقة', 'حمام رخام', 'شرفة']
+      },
+      {
+        name: 'غرفة ديلوكس',
+        size: '45 متر مربع',
+        maxGuests: 3,
+        price: 450,
+        features: ['سرير كينج', 'إطلالة على البحر', 'حمام رخام', 'شرفة', 'منطقة جلوس']
+      },
+      {
+        name: 'جنحة عائلية',
+        size: '65 متر مربع',
+        maxGuests: 4,
+        price: 580,
+        features: ['سرير كينج', 'سرير كوين', 'إطلالة على البحر', 'حمام رخام', 'شرفة', 'منطقة جلوس منفصلة']
+      },
+      {
+        name: 'جنحة ملكية',
+        size: '90 متر مربع',
+        maxGuests: 6,
+        price: 850,
+        features: ['سرير كينج', 'سرير كوين', 'إطلالة على البحر', 'حمام رخام', 'شرفة', 'منطقة جلوس منفصلة', 'وصول للمسبح الخاص']
+      }
+    ],
+    contact: {
+      phone: '+90 506 641 17 85',
+      email: 'info@fortytravel.com',
+      address: 'غوموشوك، بودروم، موغلا، تركيا'
     }
   }
 }
@@ -142,6 +332,9 @@ const amenities = {
   pool: { icon: Dumbbell, label: 'مسبح' },
   concierge: { icon: Users, label: 'خدمة الكونسيرج' },
   'room-service': { icon: Coffee, label: 'خدمة الغرف' },
+  gym: { icon: Dumbbell, label: 'مركز لياقة بدنية' },
+  beach: { icon: MapPin, label: 'شاطئ خاص' },
+  'kids-club': { icon: Users, label: 'نادي الأطفال' },
 }
 
 export default function HotelDetailPage({ params }: { params: { id: string } }) {

@@ -12,13 +12,13 @@ const hotelsData = {
     rating: 4.8,
     reviews: 324,
     price: 450,
-    image: '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
     gallery: [
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg'
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
     description: 'Experience unparalleled luxury in the heart of Istanbul where timeless elegance meets modern sophistication.',
@@ -64,8 +64,8 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 212 334 4444',
-      email: 'istanbul.reservations@ritzcarlton.com',
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
       address: 'Sıraselviler Cad. No:58, 34367 Beşiktaş, Istanbul, Turkey'
     }
   },
@@ -126,9 +126,199 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 212 326 1100',
-      email: 'bosphorus@swissotel.com',
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
       address: 'Bayıldım Cad. No:2, 34357 Beşiktaş, Istanbul, Turkey'
+    }
+  },
+  3: {
+    id: 3,
+    name: 'Kapadokya Cave Resort',
+    location: 'Cappadocia, Turkey',
+    rating: 4.9,
+    reviews: 412,
+    price: 280,
+    image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+    gallery: [
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-2.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-3.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-4 .jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-5 .jpeg'
+    ],
+    amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
+    description: 'Unique cave hotel experience in the heart of Cappadocia.',
+    fullDescription: 'Experience a luxurious stay in the magical caves of Cappadocia. Our cave resort offers an authentic experience with modern amenities, combining the unique charm of cave dwellings with contemporary comfort. Each room is carefully designed to provide an unforgettable stay in this fascinating region.',
+    features: [
+      'Authentic cave rooms with modern amenities',
+      'Stunning views of fairy chimneys',
+      'Traditional Turkish cuisine restaurant',
+      'Full-service spa',
+      'Tour desk for arranging activities',
+      'Free WiFi throughout the resort'
+    ],
+    roomTypes: [
+      {
+        name: 'Cave Suite',
+        size: '40 sqm',
+        maxGuests: 2,
+        price: 280,
+        features: ['Queen bed', 'Fairy chimney view', 'Stone bathroom', 'Traditional decoration']
+      },
+      {
+        name: 'Deluxe Cave Suite',
+        size: '55 sqm',
+        maxGuests: 3,
+        price: 350,
+        features: ['King bed', 'Fairy chimney view', 'Stone bathroom', 'Traditional decoration', 'Separate seating area']
+      },
+      {
+        name: 'Family Cave Suite',
+        size: '75 sqm',
+        maxGuests: 4,
+        price: 450,
+        features: ['King bed', 'Queen bed', 'Fairy chimney view', 'Stone bathroom', 'Traditional decoration', 'Separate seating area']
+      },
+      {
+        name: 'Premium Cave Suite',
+        size: '90 sqm',
+        maxGuests: 4,
+        price: 550,
+        features: ['King bed', 'Queen bed', 'Fairy chimney view', 'Stone bathroom', 'Traditional decoration', 'Separate seating area', 'Jacuzzi']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'Göreme Milli Parkı, 50180 Göreme, Nevşehir, Turkey'
+    }
+  },
+  4: {
+    id: 4,
+    name: 'Titanic Mardan Palace',
+    location: 'Antalya, Turkey',
+    rating: 4.8,
+    reviews: 523,
+    price: 320,
+    image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+    gallery: [
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-2.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-3.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-4.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+    description: 'Luxurious palace-style resort on the Mediterranean coast with world-class amenities.',
+    fullDescription: 'Titanic Mardan Palace is a magnificent palace-style resort located on the stunning Mediterranean coast of Antalya. As Turkey\'s most luxurious hotel, it offers an unparalleled experience with its Ottoman-inspired architecture, extensive pools, private beach, and world-class dining. The resort features lavish rooms and suites, a full-service spa, multiple swimming pools including one with water slides, and exceptional service that exceeds all expectations.',
+    features: [
+      'Palace-style architecture with Ottoman-inspired design',
+      'Private beach with crystal clear Mediterranean waters',
+      'Multiple swimming pools including water slides',
+      'World-class spa and wellness center',
+      'Fine dining restaurants with international cuisine',
+      'Kids club and family-friendly activities',
+      'State-of-the-art fitness center',
+      'Evening entertainment and shows'
+    ],
+    roomTypes: [
+      {
+        name: 'Standard Room',
+        size: '45 sqm',
+        maxGuests: 2,
+        price: 320,
+        features: ['King bed', 'Garden view', 'Marble bathroom', 'Balcony']
+      },
+      {
+        name: 'Deluxe Room',
+        size: '55 sqm',
+        maxGuests: 3,
+        price: 420,
+        features: ['King bed', 'Sea view', 'Marble bathroom', 'Balcony', 'Seating area']
+      },
+      {
+        name: 'Family Room',
+        size: '75 sqm',
+        maxGuests: 4,
+        price: 580,
+        features: ['King bed', 'Queen bed', 'Sea view', 'Marble bathroom', 'Balcony', 'Separate living area']
+      },
+      {
+        name: 'Royal Suite',
+        size: '120 sqm',
+        maxGuests: 6,
+        price: 1200,
+        features: ['King bed', 'Queen bed', 'Sea view', 'Marble bathroom', 'Balcony', 'Separate living area', 'Private pool access']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'Kemer, 07980 Antalya, Turkey'
+    }
+  },
+  5: {
+    id: 5,
+    name: 'The Land of Legends Kingdom',
+    location: 'Bodrum, Turkey',
+    rating: 4.8,
+    reviews: 167,
+    price: 350,
+    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    gallery: [
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+    description: 'Exclusive beachfront resort with stunning Aegean Sea views',
+    fullDescription: 'The Land of Legends Kingdom is an exclusive beachfront resort offering stunning views of the Aegean Sea. This luxurious destination combines world-class amenities with exceptional service to create an unforgettable experience. From pristine beaches to gourmet dining and thrilling entertainment options, every aspect of your stay is designed to exceed expectations and create lasting memories.',
+    features: [
+      'Exclusive beachfront location with Aegean Sea views',
+      'Multiple swimming pools including water slides',
+      'World-class spa and wellness facilities',
+      'Gourmet restaurants with international cuisine',
+      'State-of-the-art fitness center',
+      'Kids club with supervised activities',
+      'Evening entertainment and shows',
+      'Private beach access with premium amenities'
+    ],
+    roomTypes: [
+      {
+        name: 'Standard Room',
+        size: '35 sqm',
+        maxGuests: 2,
+        price: 350,
+        features: ['King bed', 'Garden view', 'Marble bathroom', 'Balcony']
+      },
+      {
+        name: 'Deluxe Room',
+        size: '45 sqm',
+        maxGuests: 3,
+        price: 450,
+        features: ['King bed', 'Sea view', 'Marble bathroom', 'Balcony', 'Seating area']
+      },
+      {
+        name: 'Family Suite',
+        size: '65 sqm',
+        maxGuests: 4,
+        price: 580,
+        features: ['King bed', 'Queen bed', 'Sea view', 'Marble bathroom', 'Balcony', 'Separate living area']
+      },
+      {
+        name: 'Royal Suite',
+        size: '90 sqm',
+        maxGuests: 6,
+        price: 850,
+        features: ['King bed', 'Queen bed', 'Sea view', 'Marble bathroom', 'Balcony', 'Separate living area', 'Private pool access']
+      }
+    ],
+    contact: {
+      phone: '+90 506 641 17 85',
+      email: 'info@fortytravel.com',
+      address: 'Gümüşlük, Bodrum, Muğla, Turkey'
     }
   }
 }
@@ -142,6 +332,9 @@ const amenities = {
   pool: { icon: Dumbbell, label: 'Swimming Pool' },
   concierge: { icon: Users, label: 'Concierge Service' },
   'room-service': { icon: Coffee, label: 'Room Service' },
+  gym: { icon: Dumbbell, label: 'Fitness Center' },
+  beach: { icon: MapPin, label: 'Private Beach' },
+  'kids-club': { icon: Users, label: 'Kids Club' },
 }
 
 export default function HotelDetailPage({ params }: { params: { id: string } }) {

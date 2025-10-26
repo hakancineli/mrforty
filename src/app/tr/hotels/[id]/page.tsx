@@ -12,13 +12,13 @@ const hotelsData = {
     rating: 4.8,
     reviews: 324,
     price: 450,
-    image: '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
+    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
     gallery: [
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg',
-      '/hotels/the ritz carlton/the-ritz-carlton.jpeg'
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
+      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
     description: 'İstanbulun kalbinde Boğaz manzaralı lüks otel',
@@ -64,8 +64,8 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 212 334 4444',
-      email: 'istanbul.reservations@ritzcarlton.com',
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
       address: 'Sıraselviler Cad. No:58, 34367 Beşiktaş, İstanbul, Türkiye'
     }
   },
@@ -126,9 +126,199 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 212 326 1100',
-      email: 'bosphorus@swissotel.com',
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
       address: 'Bayıldım Cad. No:2, 34357 Beşiktaş, İstanbul, Türkiye'
+    }
+  },
+  3: {
+    id: 3,
+    name: 'Kapadokya Mağara Oteli',
+    location: 'Kapadokya, Türkiye',
+    rating: 4.9,
+    reviews: 412,
+    price: 280,
+    image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+    gallery: [
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-2.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-3.jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-4 .jpeg',
+      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-5 .jpeg'
+    ],
+    amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
+    description: 'Kapadokyanın kalbinde eşsiz mağara otel deneyimi.',
+    fullDescription: 'Kapadokyanın büyülü mağaralarında lüks bir konaklama deneyimi yaşayın. Mağara resortumuz, mağara yaşamının benzersiz cazibesini çağdaş konforla birleştirerek konuklar için unutulmaz bir deneyim sunar. Her oda, bu büyüleyici bölgede unutulmaz bir konaklama sağlamak için dikkatle tasarlanmıştır.',
+    features: [
+      'Modern olanaklarla otantik mağara odaları',
+      'Peri bacaklarından büyüleyici manzaralar',
+      'Geleneksel Türk mutfağı restoran',
+      'Tam hizmetli spa',
+      'Aktiviteler düzenlemek için tur masası',
+      'Resort genelinde ücretsiz WiFi'
+    ],
+    roomTypes: [
+      {
+        name: 'Mağara Suit',
+        size: '40 m²',
+        maxGuests: 2,
+        price: 280,
+        features: ['Queen yatak', 'Peri bacası manzarası', 'Taş banyo', 'Geleneksel dekorasyon']
+      },
+      {
+        name: 'Deluxe Mağara Suit',
+        size: '55 m²',
+        maxGuests: 3,
+        price: 350,
+        features: ['King yatak', 'Peri bacası manzarası', 'Taş banyo', 'Geleneksel dekorasyon', 'Ayrı oturma alanı']
+      },
+      {
+        name: 'Aile Mağara Suit',
+        size: '75 m²',
+        maxGuests: 4,
+        price: 450,
+        features: ['King yatak', 'Queen yatak', 'Peri bacası manzarası', 'Taş banyo', 'Geleneksel dekorasyon', 'Ayrı oturma alanı']
+      },
+      {
+        name: 'Premium Mağara Suit',
+        size: '90 m²',
+        maxGuests: 4,
+        price: 550,
+        features: ['King yatak', 'Queen yatak', 'Peri bacası manzarası', 'Taş banyo', 'Geleneksel dekorasyon', 'Ayrı oturma alanı', 'Jakuzi']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'Göreme Milli Parkı, 50180 Göreme, Nevşehir, Türkiye'
+    }
+  },
+  4: {
+    id: 4,
+    name: 'Titanic Mardan Palace',
+    location: 'Antalya, Türkiye',
+    rating: 4.8,
+    reviews: 523,
+    price: 320,
+    image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+    gallery: [
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-2.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-3.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-4.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+    description: 'Akdeniz kıyısında dünya standartlarında olanaklara sahip lüks saray tarzı resort.',
+    fullDescription: 'Titanic Mardan Palace, Antalya\'nın nefes kesen Akdeniz kıyısında yer alan muhteşem bir saray tarzı resortudur. Türkiye\'nin en lüks oteli olarak, Osmanlı ilham mimarisi, geniş havuzları, özel plajı ve dünya standartlarındaki yemek olanaklarıyla eşsiz bir deneyim sunar. Resort, lüks odalar ve suitler, tam hizmetli spa, su kaydırakları dahil olmak üzere çok sayıda yüzme havuzu ve tüm beklentileri aşan istisnai hizmet sunar.',
+    features: [
+      'Osmanlı ilham mimarisiyle saray tarzı tasarım',
+      'Berrak Akdeniz sularıyla özel plaj',
+      'Su kaydırakları dahil çok sayıda yüzme havuzu',
+      'Dünya standartlarında spa ve wellness merkezi',
+      'Uluslararası mutfakta fine dining restoranlar',
+      'Çocuk kulübü ve aile dostu aktiviteler',
+      'Son teknoloji fitness merkezi',
+      'Akşam eğlenceleri ve gösteriler'
+    ],
+    roomTypes: [
+      {
+        name: 'Standart Oda',
+        size: '45 m²',
+        maxGuests: 2,
+        price: 320,
+        features: ['King yatak', 'Bahçe manzarası', 'Mermer banyo', 'Balkon']
+      },
+      {
+        name: 'Deluxe Oda',
+        size: '55 m²',
+        maxGuests: 3,
+        price: 420,
+        features: ['King yatak', 'Deniz manzarası', 'Mermer banyo', 'Balkon', 'Oturma alanı']
+      },
+      {
+        name: 'Aile Odası',
+        size: '75 m²',
+        maxGuests: 4,
+        price: 580,
+        features: ['King yatak', 'Queen yatak', 'Deniz manzarası', 'Mermer banyo', 'Balkon', 'Ayrı oturma alanı']
+      },
+      {
+        name: 'Royal Suite',
+        size: '120 m²',
+        maxGuests: 6,
+        price: 1200,
+        features: ['King yatak', 'Queen yatak', 'Deniz manzarası', 'Mermer banyo', 'Balkon', 'Ayrı oturma alanı', 'Özel havuz erişimi']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'Kemer, 07980 Antalya, Türkiye'
+    }
+  },
+  5: {
+    id: 5,
+    name: 'The Land of Legends Kingdom',
+    location: 'Bodrum, Türkiye',
+    rating: 4.8,
+    reviews: 167,
+    price: 350,
+    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    gallery: [
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
+      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+    description: 'Muhteşem Ege Denizi manzarasına sahip özel sahil tesisi',
+    fullDescription: 'The Land of Legends Kingdom, muhteşem Ege Denizi manzarasına sahip özel bir sahil tesisidir. Bu lüks destinasyon, dünya standartlarındaki olanakları olağanüstü hizmetle birleştirerek unutulmaz bir deneyim sunar. Berrak plajlardan gourmet yemeklere ve heyecan verici eğlence seçeneklerine kadar, konaklamanızın her aspecti beklentileri aşmak ve kalıcı anılar yaratmak için tasarlanmıştır.',
+    features: [
+      'Ege Denizi manzaralı özel sahil konumu',
+      'Su kaydırakları dahil olmak üzere çok sayıda yüzme havuzu',
+      'Dünya standartlarında spa ve wellness olanakları',
+      'Uluslararası mutfakta gourmet restoranlar',
+      'Son teknoloji fitness merkezi',
+      'Gözetimli aktivitelerle çocuk kulübü',
+      'Akşam eğlenceleri ve gösteriler',
+      'Premium olanaklarla özel plaj erişimi'
+    ],
+    roomTypes: [
+      {
+        name: 'Standart Oda',
+        size: '35 m²',
+        maxGuests: 2,
+        price: 350,
+        features: ['King yatak', 'Bahçe manzarası', 'Mermer banyo', 'Balkon']
+      },
+      {
+        name: 'Deluxe Oda',
+        size: '45 m²',
+        maxGuests: 3,
+        price: 450,
+        features: ['King yatak', 'Deniz manzarası', 'Mermer banyo', 'Balkon', 'Oturma alanı']
+      },
+      {
+        name: 'Aile Suit',
+        size: '65 m²',
+        maxGuests: 4,
+        price: 580,
+        features: ['King yatak', 'Queen yatak', 'Deniz manzarası', 'Mermer banyo', 'Balkon', 'Ayrı oturma alanı']
+      },
+      {
+        name: 'Royal Suit',
+        size: '90 m²',
+        maxGuests: 6,
+        price: 850,
+        features: ['King yatak', 'Queen yatak', 'Deniz manzarası', 'Mermer banyo', 'Balkon', 'Ayrı oturma alanı', 'Özel havuz erişimi']
+      }
+    ],
+    contact: {
+      phone: '+90 506 641 17 85',
+      email: 'info@fortytravel.com',
+      address: 'Gümüşlük, Bodrum, Muğla, Türkiye'
     }
   }
 }
@@ -142,6 +332,9 @@ const amenities = {
   pool: { icon: Dumbbell, label: 'Yüzme Havuzu' },
   concierge: { icon: Users, label: 'Concierge Hizmeti' },
   'room-service': { icon: Coffee, label: 'Oda Servisi' },
+  gym: { icon: Dumbbell, label: 'Fitness Merkezi' },
+  beach: { icon: MapPin, label: 'Özel Plaj' },
+  'kids-club': { icon: Users, label: 'Çocuk Kulübü' },
 }
 
 export default function HotelDetailPage({ params }: { params: { id: string } }) {
