@@ -1,8 +1,170 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera } from 'lucide-react'
+import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock } from 'lucide-react'
 
 export default function HomePage() {
+  const hotels = [
+    {
+      id: 1,
+      name: 'The Ritz-Carlton Istanbul',
+      location: 'Istanbul, Turkey',
+      rating: 4.8,
+      reviews: 324,
+      price: 450,
+      image: '/hotels/ritz-carlton.jpg',
+      amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
+      description: 'Luxury hotel in the heart of Istanbul with stunning Bosphorus views'
+    },
+    {
+      id: 2,
+      name: 'Swissotel The Bosphorus',
+      location: 'Istanbul, Turkey',
+      rating: 4.7,
+      reviews: 256,
+      price: 380,
+      image: '/hotels/swissotel.jpg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
+      description: 'Elegant hotel overlooking the Bosphorus with world-class amenities'
+    },
+    {
+      id: 3,
+      name: 'Cappadocia Cave Resort',
+      location: 'Cappadocia, Turkey',
+      rating: 4.9,
+      reviews: 412,
+      price: 280,
+      image: '/hotels/cave-resort.jpg',
+      amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
+      description: 'Unique cave hotel experience in the heart of Cappadocia'
+    },
+    {
+      id: 4,
+      name: 'Mardan Palace',
+      location: 'Antalya, Turkey',
+      rating: 4.7,
+      reviews: 298,
+      price: 350,
+      image: '/hotels/mardan-palace.jpg',
+      amenities: ['wifi', 'pool', 'spa', 'beach-access', 'golf'],
+      description: 'Luxury resort on the Mediterranean coast with private beach'
+    },
+    {
+      id: 5,
+      name: 'Hillside Beach Club',
+      location: 'Bodrum, Turkey',
+      rating: 4.8,
+      reviews: 167,
+      price: 420,
+      image: '/hotels/hillside-beach.jpg',
+      amenities: ['wifi', 'pool', 'spa', 'beach-club', 'water-sports'],
+      description: 'Exclusive beachfront resort with stunning Aegean Sea views'
+    },
+    {
+      id: 6,
+      name: 'Museum Hotel Istanbul',
+      location: 'Istanbul, Turkey',
+      rating: 4.6,
+      reviews: 189,
+      price: 320,
+      image: '/hotels/museum-hotel.jpg',
+      amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
+      description: 'Boutique hotel in the historic Sultanahmet district'
+    }
+  ]
+
+  const tours = [
+    {
+      id: 1,
+      title: 'Istanbul Bosphorus Cruise',
+      location: 'Istanbul',
+      duration: '3 hours',
+      price: 89,
+      rating: 4.8,
+      reviews: 156,
+      image: '/tours/bosphorus-cruise.jpg',
+      category: 'cruise',
+      difficulty: 'easy',
+      groupSize: '2-20',
+      highlights: ['Bosphorus Bridge', 'Dolmabahçe Palace', 'Ortaköy Mosque'],
+      description: 'Experience the magic of Istanbul from the water with our luxury Bosphorus cruise including dinner and entertainment.'
+    },
+    {
+      id: 2,
+      title: 'Cappadocia Hot Air Balloon',
+      location: 'Cappadocia',
+      duration: '1 day',
+      price: 150,
+      rating: 4.9,
+      reviews: 289,
+      image: '/tours/hot-air-balloon.jpg',
+      category: 'adventure',
+      difficulty: 'moderate',
+      groupSize: '4-16',
+      highlights: ['Sunrise Flight', 'Fairy Chimneys', 'Underground Cities'],
+      description: 'Float above the magical landscapes of Cappadocia in our hot air balloon at sunrise.'
+    },
+    {
+      id: 3,
+      title: 'Ephesus Ancient City Tour',
+      location: 'Izmir',
+      duration: 'Full day',
+      price: 75,
+      rating: 4.7,
+      reviews: 198,
+      image: '/tours/ephesus.jpg',
+      category: 'cultural',
+      difficulty: 'easy',
+      groupSize: '2-15',
+      highlights: ['Library of Celsus', 'Great Theatre', 'Temple of Artemis'],
+      description: 'Discover the ancient wonders of Ephesus with expert guides and skip-the-line tickets.'
+    },
+    {
+      id: 4,
+      title: 'Pamukkale Thermal Pools',
+      location: 'Pamukkale',
+      duration: 'Full day',
+      price: 95,
+      rating: 4.8,
+      reviews: 234,
+      image: '/tours/pamukkale.jpg',
+      category: 'nature',
+      difficulty: 'easy',
+      groupSize: '2-25',
+      highlights: ['Travertine Terraces', 'Hierapolis', 'Cleopatra Pool'],
+      description: 'Relax in the healing thermal waters of Pamukkale and explore ancient Hierapolis.'
+    },
+    {
+      id: 5,
+      title: 'Blue Voyage Gulet Cruise',
+      location: 'Bodrum',
+      duration: '3 days',
+      price: 450,
+      rating: 4.9,
+      reviews: 167,
+      image: '/tours/gulet-cruise.jpg',
+      category: 'cruise',
+      difficulty: 'easy',
+      groupSize: '2-12',
+      highlights: ['Private Gulet', 'Swimming Bays', 'Turkish Cuisine'],
+      description: 'Sail the turquoise waters of the Aegean Sea on our traditional wooden gulet.'
+    },
+    {
+      id: 6,
+      title: 'Mount Ararat Trekking',
+      location: 'Eastern Anatolia',
+      duration: '5 days',
+      price: 680,
+      rating: 4.6,
+      reviews: 89,
+      image: '/tours/mount-ararat.jpg',
+      category: 'adventure',
+      difficulty: 'challenging',
+      groupSize: '4-8',
+      highlights: ['Summit Attempt', 'Glacier Lakes', 'Kurdish Culture'],
+      description: 'Challenge yourself with Turkey\'s highest peak trek with experienced mountain guides.'
+    }
+  ]
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -51,7 +213,10 @@ export default function HomePage() {
               
               <div className="relative">
                 <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none" title="Guests">
+                <select
+                  title="Guests"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none"
+                >
                   <option>2 Guests</option>
                   <option>3 Guests</option>
                   <option>4 Guests</option>
@@ -72,20 +237,14 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4" data-translate="true">Our Premium Services</h2>
+            <h2 className="text-4xl font-bold mb-4">Our Premium Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From luxury accommodations to exclusive tours, we provide everything you need for an unforgettable journey
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {
-                icon: Plane,
-                title: 'Flights',
-                description: 'Best flight deals and convenient booking options for your Turkish journey',
-                link: '/flights'
-              },
               {
                 icon: Hotel,
                 title: 'Luxury Hotels',
@@ -93,7 +252,7 @@ export default function HomePage() {
                 link: '/hotels'
               },
               {
-                icon: Camera,
+                icon: Plane,
                 title: 'Exclusive Tours',
                 description: 'Private guided tours and unique experiences tailored to your preferences',
                 link: '/tours'
@@ -109,18 +268,6 @@ export default function HomePage() {
                 title: 'Experiences',
                 description: 'Unique activities and adventures in every destination',
                 link: '/experiences'
-              },
-              {
-                icon: Users,
-                title: 'About Us',
-                description: 'Learn more about MrForty and our commitment to luxury travel in Turkey',
-                link: '/about'
-              },
-              {
-                icon: MapPin,
-                title: 'Contact',
-                description: 'Get in touch with our travel experts for personalized assistance',
-                link: '/contact'
               }
             ].map((service, index) => (
               <div key={index} className="card group cursor-pointer">
@@ -211,6 +358,146 @@ export default function HomePage() {
                       </div>
                       <span>{destination.tours} Tours</span>
                     </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Hotels Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Luxury Hotels</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Unforgettable accommodation experiences in Turkey's most exclusive hotels
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {hotels.map((hotel) => (
+              <div key={hotel.id} className="card group cursor-pointer">
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={hotel.image}
+                    alt={hotel.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <span className="text-sm font-semibold text-primary-600">€{hotel.price}</span>
+                    <span className="text-xs text-gray-600">/night</span>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-1">{hotel.name}</h3>
+                      <div className="flex items-center text-gray-600 text-sm">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        {hotel.location}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <span className="font-medium">{hotel.rating}</span>
+                      <span className="text-gray-600 text-sm">({hotel.reviews})</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-2">{hotel.description}</p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-600">
+                      <Users className="w-4 h-4 inline mr-1" />
+                      2-4 Guests
+                    </div>
+                    <Link 
+                      href={`/hotels/${hotel.id}`}
+                      className="btn-primary text-sm px-4 py-2"
+                    >
+                      View Details
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tours Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Exclusive Tours</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover Turkey with our expert guides from ancient cities to natural wonders
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {tours.map((tour) => (
+              <div key={tour.id} className="card group cursor-pointer">
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={tour.image}
+                    alt={tour.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <span className="text-sm font-semibold text-secondary-600">€{tour.price}</span>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-1">{tour.title}</h3>
+                      <div className="flex items-center text-gray-600 text-sm">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        {tour.location}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <span className="font-medium">{tour.rating}</span>
+                      <span className="text-gray-600 text-sm">({tour.reviews})</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {tour.duration}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {tour.groupSize}
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-2">{tour.description}</p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-1">
+                      {tour.highlights.slice(0, 2).map((highlight, index) => (
+                        <span key={index} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+                    <Link 
+                      href={`/tours/${tour.id}`}
+                      className="btn-secondary text-sm px-4 py-2 flex items-center gap-1"
+                    >
+                      View Details
+                      <ChevronRight className="w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
               </div>

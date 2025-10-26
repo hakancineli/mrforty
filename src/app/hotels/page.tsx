@@ -1,6 +1,7 @@
 import { Search, Filter, MapPin, Star, Calendar, Users, Wifi, Car, Coffee, Dumbbell } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import React from 'react'
 
 export default function HotelsPage() {
   const hotels = [
@@ -116,7 +117,7 @@ export default function HotelsPage() {
               />
             </div>
             
-            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none">
+            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none" title="Hotel Destination">
               <option>All Destinations</option>
               <option>Istanbul</option>
               <option>Cappadocia</option>
@@ -124,7 +125,7 @@ export default function HotelsPage() {
               <option>Bodrum</option>
             </select>
             
-            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none">
+            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none" title="Hotel Category">
               <option>All Categories</option>
               <option>Luxury</option>
               <option>Boutique</option>
@@ -137,6 +138,7 @@ export default function HotelsPage() {
               <input
                 type="date"
                 className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                title="Check-in Date"
               />
             </div>
             

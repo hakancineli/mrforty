@@ -148,7 +148,7 @@ export default function ToursPage() {
               />
             </div>
             
-            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none">
+            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none" title="Tour Destination">
               <option>All Destinations</option>
               <option>Istanbul</option>
               <option>Cappadocia</option>
@@ -157,7 +157,7 @@ export default function ToursPage() {
               <option>Antalya</option>
             </select>
             
-            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none">
+            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none" title="Tour Category">
               {categories.map((category) => (
                 <option key={category.value} value={category.value}>
                   {category.label}
@@ -165,7 +165,7 @@ export default function ToursPage() {
               ))}
             </select>
             
-            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none">
+            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent appearance-none" title="Tour Difficulty">
               {difficulties.map((difficulty) => (
                 <option key={difficulty.value} value={difficulty.value}>
                   {difficulty.label}

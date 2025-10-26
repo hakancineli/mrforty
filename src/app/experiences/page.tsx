@@ -142,7 +142,7 @@ export default function ExperiencesPage() {
               />
             </div>
             
-            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-tertiary-500 focus:border-transparent appearance-none">
+            <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-tertiary-500 focus:border-transparent appearance-none" title="Experience Category">
               {categories.map((category) => (
                 <option key={category.value} value={category.value}>
                   {category.label}
@@ -170,7 +170,7 @@ export default function ExperiencesPage() {
             
             <div className="relative">
               <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-tertiary-500 focus:border-transparent appearance-none">
+              <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-tertiary-500 focus:border-transparent appearance-none" title="Number of Guests">
                 <option>1-2 Guests</option>
                 <option>3-6 Guests</option>
                 <option>7+ Guests</option>

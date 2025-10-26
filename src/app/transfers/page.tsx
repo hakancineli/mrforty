@@ -119,7 +119,10 @@ export default function TransfersPage() {
             
             <div className="relative">
               <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none">
+              <select
+                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none"
+                title="Number of passengers"
+              >
                 <option>1-4 Passengers</option>
                 <option>5-8 Passengers</option>
                 <option>9+ Passengers</option>
