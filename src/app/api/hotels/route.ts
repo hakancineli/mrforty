@@ -84,14 +84,14 @@ const hotels = [
   },
   {
     id: 6,
-    name: 'Hillside Beach Club',
+    name: 'The Land of Legends',
     location: 'Bodrum, Turkey',
     rating: 4.8,
     reviews: 167,
     price: 420,
-    image: '/hotels/hillside-beach.jpg',
+    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
     amenities: ['wifi', 'pool', 'spa', 'beach-club', 'water-sports'],
-    description: 'Exclusive beachfront resort with stunning Aegean Sea views',
+    description: 'Exclusive beachfront resort with stunning Mediterranean Sea views',
     rooms: [
       { type: 'Standard Room', price: 320, available: 18 },
       { type: 'Sea View Room', price: 420, available: 12 },

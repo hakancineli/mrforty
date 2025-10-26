@@ -50,14 +50,14 @@ export default function ArPage() {
     },
     {
       id: 5,
-      name: 'نادي هيلسايد بيتش',
+      name: 'ذا لاند أوف ليجيندز',
       location: 'بودروم، تركيا',
       rating: 4.8,
       reviews: 167,
       price: 420,
-      image: '/images/destinations/bodrum.jpg',
+      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
       amenities: ['wifi', 'pool', 'spa', 'beach-club', 'water-sports'],
-      description: 'منتجع شاطئي حصري مع إطلالات خلابة على بحر إيجة.'
+      description: 'منتجع شاطئي حصري مع إطلالات خلابة على البحر الأبيض المتوسط.'
     },
     {
       id: 6,

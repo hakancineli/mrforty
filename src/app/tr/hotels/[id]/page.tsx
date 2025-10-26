@@ -273,10 +273,10 @@ const hotelsData = {
       '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
-    description: 'Muhteşem Ege Denizi manzarasına sahip özel sahil tesisi',
-    fullDescription: 'The Land of Legends Kingdom, muhteşem Ege Denizi manzarasına sahip özel bir sahil tesisidir. Bu lüks destinasyon, dünya standartlarındaki olanakları olağanüstü hizmetle birleştirerek unutulmaz bir deneyim sunar. Berrak plajlardan gourmet yemeklere ve heyecan verici eğlence seçeneklerine kadar, konaklamanızın her aspecti beklentileri aşmak ve kalıcı anılar yaratmak için tasarlanmıştır.',
+    description: 'Muhteşem Akdeniz manzarasına sahip özel sahil tesisi',
+    fullDescription: 'The Land of Legends Kingdom, muhteşem Akdeniz manzarasına sahip özel bir sahil tesisidir. Bu lüks destinasyon, dünya standartlarındaki olanakları olağanüstü hizmetle birleştirerek unutulmaz bir deneyim sunar. Berrak plajlardan gourmet yemeklere ve heyecan verici eğlence seçeneklerine kadar, konaklamanızın her aspecti beklentileri aşmak ve kalıcı anılar yaratmak için tasarlanmıştır.',
     features: [
-      'Ege Denizi manzaralı özel sahil konumu',
+      'Akdeniz manzaralı özel sahil konumu',
       'Su kaydırakları dahil olmak üzere çok sayıda yüzme havuzu',
       'Dünya standartlarında spa ve wellness olanakları',
       'Uluslararası mutfakta gourmet restoranlar',

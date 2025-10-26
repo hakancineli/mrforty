@@ -273,10 +273,10 @@ const hotelsData = {
       '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
-    description: 'Exclusive beachfront resort with stunning Aegean Sea views',
+    description: 'Exclusive beachfront resort with stunning Mediterranean Sea views',
     fullDescription: 'The Land of Legends Kingdom is an exclusive beachfront resort offering stunning views of the Aegean Sea. This luxurious destination combines world-class amenities with exceptional service to create an unforgettable experience. From pristine beaches to gourmet dining and thrilling entertainment options, every aspect of your stay is designed to exceed expectations and create lasting memories.',
     features: [
-      'Exclusive beachfront location with Aegean Sea views',
+      'Exclusive beachfront location with Mediterranean Sea views',
       'Multiple swimming pools including water slides',
       'World-class spa and wellness facilities',
       'Gourmet restaurants with international cuisine',
