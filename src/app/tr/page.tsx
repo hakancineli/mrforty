@@ -11,7 +11,7 @@ export default function TrPage() {
       rating: 4.8,
       reviews: 324,
       price: 450,
-      image: '/hotels/ritz-carlton.jpg',
+      image: '/images/destinations/istanbul.jpg',
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'İstanbulun kalbinde Boğaz manzaralı lüks otel'
     },
@@ -22,7 +22,7 @@ export default function TrPage() {
       rating: 4.7,
       reviews: 256,
       price: 380,
-      image: '/hotels/swissotel.jpg',
+      image: '/images/destinations/istanbul.jpg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
       description: 'Boğaz manzaralı, dünya standartlarında olanaklara sahip şık otel'
     },
@@ -33,7 +33,7 @@ export default function TrPage() {
       rating: 4.9,
       reviews: 412,
       price: 280,
-      image: '/hotels/cave-resort.jpg',
+      image: '/images/destinations/cappadocia.jpg',
       amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
       description: 'Kapadokyanın kalbinde eşsiz mağara otel deneyimi'
     },
@@ -44,7 +44,7 @@ export default function TrPage() {
       rating: 4.7,
       reviews: 298,
       price: 350,
-      image: '/hotels/mardan-palace.jpg',
+      image: '/images/destinations/antalya.jpg',
       amenities: ['wifi', 'pool', 'spa', 'beach-access', 'golf'],
       description: 'Özel plajlı Akdeniz kıyısındaki lüks resort'
     },
@@ -55,7 +55,7 @@ export default function TrPage() {
       rating: 4.8,
       reviews: 167,
       price: 420,
-      image: '/hotels/hillside-beach.jpg',
+      image: '/images/destinations/bodrum.jpg',
       amenities: ['wifi', 'pool', 'spa', 'beach-club', 'water-sports'],
       description: 'Ege Denizi manzaralı özel plaj resort'
     },
@@ -66,7 +66,7 @@ export default function TrPage() {
       rating: 4.6,
       reviews: 189,
       price: 320,
-      image: '/hotels/museum-hotel.jpg',
+      image: '/images/destinations/istanbul.jpg',
       amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
       description: 'Tarihi Sultanahmet bölgesindeki butik otel'
     }
@@ -81,7 +81,7 @@ export default function TrPage() {
       price: 89,
       rating: 4.8,
       reviews: 156,
-      image: '/tours/bosphorus-cruise.jpg',
+      image: '/images/destinations/istanbul.jpg',
       category: 'cruise',
       difficulty: 'kolay',
       groupSize: '2-20',
@@ -96,7 +96,7 @@ export default function TrPage() {
       price: 150,
       rating: 4.9,
       reviews: 289,
-      image: '/tours/hot-air-balloon.jpg',
+      image: '/images/destinations/cappadocia.jpg',
       category: 'adventure',
       difficulty: 'orta',
       groupSize: '4-16',
@@ -111,7 +111,7 @@ export default function TrPage() {
       price: 75,
       rating: 4.7,
       reviews: 198,
-      image: '/tours/ephesus.jpg',
+      image: '/images/destinations/pamukkale.jpg',
       category: 'cultural',
       difficulty: 'kolay',
       groupSize: '2-15',
@@ -126,7 +126,7 @@ export default function TrPage() {
       price: 95,
       rating: 4.8,
       reviews: 234,
-      image: '/tours/pamukkale.jpg',
+      image: '/images/destinations/pamukkale.jpg',
       category: 'nature',
       difficulty: 'kolay',
       groupSize: '2-25',
@@ -141,7 +141,7 @@ export default function TrPage() {
       price: 450,
       rating: 4.9,
       reviews: 167,
-      image: '/tours/gulet-cruise.jpg',
+      image: '/images/destinations/bodrum.jpg',
       category: 'cruise',
       difficulty: 'kolay',
       groupSize: '2-12',
@@ -156,7 +156,7 @@ export default function TrPage() {
       price: 680,
       rating: 4.6,
       reviews: 89,
-      image: '/tours/mount-ararat.jpg',
+      image: '/images/destinations/fethiye.jpg',
       category: 'adventure',
       difficulty: 'zorlu',
       groupSize: '4-8',
@@ -304,37 +304,37 @@ export default function TrPage() {
             {[
               {
                 name: 'İstanbul',
-                image: '/destinations/istanbul.jpg',
+                image: '/images/destinations/istanbul.jpg',
                 tours: 45,
                 rating: 4.8
               },
               {
                 name: 'Kapadokya',
-                image: '/destinations/cappadocia.jpg',
+                image: '/images/destinations/cappadocia.jpg',
                 tours: 32,
                 rating: 4.9
               },
               {
                 name: 'Antalya',
-                image: '/destinations/antalya.jpg',
+                image: '/images/destinations/antalya.jpg',
                 tours: 28,
                 rating: 4.7
               },
               {
                 name: 'Bodrum',
-                image: '/destinations/bodrum.jpg',
+                image: '/images/destinations/bodrum.jpg',
                 tours: 24,
                 rating: 4.8
               },
               {
                 name: 'Pamukkale',
-                image: '/destinations/pamukkale.jpg',
+                image: '/images/destinations/pamukkale.jpg',
                 tours: 18,
                 rating: 4.9
               },
               {
                 name: 'Fethiye',
-                image: '/destinations/fethiye.jpg',
+                image: '/images/destinations/fethiye.jpg',
                 tours: 22,
                 rating: 4.7
               }
@@ -509,7 +509,7 @@ export default function TrPage() {
       <section className="py-20 px-4 bg-primary-600">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-4xl font-bold mb-6">
-            Hayalinizdeki Tatil Hazır mısınız?
+            Hayalinizdaki Tatil Hazır mısınız?
           </h2>
           <p className="text-xl mb-8 opacity-90">
             Uzman seyahat danışmanlarımızın sizin için mükemmel bir gezi planlamasına izin verin

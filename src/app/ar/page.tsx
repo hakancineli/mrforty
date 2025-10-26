@@ -1,184 +1,178 @@
-import { Search, MapPin, Calendar, Users, Clock, Star, ChevronRight, Heart, Camera, Mountain, Ship, Globe, Hotel, Plane, Car } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock } from 'lucide-react'
 
 export default function ArPage() {
   const hotels = [
     {
       id: 1,
-      title: 'فنادق بودروم',
-      location: 'اسطنبول',
-      price: 180,
-      rating: 4.9,
-      reviews: 234,
-      image: '/hotels/bosphorus-hotel.jpg',
-      category: 'luxury',
-      amenities: ['WiFi', 'Spa', 'Restaurant', 'Sea View', 'Butler Service'],
-      description: 'فندق فاخر يطل على البوسفور مع إطلالة خلابة ومناظر خلابة لإسطنبول.'
+      name: 'ذا ريتز كارلتون اسطنبول',
+      location: 'اسطنبول، تركيا',
+      rating: 4.8,
+      reviews: 324,
+      price: 450,
+      image: '/images/destinations/istanbul.jpg',
+      amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
+      description: 'تجربة فاخرة لا مثيل لها في قلب اسطنبول حيث يلتقي الأناقة الخالدة بالرقي المعاصر.'
     },
     {
       id: 2,
-      title: 'فندق سافوان',
-      location: 'أنطاليا',
-      price: 220,
-      rating: 4.8,
-      reviews: 189,
-      image: '/hotels/savoyan-hotel.jpg',
-      category: 'luxury',
-      amenities: ['WiFi', 'Spa', 'Private Beach', 'Gourmet Restaurant'],
-      description: 'فندق سافوان فاخر يقدم تجربة فاخرة لا مثيل لها مع إطلالة خلابة ومناظر خلابة للبحر الأبيض المتوسط.'
+      name: 'فندق سويسوتل البوسفور',
+      location: 'اسطنبول، تركيا',
+      rating: 4.7,
+      reviews: 256,
+      price: 380,
+      image: '/images/destinations/istanbul.jpg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
+      description: 'فندق أنيق يطل على البوسفور مع مرافق عالمية.'
     },
     {
       id: 3,
-      title: 'فندق مارماري',
-      location: 'مرمريس',
-      price: 350,
-      rating: 5.0,
-      reviews: 156,
-      image: '/hotels/marmaris-hotel.jpg',
-      category: 'luxury',
-      amenities: ['WiFi', 'Spa', 'Private Pool', 'Turkish Bath', 'Helipad'],
-      description: 'فندق مارماري الفاخر يقع في قلب مرمريس ويقدم إطلالة خلابة على المدينة التاريخية مع خدمات سبا حصرية.'
+      name: 'منتجع الكهوف في كابادوكيا',
+      location: 'كابادوكيا، تركيا',
+      rating: 4.9,
+      reviews: 412,
+      price: 280,
+      image: '/images/destinations/cappadocia.jpg',
+      amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
+      description: 'تجربة فاخرة للإقامة في الكهوف السحرية في قلب كابادوكيا.'
     },
     {
       id: 4,
-      title: 'فندق هيلتون',
-      location: 'أنطاليا',
-      price: 280,
+      name: 'قصر ماردان',
+      location: 'أنطاليا، تركيا',
       rating: 4.7,
-      reviews: 198,
-      image: '/hotels/antalya-hotel.jpg',
-      category: 'luxury',
-      amenities: ['WiFi', 'Spa', 'Water Park', 'Golf Course', 'Private Beach'],
-      description: 'فندق هيلتون الفاخر يقع بالقرب من أنطاليا ويوفر إطلالة خلابة مع مناظر خلابة للجبال والمناظر الطبيعية.'
+      reviews: 298,
+      price: 350,
+      image: '/images/destinations/antalya.jpg',
+      amenities: ['wifi', 'pool', 'spa', 'beach-access', 'golf'],
+      description: 'منتجع فاخر على الساحل المتوسطي مع شاطئ خاصة.'
     },
     {
       id: 5,
-      title: 'فندق ريفيرا',
-      location: 'كابادوكيا',
+      name: 'نادي هيلسايد بيتش',
+      location: 'بودروم، تركيا',
+      rating: 4.8,
+      reviews: 167,
       price: 420,
-      rating: 4.9,
-      reviews: 267,
-      image: '/hotels/cappadocia-hotel.jpg',
-      category: 'luxury',
-      amenities: ['WiFi', 'Spa', 'Cave Suite', 'Hot Air Balloon', 'Turkish Night'],
-      description: 'فندق ريفيرا الفاخر يقع في قلب كابادوكيا ويوفر غرف فريدة تحت الأرض مع إطلالة خلابة على الصخور البركانية ومناظر منطقة السحراء.'
+      image: '/images/destinations/bodrum.jpg',
+      amenities: ['wifi', 'pool', 'spa', 'beach-club', 'water-sports'],
+      description: 'منتجع شاطئي حصري مع إطلالات خلابة على بحر إيجة.'
     },
     {
       id: 6,
-      title: 'فندق بورصة',
-      location: 'بودروم',
-      price: 380,
+      name: 'فندق المتحف اسطنبول',
+      location: 'اسطنبول، تركيا',
       rating: 4.6,
-      reviews: 145,
-      image: '/hotels/bodrum-hotel.jpg',
-      category: 'luxury',
-      amenities: ['WiFi', 'Spa', 'Private Beach', 'Yacht Club', 'Casino'],
-      description: 'فندق بورصة الفاخر يقع في بودروم ويوفر إطلالة خلابة على البحر الأبيض المتوسط مع وصول خاص باليخت.'
+      reviews: 189,
+      price: 320,
+      image: '/images/destinations/istanbul.jpg',
+      amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
+      description: 'فندق بوتيك في منطقة السلطانة التاريخية.'
     }
   ]
 
   const tours = [
     {
       id: 1,
-      title: 'جولة بالون المنطاد',
-      location: 'كابادوكيا',
-      duration: 'يوم كامل',
-      price: 250,
-      rating: 4.9,
-      reviews: 289,
-      image: '/tours/hot-air-balloon.jpg',
-      category: 'adventure',
-      difficulty: 'moderate',
-      groupSize: '4-16',
-      highlights: ['إطلاع الفجر', 'صخور بركانية', 'وجبة فاخرة'],
-      description: 'استمتع بتجربة البالون الساخر فوق المناظر السحرية لكابادوكيا مع وجبة فاخرة عند شروق الشمس.'
+      title: 'جولة البوسفور في اسطنبول',
+      location: 'اسطنبول',
+      duration: '3 ساعات',
+      price: 89,
+      rating: 4.8,
+      reviews: 156,
+      image: '/images/destinations/istanbul.jpg',
+      category: 'cruise',
+      difficulty: 'سهل',
+      groupSize: '2-20',
+      highlights: ['جسر البوسفور', 'قصر دولماباهçe', 'مسجد أورتاكوي'],
+      description: 'تجربة سحر اسطنبول من الماء مع جولتنا الفاخرة التي تشمل العشاء والترفيه.'
     },
     {
       id: 2,
-      title: 'جولة خاصة باليخت',
-      location: 'بودروم',
-      duration: 'نصف يوم',
-      price: 450,
-      rating: 4.8,
-      reviews: 167,
-      image: '/tours/yacht-tour.jpg',
-      category: 'luxury',
-      difficulty: 'easy',
-      groupSize: '2-8',
-      highlights: ['يخت خاص', 'سباحة في الخليج', 'غداء فاخر'],
-      description: 'استمتع بيخت خاص في البحر الأبيض المتوسط مع طاقم محترفين ووجبة غداء فاخرة.'
+      title: 'البالون الحر في كابادوكيا',
+      location: 'كابادوكيا',
+      duration: 'يوم واحد',
+      price: 150,
+      rating: 4.9,
+      reviews: 289,
+      image: '/images/destinations/cappadocia.jpg',
+      category: 'adventure',
+      difficulty: 'متوسط',
+      groupSize: '4-16',
+      highlights: ['رحلة شروق الشمس', 'أبراج الخيالية', 'المدن تحت الأرض'],
+      description: 'طف فوق المناظر السحرية لكابادوكيا في بالون الحر عند شروق الشمس.'
     },
     {
       id: 3,
-      title: 'جولة في مدينة أنطاليا',
-      location: 'أنطاليا',
+      title: 'جولة مدينة أفسوس القديمة',
+      location: 'إزمير',
       duration: 'يوم كامل',
-      price: 180,
+      price: 75,
       rating: 4.7,
       reviews: 198,
-      image: '/tours/istanbul-city.jpg',
+      image: '/images/destinations/pamukkale.jpg',
       category: 'cultural',
-      difficulty: 'easy',
+      difficulty: 'سهل',
       groupSize: '2-15',
-      highlights: ['آيا صوفيا', 'قصر توبكابي', 'الجامع الأزرق'],
-      description: 'اكتشف جمال مدينة أنطاليا التاريخية مع زيارة أهم معالمها السياحية والثقافية.'
+      highlights: ['مكتبة سلسوس', 'المسرح الكبير', 'معبد أرتميس'],
+      description: 'اكتشف عجائب أفسوس القديمة مع أدلائنا الخبراء وتذاكر الدخول.'
     },
     {
       id: 4,
-      title: 'جولة في باموكالي',
+      title: 'بركات باموكالي الحرارية',
       location: 'باموكالي',
       duration: 'يوم كامل',
-      price: 150,
+      price: 95,
       rating: 4.8,
       reviews: 234,
-      image: '/tours/pamukkale.jpg',
+      image: '/images/destinations/pamukkale.jpg',
       category: 'nature',
-      difficulty: 'moderate',
-      groupSize: '2-12',
-      highlights: ['مياه ساخرة', 'مدرجات بيضاء', 'آثار قديمة'],
-      description: 'استمتع بمياه باموكالي الساخرة واستكشف الآثار القديمة في هذه المدينة التاريخية.'
+      difficulty: 'سهل',
+      groupSize: '2-25',
+      highlights: ['الأسطح الترافرتينية', 'هييرابوليس', 'بركة كليوباترا'],
+      description: 'استرخ في المياه الشافية لباموكالي واستكشف هييرابوليس القديمة.'
     },
     {
       id: 5,
-      title: 'جولة في بودروم',
+      title: 'جولة القلع الزرقاء',
       location: 'بودروم',
-      duration: 'يوم كامل',
-      price: 200,
+      duration: '3 أيام',
+      price: 450,
       rating: 4.9,
-      reviews: 156,
-      image: '/tours/bodrum-city.jpg',
-      category: 'cultural',
-      difficulty: 'easy',
-      groupSize: '2-15',
-      highlights: ['قلعة بودروم', 'شواطئ البحر', 'حصن تقليدي'],
-      description: 'استمتع بجمال بودروم الساحلي مع زيارة المعالم التاريخية والاستمتاع بالمأكول المحلية.'
+      reviews: 167,
+      image: '/images/destinations/bodrum.jpg',
+      category: 'cruise',
+      difficulty: 'سهل',
+      groupSize: '2-12',
+      highlights: ['القلع التقليدية', 'خلع السباحة', 'المطبخ التركي'],
+      description: 'أبحر في المياه الزرقاء لبحر إيجة على قلعنا الخشبية التقليدية مع طعام تركي شهير.'
     },
     {
       id: 6,
-      title: 'جولة في مرمريس',
-      location: 'مرمريس',
-      duration: 'يوم كامل',
-      price: 280,
-      rating: 5.0,
-      reviews: 189,
-      image: '/tours/marmaris-city.jpg',
-      category: 'cultural',
-      difficulty: 'moderate',
-      groupSize: '2-15',
-      highlights: ['السوق الكبير', 'المساجد الأزرق', 'جسر غلطة'],
-      description: 'اكتشف عاصمة تركيا التجارية والثقافية مع زيارة أسواقها الشهيرة ومعالمها التاريخية.'
+      title: 'تسلق جبل أرارات',
+      location: 'شرق الأناضول',
+      duration: '5 أيام',
+      price: 680,
+      rating: 4.6,
+      reviews: 89,
+      image: '/images/destinations/fethiye.jpg',
+      category: 'adventure',
+      difficulty: 'صعب',
+      groupSize: '4-8',
+      highlights: ['محاولة الوصول للقمة', 'بحيرات الجليدية', 'ثقافة كردية'],
+      description: 'تحدى نفسك مع أعلى قمة في تركيا مع مرشقي الجبال الخبراء.'
     }
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-80 flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-bg.jpg"
-            alt="Luxury Travel Background"
+            src="/images/hero-bg.jpg"
+            alt="خلفية السفر الفاخر"
             fill
             className="object-cover"
             priority
@@ -192,7 +186,7 @@ export default function ArPage() {
             <span className="text-primary-400"> MrForty</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            تجربة السفر الفاخرة والفنادق الحصرية في أجمل الوجهات السياحية في تركيا
+            جرب السفر الفاخر والفنادق المميزة والجولات الحصرية في أجمل وجهات تركيا
           </p>
           
           {/* Search Bar */}
@@ -211,7 +205,7 @@ export default function ArPage() {
                 <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="date"
-                  title="تاريخ السفر"
+                  placeholder="التاريخ"
                   className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
@@ -244,7 +238,7 @@ export default function ArPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">خدماتنا المميزة</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              من الفنادق الفاخرة إلى الجولات الحصرية، نقدم كل ما تحتاجه لرحلة لا تُنسى
+              من الإقامة الفاخرة إلى الجولات الحصرية، نوفر كل ما تحتاجه لرحلة لا تُنسى
             </p>
           </div>
           
@@ -259,13 +253,13 @@ export default function ArPage() {
               {
                 icon: Plane,
                 title: 'جولات حصرية',
-                description: 'جولات خاصة مع مرشدين وتجارب فريدة حسب تفضيلاتك',
+                description: 'جولات موجهة وتجارب فريدة مصممة حسب تفضيلاتك',
                 link: '/ar/tours'
               },
               {
                 icon: Car,
                 title: 'نقل VIP',
-                description: 'خدمات نقل مميزة مع سائقين محترفين',
+                description: 'خدمات النقل المميزة مع السائقين المحترفين',
                 link: '/ar/transfers'
               },
               {
@@ -282,7 +276,7 @@ export default function ArPage() {
                   </div>
                   <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
-                  <Link
+                  <Link 
                     href={service.link}
                     className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
                   >
@@ -302,45 +296,45 @@ export default function ArPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">الوجهات الشعبية</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              اكتشف مدن تركيا الأيقونية والجواهر الخفية
+              اكتشف مدن تركيا الأيقونية ومجوهراتها الخفية
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: 'إسطنبول',
-                image: '/destinations/istanbul.jpg',
+                name: 'اسطنبول',
+                image: '/images/destinations/istanbul.jpg',
                 tours: 45,
                 rating: 4.8
               },
               {
                 name: 'كابادوكيا',
-                image: '/destinations/cappadocia.jpg',
+                image: '/images/destinations/cappadocia.jpg',
                 tours: 32,
                 rating: 4.9
               },
               {
                 name: 'أنطاليا',
-                image: '/destinations/antalya.jpg',
+                image: '/images/destinations/antalya.jpg',
                 tours: 28,
                 rating: 4.7
               },
               {
                 name: 'بودروم',
-                image: '/destinations/bodrum.jpg',
+                image: '/images/destinations/bodrum.jpg',
                 tours: 24,
                 rating: 4.8
               },
               {
                 name: 'باموكالي',
-                image: '/destinations/pamukkale.jpg',
+                image: '/images/destinations/pamukkale.jpg',
                 tours: 18,
                 rating: 4.9
               },
               {
-                name: 'فتحية',
-                image: '/destinations/fethiye.jpg',
+                name: 'فيثيي',
+                image: '/images/destinations/fethiye.jpg',
                 tours: 22,
                 rating: 4.7
               }
@@ -377,7 +371,7 @@ export default function ArPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">فنادقنا الفاخرة</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              تجربة إقامة لا تُنسى في أرق فنادق تركيا
+              تجربة إقامة لا مثيل لها في فنادق تركيا المميزة
             </p>
           </div>
           
@@ -387,7 +381,7 @@ export default function ArPage() {
                 <div className="relative h-64 overflow-hidden">
                   <Image
                     src={hotel.image}
-                    alt={hotel.title}
+                    alt={hotel.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -400,7 +394,7 @@ export default function ArPage() {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-1">{hotel.title}</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-1">{hotel.name}</h3>
                       <div className="flex items-center text-gray-600 text-sm">
                         <MapPin className="w-4 h-4 mr-1" />
                         {hotel.location}
@@ -420,7 +414,7 @@ export default function ArPage() {
                       <Users className="w-4 h-4 inline mr-1" />
                       2-4 ضيوف
                     </div>
-                    <Link
+                    <Link 
                       href={`/ar/hotels/${hotel.id}`}
                       className="btn-primary text-sm px-4 py-2"
                     >
@@ -440,7 +434,7 @@ export default function ArPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">جولاتنا الحصرية</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              اكتشف تركيا من المدن القديمة إلى العجائب الطبيعية مع مرشدينا الخبراء
+              استكشف تركيا مع أدلائنا الخبراء من المدن القديمة إلى عجائب الطبيعية
             </p>
           </div>
           
@@ -496,7 +490,7 @@ export default function ArPage() {
                         </span>
                       ))}
                     </div>
-                    <Link
+                    <Link 
                       href={`/ar/tours/${tour.id}`}
                       className="btn-secondary text-sm px-4 py-2 flex items-center gap-1"
                     >
@@ -511,22 +505,21 @@ export default function ArPage() {
         </div>
       </section>
 
-
       {/* CTA Section */}
-      <section className="bg-primary-600 py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl font-bold mb-6">
-            هل تحتاج إلى ترتيبات مخصصة؟
+      <section className="py-20 px-4 bg-primary-600">
+        <div className="max-w-4xl mx-auto text-center text-white">
+          <h2 className="text-4xl font-bold mb-6">
+            هل أنت مستعد لعطلتك الحلم؟
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            تواصل مع فريقنا للحصول على ترتيبات سفر مخصصة وترتيبات خاصة
+            دع خبراء السفر لدينا ينشئوا خط سير مثالي لك
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              احصل على عرض سعر
+              ابدأ التخطيط
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-              تواصل مع الفريق
+              تواصل معنا
             </button>
           </div>
         </div>
