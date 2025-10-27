@@ -11,7 +11,7 @@ export default function AboutPage() {
       image: '/team/seyfettin.jpg',
       bio: 'With over 15 years of experience in luxury travel and tourism, Seyfettin leads our team with passion and expertise in creating unforgettable journeys for our clients.',
       email: 'seyfettin@mrfortytravel.com',
-      phone: '+90 212 555 0140',
+      phone: '+90 506 641 17 85',
       linkedin: 'https://linkedin.com/in/seyfettin-kirk'
     },
     {

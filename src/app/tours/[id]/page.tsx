@@ -77,7 +77,7 @@ const toursData = {
       'Gratuities'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Kabataş Pier, Istanbul, Turkey'
     }
@@ -153,7 +153,7 @@ const toursData = {
       'Tips for pilot'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Göreme, Cappadocia, Turkey'
     }
@@ -238,7 +238,7 @@ const toursData = {
       'Dinner'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Selçuk, Izmir, Turkey'
     }
@@ -323,7 +323,7 @@ const toursData = {
       'Tips for guide'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Pamukkale, Denizli, Turkey'
     }
@@ -409,7 +409,7 @@ const toursData = {
       'Tips for crew'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Bodrum Harbor, Muğla, Turkey'
     }
@@ -484,7 +484,7 @@ const toursData = {
       'Tips for guide'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Sapanca, Istanbul, Turkey'
     }

@@ -232,7 +232,7 @@ export default function Header() {
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-primary-600" />
-                  <span className="text-sm text-gray-900">+90 212 555 0140</span>
+                  <span className="text-sm text-gray-900">+90 506 641 17 85</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-primary-600" />

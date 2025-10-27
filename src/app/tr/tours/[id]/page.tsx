@@ -77,7 +77,7 @@ const toursData = {
       'Bahşişler'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Kabataş Yanağı, İstanbul, Türkiye'
     }
@@ -153,7 +153,7 @@ const toursData = {
       'Pilota bahşiş'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Göreme, Kapadokya, Türkiye'
     }
@@ -238,7 +238,7 @@ const toursData = {
       'Akşam yemeği'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Selçuk, İzmir, Türkiye'
     }
@@ -323,7 +323,7 @@ const toursData = {
       'Rehbere bahşiş'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Pamukkale, Denizli, Türkiye'
     }
@@ -409,7 +409,7 @@ const toursData = {
       'Mürettebata bahşiş'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Bodrum Limanı, Muğla, Türkiye'
     }
@@ -484,7 +484,7 @@ const toursData = {
       'Rehbere bahşiş'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'Sapanca, İstanbul, Türkiye'
     }

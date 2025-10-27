@@ -77,7 +77,7 @@ const toursData = {
       'الإكراميات'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'رصيف كاباتاش، اسطنبول، تركيا'
     }
@@ -153,7 +153,7 @@ const toursData = {
       'البقش للطيار'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'غوريمي، كابادوكيا، تركيا'
     }
@@ -238,7 +238,7 @@ const toursData = {
       'العشاء'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'سلجوق، إزمير، تركيا'
     }
@@ -323,7 +323,7 @@ const toursData = {
       'البقش للدليل'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'باموكالي، دينيزلي، تركيا'
     }
@@ -409,7 +409,7 @@ const toursData = {
       'البقش للطاقم'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'ميناء بودروم، موغلا، تركيا'
     }
@@ -484,7 +484,7 @@ const toursData = {
       'البقش للدليل'
     ],
     contact: {
-      phone: '+90 532 123 4567',
+      phone: '+90 506 641 17 85',
       email: 'info@fortytravel.com',
       address: 'سابانكا، إسطنبول، تركيا'
     }
