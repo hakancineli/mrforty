@@ -88,7 +88,7 @@ export default function TrToursPage() {
       price: 180,
       rating: 4.8,
       reviews: 125,
-      image: '/tours/Sapanca Maşukiye/Sapanca Maşukiye.jpeg',
+      image: '/tours/Sapanca Masukiye/Sapanca Masukiye.jpeg',
       category: 'nature',
       difficulty: 'kolay',
       groupSize: '2-15',
