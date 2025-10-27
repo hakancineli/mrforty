@@ -91,19 +91,19 @@ export default function Footer() {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center shadow-lg p-2">
-                  <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+                <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg p-2">
+                  <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center">
                     <Image
                       src="/images/logo.png"
                       alt="MrForty Logo"
-                      width={120}
-                      height={120}
+                      width={150}
+                      height={150}
                       className="rounded-lg"
                       priority
                     />
                   </div>
                 </div>
-                <span className="text-2xl font-bold font-serif">{SITE_NAME}</span>
+                <span className="text-2xl font-bold font-serif"></span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Your trusted partner for luxury travel experiences in Turkey. 

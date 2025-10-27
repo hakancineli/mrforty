@@ -44,9 +44,9 @@ export default function Header() {
     if (currentLang === 'tr') {
       return [
         { name: 'Ana Sayfa', href: langPrefix ? `/${langPrefix}` : '/' },
-        { name: 'Uçuşlar', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'Oteller', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'Turlar', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
+        { name: 'Uçuşlar', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'Deneyimler', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },
         { name: 'Hakkımızda', href: langPrefix ? `/${langPrefix}/about` : '/about' },
         { name: 'İletişim', href: langPrefix ? `/${langPrefix}/contact` : '/contact' },
@@ -54,9 +54,9 @@ export default function Header() {
     } else if (currentLang === 'ar') {
       return [
         { name: 'الرئيسية', href: langPrefix ? `/${langPrefix}` : '/' },
-        { name: 'الرحلات الجوية', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'الفنادق', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'الجولات', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
+        { name: 'الرحلات الجوية', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'التجارب', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },
         { name: 'من نحن', href: langPrefix ? `/${langPrefix}/about` : '/about' },
         { name: 'اتصل بنا', href: langPrefix ? `/${langPrefix}/contact` : '/contact' },
@@ -64,9 +64,9 @@ export default function Header() {
     } else {
       return [
         { name: 'Home', href: langPrefix ? `/${langPrefix}` : '/' },
-        { name: 'Flights', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'Hotels', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'Tours', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
+        { name: 'Flights', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'Experiences', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },
         { name: 'About', href: langPrefix ? `/${langPrefix}/about` : '/about' },
         { name: 'Contact', href: langPrefix ? `/${langPrefix}/contact` : '/contact' },
@@ -116,13 +116,13 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center shadow-lg p-2">
-              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg p-2">
+              <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center">
                 <Image
                   src="/images/logo.png"
                   alt="MrForty Logo"
-                  width={120}
-                  height={120}
+                  width={150}
+                  height={150}
                   className="rounded-lg"
                   priority
                 />
@@ -131,7 +131,7 @@ export default function Header() {
             <span className={`text-2xl font-bold font-serif ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
-              {SITE_NAME}
+              
             </span>
           </Link>
 

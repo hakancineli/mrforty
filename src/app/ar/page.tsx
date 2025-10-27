@@ -183,7 +183,7 @@ export default function ArPage() {
         <div className="relative z-10 text-center text-white px-4 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif">
             اكتشف تركيا مع
-            <span className="text-primary-400"> MrForty</span>
+            <span className="text-primary-400"></span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             جرب السفر الفاخر والفنادق المميزة والجولات الحصرية في أجمل وجهات تركيا

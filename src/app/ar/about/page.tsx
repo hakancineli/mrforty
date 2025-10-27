@@ -84,40 +84,42 @@ export default function AboutPage() {
                 phone: '+90 506 641 17 85',
                 linkedin: 'https://linkedin.com/in/elif-demir'
               }
-            ].map((member) => (
+            ].filter(member => member.id !== 3).map((member) => (
               <div key={member.id} className="text-center">
                 <div className="flex flex-col items-center gap-4">
-                  <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{member.name}</h3>
-                    <p className="text-gray-600 mb-2">{member.position}</p>
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{member.bio}</p>
-                    <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm mt-4">
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <Mail className="w-4 h-4" />
-                        <span>{member.email}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <Phone className="w-4 h-4" />
-                        <span>{member.phone}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-600 mt-2">
-                        <a
-                          href={`https://wa.me/${member.phone.replace(/\s/g, '')}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
-                        >
-                          <MessageCircle className="w-4 h-4" />
-                          <span>واتساب</span>
-                        </a>
+                  <div className="flex flex-col md:flex-row items-center gap-8">
+                    <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full flex-shrink-0">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="text-center md:text-left">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{member.name}</h3>
+                      <p className="text-gray-600 mb-2">{member.position}</p>
+                      <p className="text-gray-600 mb-4 text-sm leading-relaxed">{member.bio}</p>
+                      <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm mt-4">
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <Mail className="w-4 h-4" />
+                          <span>{member.email}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <Phone className="w-4 h-4" />
+                          <span>{member.phone}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-600 mt-2">
+                          <a
+                            href={`https://wa.me/${member.phone.replace(/\s/g, '')}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
+                          >
+                            <MessageCircle className="w-4 h-4" />
+                            <span>واتساب</span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>

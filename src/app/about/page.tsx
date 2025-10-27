@@ -9,7 +9,7 @@ export default function AboutPage() {
       name: 'Seyfettin KIRK',
       position: 'General Manager',
       image: '/team/seyfettin.jpg',
-      bio: 'With over 15 years of experience in luxury travel and tourism, Seyfettin leads our team with passion and expertise in creating unforgettable journeys for our clients.',
+      bio: 'With over 25 years of experience in luxury travel and tourism, Seyfettin leads our team with passion and expertise in creating unforgettable journeys for our clients.',
       email: 'seyfettin@mrfortytravel.com',
       phone: '+90 506 641 17 85',
       linkedin: 'https://linkedin.com/in/seyfettin-kirk'
@@ -66,7 +66,7 @@ export default function AboutPage() {
         <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
-              About MrForty
+              Hakkımızda
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
               Your trusted partner for luxury travel experiences in Turkey
