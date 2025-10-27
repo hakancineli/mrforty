@@ -16,7 +16,7 @@ export default function FlightsPage() {
       duration: '1h 45m',
       aircraft: 'Boeing 737-800',
       class: 'Economy',
-      image: '/flights/istanbul-antalya.jpg'
+      image: '/hotels/Flights/qatararways.jpeg'
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export default function FlightsPage() {
       duration: '1h 30m',
       aircraft: 'Airbus A320',
       class: 'Economy',
-      image: '/flights/istanbul-cappadocia.jpg'
+      image: '/hotels/Flights/qatararways.jpeg'
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ export default function FlightsPage() {
       duration: '1h 30m',
       aircraft: 'Boeing 737-700',
       class: 'Economy',
-      image: '/flights/istanbul-bodrum.jpg'
+      image: '/hotels/Flights/qatararways.jpeg'
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ export default function FlightsPage() {
       duration: '1h 15m',
       aircraft: 'Airbus A321',
       class: 'Business',
-      image: '/flights/istanbul-izmir.jpg'
+      image: '/hotels/Flights/qatararways.jpeg'
     },
     {
       id: 5,
@@ -72,7 +72,7 @@ export default function FlightsPage() {
       duration: '1h 30m',
       aircraft: 'Boeing 737-800',
       class: 'Economy',
-      image: '/flights/istanbul-trabzon.jpg'
+      image: '/hotels/Flights/qatararways.jpeg'
     }
   ]
 
@@ -82,7 +82,7 @@ export default function FlightsPage() {
       <section className="relative h-80 bg-gradient-to-r from-secondary-600 to-secondary-800">
         <div className="absolute inset-0">
           <Image
-            src="/flights-hero.jpg"
+            src="/hotels/Flights/qatararways.jpeg"
             alt="Flight Booking"
             fill
             className="object-cover opacity-30"
@@ -246,13 +246,15 @@ export default function FlightsPage() {
                   <div className="flex items-center gap-4 text-sm text-gray-600">
                     <span>Available 24/7</span>
                   </div>
-                  <Link 
-                    href={`/flights/${flight.id}`}
+                  <a
+                    href={`https://wa.me/90506641785?text=Hello, I would like to make a reservation for ${flight.airline} ${flight.flightNumber}. ${flight.from} -> ${flight.to}, ${flight.departure} - ${flight.arrival}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-secondary text-sm px-4 py-2 flex items-center gap-1"
                   >
-                    View Details
+                    Book Now
                     <ChevronRight className="w-4 h-4" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -270,12 +272,22 @@ export default function FlightsPage() {
             Contact our team for personalized flight booking and special arrangements
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-secondary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <a
+              href="https://wa.me/90506641785?text=Hello, I would like to book a flight."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-secondary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
               Book Flight
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-secondary-600 transition-colors">
+            </a>
+            <a
+              href="https://wa.me/90506641785?text=Hello, I would like to get information about flights."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-secondary-600 transition-colors"
+            >
               Contact Team
-            </button>
+            </a>
           </div>
         </div>
       </section>

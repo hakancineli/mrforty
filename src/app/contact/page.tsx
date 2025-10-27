@@ -201,12 +201,10 @@ export default function ContactPage() {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.9485874328!2d28.98315631541896!3d41.03700397929835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7650645c4e5%3A0x1234567890abcdef!2sKocatepe%20Mah.%2C%20Cumhuriyet%20Cad.%20No%3A9%2C%20Taksim%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1234567890"
                     width="100%"
                     height="100%"
-                    style={{ border: 0 }}
+                    className="absolute inset-0 w-full h-full rounded-2xl border-0"
                     allowFullScreen
-                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="MrForty Travel Harita"
-                    className="absolute inset-0 w-full h-full rounded-2xl"
                   />
                 </div>
               </div>

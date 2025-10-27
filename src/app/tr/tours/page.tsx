@@ -13,7 +13,7 @@ export default function TrToursPage() {
       price: 89,
       rating: 4.8,
       reviews: 156,
-      image: '/tours/İstanbul Boğaz Turu /İstanbul Boğaz Turu.jpeg',
+      image: '/tours/istanbul-bogaz-turu.jpeg',
       category: 'cruise',
       difficulty: 'kolay',
       groupSize: '2-20',
@@ -28,7 +28,7 @@ export default function TrToursPage() {
       price: 150,
       rating: 4.9,
       reviews: 289,
-      image: '/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg',
+      image: '/images/destinations/cappadocia.jpg',
       category: 'adventure',
       difficulty: 'orta',
       groupSize: '4-16',
@@ -43,7 +43,7 @@ export default function TrToursPage() {
       price: 75,
       rating: 4.7,
       reviews: 198,
-      image: '/tours/Cappadocia Hot Air Balloon/Ephesus Ancient City Tour/Ephesus Ancient City Tour.jpeg',
+      image: '/tours/Cappadocia%20Hot%20Air%20Balloon/Ephesus%20Ancient%20City%20Tour/Ephesus%20Ancient%20City%20Tour.jpeg',
       category: 'cultural',
       difficulty: 'kolay',
       groupSize: '2-15',
@@ -58,7 +58,7 @@ export default function TrToursPage() {
       price: 95,
       rating: 4.8,
       reviews: 234,
-      image: '/tours/Cappadocia Hot Air Balloon/Ephesus Ancient City Tour/Pamukkale Thermal Pools/Pamukkale Thermal Pools.jpeg',
+      image: '/images/destinations/pamukkale.jpg',
       category: 'nature',
       difficulty: 'kolay',
       groupSize: '2-25',
@@ -73,7 +73,7 @@ export default function TrToursPage() {
       price: 450,
       rating: 4.9,
       reviews: 167,
-      image: '/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk üst Görsel.jpeg',
+      image: '/tours/Mavi%20Yolculuk%20Gulet%20Turu/Mavi%20Yolculuk%20üst%20Görsel.jpeg',
       category: 'cruise',
       difficulty: 'kolay',
       groupSize: '2-12',
@@ -88,7 +88,7 @@ export default function TrToursPage() {
       price: 180,
       rating: 4.8,
       reviews: 125,
-      image: '/tours/Sapanca Masukiye/Sapanca Masukiye.jpeg',
+      image: '/tours/Sapanca%20Masukiye/Sapanca%20Masukiye.jpeg',
       category: 'nature',
       difficulty: 'kolay',
       groupSize: '2-15',
@@ -127,10 +127,10 @@ export default function TrToursPage() {
         <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
-              Türkiye\'deki Unutulmaz Turlar
+              Türkiye'deki Unutulmaz Turlar
             </h1>
             <p className="text-xl max-w-2xl mx-auto opacity-90">
-              Antik kalıntılardan doğal harikalara kadar Türkiye\'yi uzman rehberlerimizle Keşfedin
+              Antik kalıntılardan doğal harikalara kadar Türkiye'yi uzman rehberlerimizle Keşfedin
             </p>
           </div>
         </div>

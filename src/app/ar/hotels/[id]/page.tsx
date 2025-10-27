@@ -138,13 +138,13 @@ const hotelsData = {
     rating: 4.9,
     reviews: 412,
     price: 280,
-    image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+    image: '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-1.jpeg',
     gallery: [
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-2.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-3.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-4 .jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-5 .jpeg'
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-1.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-2.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-3.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-4%20.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-5%20.jpeg'
     ],
     amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
     description: 'تجربة فريدة من نوعها في فندق الكهوف في قلب كابادوكيا.',
@@ -259,7 +259,7 @@ const hotelsData = {
   },
   5: {
     id: 5,
-    name: 'ذا لاند أوف ليجندز',
+    name: 'ذا لاند أوف ليجندز كينغدوم',
     location: 'بودروم، تركيا',
     rating: 4.8,
     reviews: 167,
@@ -273,8 +273,8 @@ const hotelsData = {
       '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
-    description: 'منتجع شاطئي حصري مع إطلالات خلابة على البحر الأبيض المتوسط',
-    fullDescription: 'ذا لاند أوف ليجندز كينغدوم هو منتجع شاطئي حصري يقدم إطلالات خلابة على البحر الأبيض المتوسط. هذه الوجهة الفاخرة تجمع بين المرافق عالمية المستوى والخدمة الاستثنائية لخلق تجربة لا تُنسى. من الشواطئ النقية إلى المطاعم الراقية وخيارات الترفيه المثيرة، تم تصميم كل جانب من إقامتك لتجاوز التوقعات وخلق ذكريات دائمة.',
+    description: 'منتجع شاطئي حصري مع إطلالات خلابة على بحر إيجه',
+    fullDescription: 'ذا لاند أوف ليجندز كينغدوم هو منتجع شاطئي حصري يقدم إطلالات خلابة على بحر إيجه. هذه الوجهة الفاخرة تجمع بين المرافق عالمية المستوى والخدمة الاستثنائية لخلق تجربة لا تُنسى. من الشواطئ النقية إلى المطاعم الراقية وخيارات الترفيه المثيرة، تم تصميم كل جانب من إقامتك لتجاوز التوقعات وخلق ذكريات دائمة.',
     features: [
       'موقع شاطئي حصري مع إطلالات على البحر الأبيض المتوسط',
       'مسابح سباحة متعددة بما في ذلك ألعاب مائية',
@@ -316,9 +316,73 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 506 641 17 85',
+      phone: '+90 506 641 17 83',
       email: 'info@fortytravel.com',
       address: 'غوموشوك، بودروم، موغلا، تركيا'
+    }
+  },
+  6: {
+    id: 6,
+    name: 'فندق CVK Park Bosphorus Hotel Istanbul',
+    location: 'اسطنبول، تركيا',
+    rating: 4.7,
+    reviews: 289,
+    price: 420,
+    image: '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+    gallery: [
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-1.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-2.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-3.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'concierge', 'room-service'],
+    description: 'فندق عصري وحديث مع إطلالات على البوسفور',
+    fullDescription: 'فندق CVK Park Bosphorus Hotel Istanbul هو فندق عصري وحديث في قلب اسطنبول مع إطلالات خلابة على البوسفور. يتميز فندقنا بالتصميم المعاصر الذي يجمع بين الراحة والرفاهية، ويقدم خدمة فائقة للضيوف. مع الغرف الأنيقة ومطاعم الطعام الراقية وسبا مجهز بالكامل، ستكون إقامتك لا تُنسى.',
+    features: [
+      'غرف عصرية وأجنحة مع إطلالات على البوسفور',
+      'مركز سبا وولنس بالخدمة الكاملة',
+      'عدة مطاعم طعام راقية',
+      'مركز لياقة بدنية مجهز بأحدث التقنيات',
+      'مسبح داخلي',
+      'خدمة غرف على مدار 24 ساعة',
+      'خدمة كونسيرج مخصصة',
+      'قاعات اجتماعات ومناسبات'
+    ],
+    roomTypes: [
+      {
+        name: 'غرفة قياسية',
+        size: '35 متر مربع',
+        maxGuests: 2,
+        price: 420,
+        features: ['سرير كوين', 'إطلالة على المدينة', 'حمام رخام']
+      },
+      {
+        name: 'غرفة ديلوكس',
+        size: '45 متر مربع',
+        maxGuests: 2,
+        price: 520,
+        features: ['سرير كينج', 'إطلالة على البوسفور', 'حمام رخام', 'مكتب عمل']
+      },
+      {
+        name: 'جنحة تنفيذية',
+        size: '65 متر مربع',
+        maxGuests: 3,
+        price: 680,
+        features: ['سرير كينج', 'إطلالة على البوسفور', 'منطقة جلوس منفصلة', 'حمام رخام']
+      },
+      {
+        name: 'جنحة رئاسية',
+        size: '120 متر مربع',
+        maxGuests: 4,
+        price: 1200,
+        features: ['سرير كينج', 'إطلالة على البوسفور', 'منطقة جلوس منفصلة', 'حمام ضيوف', 'تراس خاص']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'غوموشسويو مح. بالومجو شك. رقم:1، 34349 بشيكتاش، اسطنبول، تركيا'
     }
   }
 }

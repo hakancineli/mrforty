@@ -138,13 +138,13 @@ const hotelsData = {
     rating: 4.9,
     reviews: 412,
     price: 280,
-    image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+    image: '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-1.jpeg',
     gallery: [
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-2.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-3.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-4 .jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-5 .jpeg'
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-1.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-2.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-3.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-4%20.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-5%20.jpeg'
     ],
     amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
     description: 'Kapadokyanın kalbinde eşsiz mağara otel deneyimi.',
@@ -259,7 +259,7 @@ const hotelsData = {
   },
   5: {
     id: 5,
-    name: 'The Land of Legends',
+    name: 'The Land of Legends Kingdom',
     location: 'Bodrum, Türkiye',
     rating: 4.8,
     reviews: 167,
@@ -273,8 +273,8 @@ const hotelsData = {
       '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
-    description: 'Muhteşem Akdeniz manzarasına sahip özel sahil tesisi',
-    fullDescription: 'The Land of Legends Kingdom, muhteşem Akdeniz manzarasına sahip özel bir sahil tesisidir. Bu lüks destinasyon, dünya standartlarındaki olanakları olağanüstü hizmetle birleştirerek unutulmaz bir deneyim sunar. Berrak plajlardan gourmet yemeklere ve heyecan verici eğlence seçeneklerine kadar, konaklamanızın her aspecti beklentileri aşmak ve kalıcı anılar yaratmak için tasarlanmıştır.',
+    description: 'Ege Denizi manzaralı özel sahil tesisi',
+    fullDescription: 'The Land of Legends Kingdom, Ege Denizi manzaralı özel bir sahil tesisidir. Bu lüks destinasyon, dünya standartlarındaki olanakları olağanüstü hizmetle birleştirerek unutulmaz bir deneyim sunar. Berrak plajlardan gourmet yemeklere ve heyecan verici eğlence seçeneklerine kadar, konaklamanızın her aspecti beklentileri aşmak ve kalıcı anılar yaratmak için tasarlanmıştır.',
     features: [
       'Akdeniz manzaralı özel sahil konumu',
       'Su kaydırakları dahil olmak üzere çok sayıda yüzme havuzu',
@@ -316,9 +316,73 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 506 641 17 85',
+      phone: '+90 506 641 17 83',
       email: 'info@fortytravel.com',
       address: 'Gümüşlük, Bodrum, Muğla, Türkiye'
+    }
+  },
+  6: {
+    id: 6,
+    name: 'CVK Park Bosphorus Hotel Istanbul',
+    location: 'İstanbul, Türkiye',
+    rating: 4.7,
+    reviews: 289,
+    price: 420,
+    image: '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+    gallery: [
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-1.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-2.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-3.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'concierge', 'room-service'],
+    description: 'Boğaz manzaralı modern ve şık otel',
+    fullDescription: 'CVK Park Bosphorus Hotel Istanbul, İstanbulun kalbinde Boğaz manzaralı modern ve şık bir oteldir. Otelimiz, konuklar için konfor ve lüksü birleştiren contemporary tasarım ve üstün hizmet sunar. Şık odalar, fine dining restoranlar ve tam donanımlı spa ile konaklamanız unutulmaz olacaktır.',
+    features: [
+      'Boğaz manzaralı modern odalar ve suitler',
+      'Tam hizmetli spa ve wellness merkezi',
+      'Birden fazla fine dining restoran',
+      'Son teknoloji fitness merkezi',
+      'Kapalı yüzme havuzu',
+      '24 saat oda servisi',
+      'Özel concierge hizmeti',
+      'Toplantı ve etkinlik alanları'
+    ],
+    roomTypes: [
+      {
+        name: 'Standart Oda',
+        size: '35 m²',
+        maxGuests: 2,
+        price: 420,
+        features: ['Queen yatak', 'Şehir manzarası', 'Mermer banyo']
+      },
+      {
+        name: 'Deluxe Oda',
+        size: '45 m²',
+        maxGuests: 2,
+        price: 520,
+        features: ['King yatak', 'Boğaz manzarası', 'Mermer banyo', 'Çalışma masası']
+      },
+      {
+        name: 'Executive Suit',
+        size: '65 m²',
+        maxGuests: 3,
+        price: 680,
+        features: ['King yatak', 'Boğaz manzarası', 'Ayrı oturma alanı', 'Mermer banyo']
+      },
+      {
+        name: 'Presidential Suit',
+        size: '120 m²',
+        maxGuests: 4,
+        price: 1200,
+        features: ['King yatak', 'Boğaz manzarası', 'Ayrı oturma alanı', 'Misafir banyosu', 'Özel teras']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'Gümüşsuyu Mah. Balmumcu Sk. No:1, 34349 Beşiktaş, İstanbul, Türkiye'
     }
   }
 }

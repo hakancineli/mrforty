@@ -12,7 +12,7 @@ export default function ToursPage() {
       price: 89,
       rating: 4.8,
       reviews: 156,
-      image: '/tours/İstanbul Boğaz Turu /İstanbul Boğaz Turu.jpeg',
+      image: '/tours/istanbul-bogaz-turu.jpeg',
       category: 'cruise',
       difficulty: 'سهل',
       groupSize: '2-20',

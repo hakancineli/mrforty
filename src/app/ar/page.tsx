@@ -33,7 +33,7 @@ export default function ArPage() {
       rating: 4.9,
       reviews: 412,
       price: 280,
-      image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+      image: '/hotels/Kapadokya Cave Resort/Kapadokya Cave Resort-1.jpeg',
       amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
       description: 'تجربة فاخرة للإقامة في الكهوف السحرية في قلب كابادوكيا.'
     },
@@ -156,7 +156,7 @@ export default function ArPage() {
       price: 180,
       rating: 4.8,
       reviews: 125,
-      image: '/tours/Sapanca Maşukiye/Sapanca Maşukiye.jpeg',
+      image: '/tours/Sapanca Masukiye/Sapanca Masukiye.jpeg',
       category: 'nature',
       difficulty: 'سهل',
       groupSize: '2-15',

@@ -57,7 +57,7 @@ const hotels = [
     rating: 4.9,
     reviews: 412,
     price: 280,
-    image: '/hotels/cave-resort.jpg',
+    image: '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-1.jpeg',
     amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
     description: 'Unique cave hotel experience in the heart of Cappadocia',
     rooms: [

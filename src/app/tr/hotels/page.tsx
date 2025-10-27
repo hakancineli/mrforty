@@ -29,28 +29,17 @@ export default function TrHotelsPage() {
     },
     {
       id: 3,
-      name: 'Museum Hotel İstanbul',
-      location: 'İstanbul, Türkiye',
-      rating: 4.6,
-      reviews: 189,
-      price: 320,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
-      description: 'Tarihi Sultanahmet bölgesindeki butik otel',
-    },
-    {
-      id: 4,
       name: 'Kapadokya Mağara Oteli',
       location: 'Kapadokya, Türkiye',
       rating: 4.9,
       reviews: 412,
       price: 280,
-      image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+      image: '/hotels/Kapadokya Cave Resort/Kapadokya Cave Resort-1.jpeg',
       amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
       description: 'Kapadokyanın kalbinde eşsiz mağara otel Deneyimi',
     },
     {
-      id: 5,
+      id: 4,
       name: 'Titanic Mardan Palace',
       location: 'Antalya, Türkiye',
       rating: 4.8,
@@ -61,8 +50,8 @@ export default function TrHotelsPage() {
       description: 'Akdeniz kıyısındaki lüks saray tarzı resort',
     },
     {
-      id: 6,
-      name: 'The Land of Legends',
+      id: 5,
+      name: 'The Land of Legends Kingdom',
       location: 'Bodrum, Türkiye',
       rating: 4.8,
       reviews: 167,
@@ -70,6 +59,17 @@ export default function TrHotelsPage() {
       image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
       description: 'Ege Denizi manzaralı özel sahil tesisi',
+    },
+    {
+      id: 6,
+      name: 'CVK Park Bosphorus Hotel Istanbul',
+      location: 'İstanbul, Türkiye',
+      rating: 4.7,
+      reviews: 289,
+      price: 420,
+      image: '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'concierge', 'room-service'],
+      description: 'Boğaz manzaralı modern ve şık otel',
     }
   ]
 
@@ -95,10 +95,10 @@ export default function TrHotelsPage() {
         <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 pt-20">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
-              Türkiye\'deki Lüks Oteller
+              Türkiye'deki Lüks Oteller
             </h1>
             <p className="text-xl max-w-2xl mx-auto opacity-90">
-              Unutulmaz deneyimler için seçkin premium konaklamalar',
+              Unutulmaz deneyimler için seçkin premium konaklamalar
             </p>
           </div>
         </div>

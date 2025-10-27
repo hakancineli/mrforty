@@ -29,23 +29,12 @@ export default function HotelsPage() {
     },
     {
       id: 3,
-      name: 'Museum Hotel Istanbul',
-      location: 'Istanbul, Turkey',
-      rating: 4.6,
-      reviews: 189,
-      price: 320,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
-      description: 'Boutique hotel in the historic Sultanahmet district'
-    },
-    {
-      id: 4,
       name: 'Cappadocia Cave Resort',
       location: 'Cappadocia, Turkey',
       rating: 4.9,
       reviews: 412,
       price: 280,
-      image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+      image: '/hotels/Kapadokya Cave Resort/Kapadokya Cave Resort-1.jpeg',
       amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
       description: 'Unique cave hotel experience in the heart of Cappadocia'
     },
@@ -62,7 +51,7 @@ export default function HotelsPage() {
     },
     {
       id: 5,
-      name: 'The Land of Legends',
+      name: 'The Land of Legends Kingdom',
       location: 'Bodrum, Turkey',
       rating: 4.8,
       reviews: 167,
@@ -70,6 +59,17 @@ export default function HotelsPage() {
       image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
       description: 'Exclusive beachfront resort with stunning Aegean Sea views'
+    },
+    {
+      id: 6,
+      name: 'CVK Park Bosphorus Hotel Istanbul',
+      location: 'Istanbul, Turkey',
+      rating: 4.7,
+      reviews: 289,
+      price: 420,
+      image: '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'concierge', 'room-service'],
+      description: 'Modern and stylish hotel with Bosphorus views'
     }
   ]
 

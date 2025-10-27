@@ -138,13 +138,13 @@ const hotelsData = {
     rating: 4.9,
     reviews: 412,
     price: 280,
-    image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+    image: '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-1.jpeg',
     gallery: [
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-2.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-3.jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-4 .jpeg',
-      '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-5 .jpeg'
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-1.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-2.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-3.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-4%20.jpeg',
+      '/hotels/Kapadokya%20Cave%20Resort/Kapadokya%20Cave%20Resort-5%20.jpeg'
     ],
     amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
     description: 'Unique cave hotel experience in the heart of Cappadocia.',
@@ -259,7 +259,7 @@ const hotelsData = {
   },
   5: {
     id: 5,
-    name: 'The Land of Legends',
+    name: 'The Land of Legends Kingdom',
     location: 'Bodrum, Turkey',
     rating: 4.8,
     reviews: 167,
@@ -273,7 +273,7 @@ const hotelsData = {
       '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
-    description: 'Exclusive beachfront resort with stunning Mediterranean Sea views',
+    description: 'Exclusive beachfront resort with stunning Aegean Sea views',
     fullDescription: 'The Land of Legends Kingdom is an exclusive beachfront resort offering stunning views of the Aegean Sea. This luxurious destination combines world-class amenities with exceptional service to create an unforgettable experience. From pristine beaches to gourmet dining and thrilling entertainment options, every aspect of your stay is designed to exceed expectations and create lasting memories.',
     features: [
       'Exclusive beachfront location with Mediterranean Sea views',
@@ -316,9 +316,73 @@ const hotelsData = {
       }
     ],
     contact: {
-      phone: '+90 506 641 17 85',
+      phone: '+90 506 641 17 83',
       email: 'info@fortytravel.com',
       address: 'Gümüşlük, Bodrum, Muğla, Turkey'
+    }
+  },
+  6: {
+    id: 6,
+    name: 'CVK Park Bosphorus Hotel Istanbul',
+    location: 'Istanbul, Turkey',
+    rating: 4.7,
+    reviews: 289,
+    price: 420,
+    image: '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+    gallery: [
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-1.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-2.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-3.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+      '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'concierge', 'room-service'],
+    description: 'Modern and stylish hotel with Bosphorus views',
+    fullDescription: 'CVK Park Bosphorus Hotel Istanbul is a modern and stylish hotel in the heart of Istanbul with stunning Bosphorus views. Our hotel combines contemporary design with superior service, offering comfort and luxury for our guests. With elegant rooms, fine dining restaurants, and a fully equipped spa, your stay will be unforgettable.',
+    features: [
+      'Modern rooms and suites with Bosphorus views',
+      'Full-service spa and wellness center',
+      'Multiple fine dining restaurants',
+      'State-of-the-art fitness center',
+      'Indoor swimming pool',
+      '24-hour room service',
+      'Dedicated concierge service',
+      'Meeting and event spaces'
+    ],
+    roomTypes: [
+      {
+        name: 'Standard Room',
+        size: '35 sqm',
+        maxGuests: 2,
+        price: 420,
+        features: ['Queen bed', 'City view', 'Marble bathroom']
+      },
+      {
+        name: 'Deluxe Room',
+        size: '45 sqm',
+        maxGuests: 2,
+        price: 520,
+        features: ['King bed', 'Bosphorus view', 'Marble bathroom', 'Work desk']
+      },
+      {
+        name: 'Executive Suite',
+        size: '65 sqm',
+        maxGuests: 3,
+        price: 680,
+        features: ['King bed', 'Bosphorus view', 'Separate living area', 'Marble bathroom']
+      },
+      {
+        name: 'Presidential Suite',
+        size: '120 sqm',
+        maxGuests: 4,
+        price: 1200,
+        features: ['King bed', 'Bosphorus view', 'Separate living area', 'Guest bathroom', 'Private terrace']
+      }
+    ],
+    contact: {
+      phone: '+90 532 123 4567',
+      email: 'info@fortytravel.com',
+      address: 'Gümüşsuyu Mah. Balmumcu Sk. No:1, 34349 Beşiktaş, Istanbul, Turkey'
     }
   }
 }

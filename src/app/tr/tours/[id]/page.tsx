@@ -421,7 +421,7 @@ const toursData = {
     rating: 4.8,
     reviews: 125,
     price: 180,
-    image: '/tours/Sapanca Maşukiye/Sapanca Maşukiye.jpeg',
+    image: '/tours/Sapanca%20Masukiye/Sapanca%20Masukiye.jpeg',
     category: 'nature',
     difficulty: 'Kolay',
     groupSize: '2-15',

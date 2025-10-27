@@ -35,28 +35,17 @@ export default function HotelsPage() {
     },
     {
       id: 3,
-      name: 'فندق المتحف اسطنبول',
-      location: 'اسطنبول',
-      rating: 4.6,
-      reviews: 189,
-      price: 320,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
-      description: 'فندق بوتيك في حي السلطان أحمد التاريخي'
-    },
-    {
-      id: 4,
       name: 'منتجع كهوف كابادوكيا',
       location: 'كابادوكيا',
       rating: 4.9,
       reviews: 412,
       price: 280,
-      image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
+      image: '/hotels/Kapadokya Cave Resort/Kapadokya Cave Resort-1.jpeg',
       amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
       description: 'تجربة فندق كهوف فريدة في قلب كابادوكيا'
     },
     {
-      id: 5,
+      id: 4,
       name: 'تيتانيك ماردان بالاس',
       location: 'أنطاليا',
       rating: 4.8,
@@ -67,8 +56,8 @@ export default function HotelsPage() {
       description: 'منتجع على طراز قصر فاخر على ساحل البحر المتوسط مع مرافق عالمية'
     },
     {
-      id: 6,
-      name: 'ذا لاند أوف ليجندز',
+      id: 5,
+      name: 'ذا لاند أوف ليجندز كينغدوم',
       location: 'بودروم',
       rating: 4.8,
       reviews: 167,
@@ -76,6 +65,17 @@ export default function HotelsPage() {
       image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
       description: 'منتجع شاطئي حصري مع إطلالات خلابة على بحر إيجه'
+    },
+    {
+      id: 6,
+      name: 'فندق CVK Park Bosphorus Hotel Istanbul',
+      location: 'اسطنبول',
+      rating: 4.7,
+      reviews: 289,
+      price: 420,
+      image: '/hotels/CVK Park Bosphorus Hotel Istanbul /CVK Park Bosphorus Hotel Istanbul-4.jpeg',
+      amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'concierge', 'room-service'],
+      description: 'فندق عصري وحديث مع إطلالات على البوسفور'
     }
   ]
 
