@@ -92,7 +92,7 @@ export default function TrHotelsPage() {
             className="object-cover opacity-30"
           />
         </div>
-        <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
+        <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 pt-20">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
               Türkiye\'deki Lüks Oteller

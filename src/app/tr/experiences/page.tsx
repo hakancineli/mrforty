@@ -118,7 +118,7 @@ export default function TrExperiencesPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
+        <div className="relative z-10 h-full flex items-center justify-center text-white px-4 pt-20">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
               Türkiye'deki Benzersiz Deneyimler

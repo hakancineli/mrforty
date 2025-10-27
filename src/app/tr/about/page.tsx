@@ -22,13 +22,13 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
+        <div className="relative z-10 h-full flex items-center justify-center text-white px-4 pt-20">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
               Hakkımızda
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-              Türkiye\'deki lüks seyahat deneyimlerinizde güvenilir partneriniz
+              Türkiye'deki lüks seyahat deneyimlerinizde güvenilir partneriniz
             </p>
           </div>
         </div>
@@ -64,14 +64,14 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Ekibimizle Tanışın</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {[
               {
                 id: 1,
                 name: 'Seyfettin KIRK',
                 position: 'Genel Müdür',
                 image: '/team/seyfettin.jpg',
-                bio: '15 yıllık lüks seyahat ve turizm alanındaki deneyimiyle, ekibimize tutku ve şevkete geçmeyen yolculuklar yaratma konusunda tutku ve uzmanlıkla liderlik eden Seyfettin, MrForty\'in kalbi ve ruhudur.',
+                bio: '25 yıllık lüks seyahat ve turizm alanındaki deneyimiyle, ekibimize tutku ve uzmanlıkla unutulmaz yolculuklar yaratma konusunda liderlik eden Seyfettin, MrForty\'in kalbi ve ruhudur.',
                 email: 'seyfettin@mrfortytravel.com',
                 phone: '+90 506 641 17 85',
                 linkedin: 'https://linkedin.com/in/seyfettin-kirk'
@@ -79,58 +79,56 @@ export default function AboutPage() {
               {
                 id: 2,
                 name: 'Mehmet KIRK',
-                position: 'Tur Rehberi',
+                position: 'Rezervasyon Müdürü',
                 image: '/team/mehmet.jpg',
-                bio: 'Mehmet, Türkiye tarih ve kültürü konusunda geniş bilgiye sahip uzman rehberimizdir. Akıcı İngilizce, Türkçe ve Arapça konuşması, onu uluslararası müşteriler için mükemmel bir rehber yapmaktadır.',
+                bio: '25 yıllık seyahat rezervasyonları ve müşteri hizmetleri deneyimiyle, Mehmet rezervasyon müdürümüz olarak uluslararası müşterilerimizin tüm ihtiyaçlarında sorunsuz iletişim sağlamaktadır. Akıcı İngilizce, Türkçe ve Arapça konuşmasıyla müşteri memnuniyetini en üst düzeyde tutmaktadır.',
                 email: 'mehmet@mrfortytravel.com',
                 phone: '+90 506 641 17 85',
                 linkedin: 'https://linkedin.com/in/mehmet-ozkan'
               },
              
             ].map((member) => (
-              <div key={member.id} className="text-center">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{member.name}</h3>
-                    <p className="text-gray-600 mb-2">{member.position}</p>
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{member.bio}</p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm mt-4">
-                      {member.id === 1 || member.id === 2 ? (
-                        <>
-                          <div className="flex items-center gap-2 text-gray-600">
-                            <Mail className="w-4 h-4" />
-                            <span>{member.email}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-gray-600">
-                            <Phone className="w-4 h-4" />
-                            <span>{member.phone}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-gray-600 mt-2">
-                            <a
-                              href={`https://wa.me/${member.phone.replace(/\s/g, '')}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
-                            >
-                              <MessageCircle className="w-4 h-4" />
-                              <span>WhatsApp</span>
-                            </a>
-                          </div>
-                          <div className="flex items-center gap-2 text-gray-600">
-                            <Clock className="w-4 h-4" />
-                            <span>Pazartesi-Cuma: 09:00-18:00</span>
-                          </div>
-                        </>
-                      ) : null}
-                    </div>
+              <div key={member.id} className="flex flex-col md:flex-row items-center gap-8">
+                <div className="relative w-32 h-32 mx-auto mb-6 md:mb-0 overflow-hidden rounded-full flex-shrink-0">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="text-center md:text-left flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-gray-600 mb-4">{member.position}</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{member.bio}</p>
+                  <div className="flex flex-col gap-2 justify-center text-sm">
+                    {member.id === 1 || member.id === 2 ? (
+                      <>
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <Mail className="w-4 h-4" />
+                          <span>{member.email}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <Phone className="w-4 h-4" />
+                          <span>{member.phone}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <a
+                            href={`https://wa.me/${member.phone.replace(/\s/g, '')}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
+                          >
+                            <MessageCircle className="w-4 h-4" />
+                            <span>WhatsApp Hesabı</span>
+                          </a>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <Clock className="w-4 h-4" />
+                          <span>Pazartesi-Cuma: 09:00-18:00</span>
+                        </div>
+                      </>
+                    ) : null}
                   </div>
                 </div>
               </div>

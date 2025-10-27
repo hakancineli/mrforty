@@ -13,7 +13,7 @@ export default function AboutPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-600 to-primary-800">
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="relative z-10 text-center text-white px-4 pt-20">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif">
             من نحن
           </h1>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 name: 'سيف الدين كيرك',
                 position: 'المدير العام',
                 image: '/team/seyfettin.jpg',
-                bio: 'مع أكثر من 15 عامًا من الخبرة في السفر الفاخر والسياحة، يقود سيف الدين فريقنا بشغف وخبرة في إنشاء رحلات لا تُنسى لعملائنا.',
+                bio: 'مع أكثر من 25 عامًا من الخبرة في السفر الفاخر والسياحة، يقود سيف الدين فريقنا بشغف وخبرة في إنشاء رحلات لا تُنسى لعملائنا.',
                 email: 'seyfettin@mrfortytravel.com',
                 phone: '+90 506 641 17 85',
                 linkedin: 'https://linkedin.com/in/seyfettin-kirk'
@@ -67,9 +67,9 @@ export default function AboutPage() {
               {
                 id: 2,
                 name: 'محميت أوزكان',
-                position: 'دليل الجولات',
+                position: 'مدير الحجوزات',
                 image: '/team/mehmet.jpg',
-                bio: 'محميت هو دليل الجولات الخبير لدينا بمعرفة واسعة بتاريخ تركيا وثقافتها. يتحدث الإنجليزية والتركية والعربية بطلاقة، مما يجعله مثاليًا للعملاء الدوليين.',
+                bio: 'مع أكثر من 25 عامًا من الخبرة في حجوزات السفر وخدمة العملاء، محميت هو مدير الحجوزات لدينا. يتحدث الإنجليزية والتركية والعربية بطلاقة، مما يضمن تواصلاً سلساً مع عملائنا الدوليين لجميع احتياجات الحجز.',
                 email: 'mehmet@mrfortytravel.com',
                 phone: '+90 506 641 17 85',
                 linkedin: 'https://linkedin.com/in/mehmet-ozkan'
@@ -100,7 +100,7 @@ export default function AboutPage() {
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">{member.name}</h3>
                       <p className="text-gray-600 mb-2">{member.position}</p>
                       <p className="text-gray-600 mb-4 text-sm leading-relaxed">{member.bio}</p>
-                      <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm mt-4">
+                      <div className="flex flex-col gap-2 justify-center text-sm mt-4">
                         <div className="flex items-center gap-2 text-gray-600">
                           <Mail className="w-4 h-4" />
                           <span>{member.email}</span>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                           <Phone className="w-4 h-4" />
                           <span>{member.phone}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-600 mt-2">
+                        <div className="flex items-center gap-2 text-gray-600">
                           <a
                             href={`https://wa.me/${member.phone.replace(/\s/g, '')}`}
                             target="_blank"
@@ -117,7 +117,7 @@ export default function AboutPage() {
                             className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
                           >
                             <MessageCircle className="w-4 h-4" />
-                            <span>واتساب</span>
+                            <span>حساب واتساب</span>
                           </a>
                         </div>
                       </div>

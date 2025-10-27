@@ -17,9 +17,9 @@ export default function AboutPage() {
     {
       id: 2,
       name: 'Mehmet KIRK',
-      position: 'Tour Guide',
+      position: 'Reservation Manager',
       image: '/team/mehmet.jpg',
-      bio: 'Mehmet is our expert tour guide with extensive knowledge of Turkish history and culture. He speaks fluent English, Turkish, and Arabic, making him perfect for international clients.',
+      bio: 'With over 25 years of experience in travel booking and customer service, Mehmet is our reservation manager. He speaks fluent English, Turkish, and Arabic, ensuring smooth communication with our international clients for all their reservation needs.',
       email: 'mehmet@mrfortytravel.com',
       phone: '+90 506 641 17 83',
       linkedin: 'https://linkedin.com/in/mehmet-ozkan'
@@ -63,7 +63,7 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
+        <div className="relative z-10 h-full flex items-center justify-center text-white px-4 pt-20">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
               Hakkımızda
@@ -121,7 +121,7 @@ export default function AboutPage() {
                   <p className="text-gray-600 mb-4">{member.position}</p>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed">{member.bio}</p>
                   {member.id === 1 || member.id === 2 ? (
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+                    <div className="flex flex-col gap-2 justify-center text-sm">
                       <div className="flex items-center gap-2 text-gray-600">
                         <Mail className="w-4 h-4" />
                         <span>{member.email}</span>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                         <Phone className="w-4 h-4" />
                         <span>{member.phone}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-600 mt-2">
+                      <div className="flex items-center gap-2 text-gray-600">
                         <a
                           href={`https://wa.me/${member.phone.replace(/\s/g, '')}`}
                           target="_blank"
@@ -138,7 +138,7 @@ export default function AboutPage() {
                           className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
                         >
                           <MessageCircle className="w-4 h-4" />
-                          <span>WhatsApp</span>
+                          <span>WhatsApp Account</span>
                         </a>
                       </div>
                     </div>

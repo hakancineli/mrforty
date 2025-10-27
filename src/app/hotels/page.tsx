@@ -12,7 +12,7 @@ export default function HotelsPage() {
       rating: 4.8,
       reviews: 324,
       price: 450,
-      image: '/hotels/ritz-carlton.jpg',
+      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'Luxury hotel in the heart of Istanbul with stunning Bosphorus views'
     },
@@ -23,7 +23,7 @@ export default function HotelsPage() {
       rating: 4.7,
       reviews: 256,
       price: 380,
-      image: '/hotels/swissotel.jpg',
+      image: '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
       description: 'Elegant hotel overlooking the Bosphorus with world-class amenities'
     },
@@ -34,7 +34,7 @@ export default function HotelsPage() {
       rating: 4.6,
       reviews: 189,
       price: 320,
-      image: '/hotels/museum-hotel.jpg',
+      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
       description: 'Boutique hotel in the historic Sultanahmet district'
     },
@@ -45,7 +45,7 @@ export default function HotelsPage() {
       rating: 4.9,
       reviews: 412,
       price: 280,
-      image: '/hotels/cave-resort.jpg',
+      image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
       amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
       description: 'Unique cave hotel experience in the heart of Cappadocia'
     },
@@ -92,7 +92,7 @@ export default function HotelsPage() {
             className="object-cover opacity-30"
           />
         </div>
-        <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
+        <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 pt-20">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
               Luxury Hotels in Turkey

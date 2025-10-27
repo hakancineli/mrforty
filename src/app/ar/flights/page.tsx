@@ -10,7 +10,7 @@ export default function FlightsPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-600 to-primary-800">
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="relative z-10 text-center text-white px-4 pt-20">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif">
             الرحلات الجوية
           </h1>
