@@ -12,9 +12,9 @@ export default function TrHotelsPage() {
       rating: 4.8,
       reviews: 324,
       price: 450,
-      image: '/hotels/ritz-carlton.jpg',
+      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
-      description: 'İstanbulun kalbinde Boğaz manzaralı lüks otel'
+      description: 'İstanbulun kalbinde Boğaz manzaralı lüks otel',
     },
     {
       id: 2,
@@ -23,9 +23,9 @@ export default function TrHotelsPage() {
       rating: 4.7,
       reviews: 256,
       price: 380,
-      image: '/hotels/swissotel.jpg',
+      image: '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
-      description: 'Boğaz manzaralı, dünya standartlarında olanaklara sahip şık otel'
+      description: 'Boğaz manzaralı, dünya standartlarında olanaklara sahip şık otel',
     },
     {
       id: 3,
@@ -34,9 +34,9 @@ export default function TrHotelsPage() {
       rating: 4.6,
       reviews: 189,
       price: 320,
-      image: '/hotels/museum-hotel.jpg',
+      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
-      description: 'Tarihi Sultanahmet bölgesindeki butik otel'
+      description: 'Tarihi Sultanahmet bölgesindeki butik otel',
     },
     {
       id: 4,
@@ -45,12 +45,12 @@ export default function TrHotelsPage() {
       rating: 4.9,
       reviews: 412,
       price: 280,
-      image: '/hotels/cave-resort.jpg',
+      image: '/hotels/Kapadokya Cave Resort /Kapadokya Cave Resort-1.jpeg',
       amenities: ['wifi', 'spa', 'restaurant', 'tour-desk'],
-      description: 'Kapadokyanın kalbinde eşsiz mağara otel deneyimi'
+      description: 'Kapadokyanın kalbinde eşsiz mağara otel Deneyimi',
     },
     {
-      id: 4,
+      id: 5,
       name: 'Titanic Mardan Palace',
       location: 'Antalya, Türkiye',
       rating: 4.8,
@@ -58,10 +58,10 @@ export default function TrHotelsPage() {
       price: 320,
       image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
-      description: 'Akdeniz kıyısındaki lüks saray tarzı resort'
+      description: 'Akdeniz kıyısındaki lüks saray tarzı resort',
     },
     {
-      id: 5,
+      id: 6,
       name: 'The Land of Legends',
       location: 'Bodrum, Türkiye',
       rating: 4.8,
@@ -69,7 +69,7 @@ export default function TrHotelsPage() {
       price: 350,
       image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
-      description: 'Ege Denizi manzaralı özel sahil tesisi'
+      description: 'Ege Denizi manzaralı özel sahil tesisi',
     }
   ]
 
@@ -98,7 +98,7 @@ export default function TrHotelsPage() {
               Türkiye\'deki Lüks Oteller
             </h1>
             <p className="text-xl max-w-2xl mx-auto opacity-90">
-              Unutulmaz deneyimler için seçkin premium konaklamalar
+              Unutulmaz deneyimler için seçkin premium konaklamalar',
             </p>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function TrHotelsPage() {
             Özel Otel Fırsatları Alın
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Özel teklifler ve lüks otel önerileri için bültenimize abone olun
+            Özel teklifler ve lüks otel önerileri için bültenimize abone Olun
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input

@@ -165,7 +165,7 @@ const toursData = {
     rating: 4.7,
     reviews: 198,
     price: 75,
-    image: '/images/destinations/pamukkale.jpg',
+    image: '/tours/Cappadocia Hot Air Balloon/Ephesus Ancient City Tour/Ephesus Ancient City Tour.jpeg',
     category: 'cultural',
     difficulty: 'سهل',
     groupSize: '2-15',

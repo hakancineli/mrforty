@@ -33,7 +33,7 @@ export default function TransfersPage() {
       to: 'Beach Resorts',
       price: 65,
       duration: '90 min',
-      image: '/transfers/antalya-airport.jpg',
+      image: '/transfers/Antalya Airport Transfer.jpeg',
       vehicle: 'Mercedes-Benz E-Class',
       features: ['WiFi', 'Bottled Water', 'Professional Driver']
     },
@@ -44,7 +44,7 @@ export default function TransfersPage() {
       to: 'City Center',
       price: 50,
       duration: '45 min',
-      image: '/transfers/bodrum-airport.jpg',
+      image: '/transfers/Bodrum Airport Transfer.jpeg',
       vehicle: 'Mercedes-Benz V-Class',
       features: ['WiFi', 'Bottled Water', 'Professional Driver']
     },
@@ -55,7 +55,7 @@ export default function TransfersPage() {
       to: 'City Center',
       price: 75,
       duration: '75 min',
-      image: '/transfers/cappadocia-airport.jpg',
+      image: '/transfers/Kapadokya Havalimanı Transferi.jpeg',
       vehicle: 'Mercedes-Benz V-Class',
       features: ['WiFi', 'Bottled Water', 'Professional Driver']
     }
@@ -168,19 +168,17 @@ export default function TransfersPage() {
               </div>
               
               <div className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">{transfer.title}</h3>
-                    <div className="flex items-center text-gray-600 text-sm">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      <span>{transfer.from} → {transfer.to}</span>
-                    </div>
+                <div className="mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-1">{transfer.title}</h3>
+                  <div className="flex items-center text-gray-600 text-sm">
+                    <MapPin className="w-4 h-4 mr-1" />
+                    <span>{transfer.from} → {transfer.to}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    <span className="font-medium">4.9</span>
-                    <span className="text-gray-600 text-sm">(127 reviews)</span>
-                  </div>
+                </div>
+                <div className="flex items-center gap-1 mb-4">
+                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  <span className="font-medium">4.9</span>
+                  <span className="text-gray-600 text-sm">(127 reviews)</span>
                 </div>
                 
                 <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
@@ -199,13 +197,15 @@ export default function TransfersPage() {
                     <MapPin className="w-4 h-4" />
                     <span>Available 24/7</span>
                   </div>
-                  <Link 
-                    href={`/transfers/${transfer.id}`}
+                  <a
+                    href={`https://wa.me/905066411785?text=${encodeURIComponent(`BOOK NOW - ${transfer.title}\n\n📅 Date: \n⏰ Time: \n👥 Passengers: \n📍 From: ${transfer.from}\n📍 To: ${transfer.to}\n\nPlease fill in the details above and we'll confirm your booking.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-secondary text-sm px-4 py-2 flex items-center gap-1"
                   >
-                    View Details
+                    BOOK NOW
                     <ChevronRight className="w-4 h-4" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

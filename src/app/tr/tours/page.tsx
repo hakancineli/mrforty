@@ -130,7 +130,7 @@ export default function TrToursPage() {
               Türkiye\'deki Unutulmaz Turlar
             </h1>
             <p className="text-xl max-w-2xl mx-auto opacity-90">
-              Antik kalıntılardan doğal harikalara kadar Türkiye\'yi uzman rehberlerimizle keşfedin
+              Antik kalıntılardan doğal harikalara kadar Türkiye\'yi uzman rehberlerimizle Keşfedin
             </p>
           </div>
         </div>
@@ -289,7 +289,7 @@ export default function TrToursPage() {
             Aradığınızı bulamadınız mı?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Seyahat uzmanlarımızın sizin için özel bir tur oluşturmasına izin verin
+            Seyahat uzmanlarımızın sizin için özel bir tur oluşturmasına izin Verin
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-secondary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

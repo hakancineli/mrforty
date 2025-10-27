@@ -111,7 +111,7 @@ export default function ArPage() {
       price: 75,
       rating: 4.7,
       reviews: 198,
-      image: '/images/destinations/pamukkale.jpg',
+      image: '/tours/Cappadocia Hot Air Balloon/Ephesus Ancient City Tour/Ephesus Ancient City Tour.jpeg',
       category: 'cultural',
       difficulty: 'سهل',
       groupSize: '2-15',
@@ -150,18 +150,18 @@ export default function ArPage() {
     },
     {
       id: 6,
-      title: 'تسلق جبل أرارات',
-      location: 'شرق الأناضول',
-      duration: '5 أيام',
-      price: 680,
-      rating: 4.6,
-      reviews: 89,
-      image: '/images/destinations/fethiye.jpg',
-      category: 'adventure',
-      difficulty: 'صعب',
-      groupSize: '4-8',
-      highlights: ['محاولة الوصول للقمة', 'بحيرات الجليدية', 'ثقافة كردية'],
-      description: 'تحدى نفسك مع أعلى قمة في تركيا مع مرشقي الجبال الخبراء.'
+      title: 'جولة سابانكا ماسوكيه',
+      location: 'سابانكا',
+      duration: 'يوم واحد',
+      price: 180,
+      rating: 4.8,
+      reviews: 125,
+      image: '/tours/Sapanca Maşukiye/Sapanca Maşukiye.jpeg',
+      category: 'nature',
+      difficulty: 'سهل',
+      groupSize: '2-15',
+      highlights: ['بحيرة سابانكا', 'غابة ماسوكيه', 'طبيعة خلابة'],
+      description: 'استمتع بيوم واحد في سابانكا ماسوكيه مع جولتنا الموجهة.'
     }
   ]
 

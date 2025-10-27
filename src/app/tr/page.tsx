@@ -111,7 +111,7 @@ export default function TrPage() {
       price: 75,
       rating: 4.7,
       reviews: 198,
-      image: '/images/destinations/pamukkale.jpg',
+      image: '/tours/Cappadocia Hot Air Balloon/Ephesus Ancient City Tour/Ephesus Ancient City Tour.jpeg',
       category: 'cultural',
       difficulty: 'kolay',
       groupSize: '2-15',
@@ -150,18 +150,18 @@ export default function TrPage() {
     },
     {
       id: 6,
-      title: 'Ağrı Dağı Trekking',
-      location: 'Doğu Anadolu',
-      duration: '5 gün',
-      price: 680,
-      rating: 4.6,
-      reviews: 89,
-      image: '/images/destinations/fethiye.jpg',
-      category: 'adventure',
-      difficulty: 'zorlu',
-      groupSize: '4-8',
-      highlights: ['Zirve Tırmanışı', 'Buzul Gölleri', 'Kürt Kültürü'],
-      description: 'Türkiyenin en yüksek zirvesini deneyimli dağ rehberleriyle tırmanın.'
+      title: 'Sapanca Maşukiye Turu',
+      location: 'Sapanca',
+      duration: '1 gün',
+      price: 180,
+      rating: 4.8,
+      reviews: 125,
+      image: '/tours/Sapanca Maşukiye/Sapanca Maşukiye.jpeg',
+      category: 'nature',
+      difficulty: 'kolay',
+      groupSize: '2-15',
+      highlights: ['Sapanca Gölü', 'Maşukiye Ormanı', 'Doğa manzaraları'],
+      description: 'Sapanca Maşukiye\'de bir gün geçirin ve rehberli turumuzla keyifli zamanlar yaşayın.'
     }
   ]
 
@@ -512,7 +512,7 @@ export default function TrPage() {
             Hayalinizdaki Tatil Hazır mısınız?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Uzman seyahat danışmanlarımızın sizin için mükemmel bir gezi planlamasına izin verin
+            Uzman seyahat danışmanlarımızın sizin için mükemmel bir gezi planlamasına izin Verin
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

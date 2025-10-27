@@ -46,6 +46,7 @@ export default function Header() {
         { name: 'Ana Sayfa', href: langPrefix ? `/${langPrefix}` : '/' },
         { name: 'Oteller', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'Turlar', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
+        { name: 'VIP Transfers', href: langPrefix ? `/${langPrefix}/transfers` : '/transfers' },
         { name: 'Uçuşlar', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'Deneyimler', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },
         { name: 'Hakkımızda', href: langPrefix ? `/${langPrefix}/about` : '/about' },
@@ -56,6 +57,7 @@ export default function Header() {
         { name: 'الرئيسية', href: langPrefix ? `/${langPrefix}` : '/' },
         { name: 'الفنادق', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'الجولات', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
+        { name: 'النقل VIP', href: langPrefix ? `/${langPrefix}/transfers` : '/transfers' },
         { name: 'الرحلات الجوية', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'التجارب', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },
         { name: 'من نحن', href: langPrefix ? `/${langPrefix}/about` : '/about' },
@@ -66,6 +68,7 @@ export default function Header() {
         { name: 'Home', href: langPrefix ? `/${langPrefix}` : '/' },
         { name: 'Hotels', href: langPrefix ? `/${langPrefix}/hotels` : '/hotels' },
         { name: 'Tours', href: langPrefix ? `/${langPrefix}/tours` : '/tours' },
+        { name: 'VIP Transfers', href: langPrefix ? `/${langPrefix}/transfers` : '/transfers' },
         { name: 'Flights', href: langPrefix ? `/${langPrefix}/flights` : '/flights' },
         { name: 'Experiences', href: langPrefix ? `/${langPrefix}/experiences` : '/experiences' },
         { name: 'About', href: langPrefix ? `/${langPrefix}/about` : '/about' },
@@ -83,12 +86,35 @@ export default function Header() {
       const currentPath = window.location.pathname
       const currentSearch = window.location.search
       
-      if (langCode === 'en') {
-        window.location.href = currentPath.replace(/^\/(tr|ar|ru)/, '') + currentSearch
-      } else {
-        const newPath = currentPath.replace(/^\/(en|tr|ar|ru)/, '') || '/'
-        window.location.href = `/${langCode}${newPath}` + currentSearch
+      
+      // More explicit approach
+      let cleanPath = currentPath
+      
+      // Remove language prefix if exists
+      if (cleanPath.startsWith('/en/')) {
+        cleanPath = cleanPath.substring(3)
+      } else if (cleanPath.startsWith('/tr/')) {
+        cleanPath = cleanPath.substring(3)
+      } else if (cleanPath.startsWith('/ar/')) {
+        cleanPath = cleanPath.substring(3)
+      } else if (cleanPath.startsWith('/ru/')) {
+        cleanPath = cleanPath.substring(3)
       }
+      
+      // Ensure cleanPath starts with /
+      if (!cleanPath.startsWith('/')) {
+        cleanPath = '/' + cleanPath
+      }
+      
+      // Build new URL
+      let newUrl
+      if (langCode === 'en') {
+        newUrl = cleanPath
+      } else {
+        newUrl = `/${langCode}${cleanPath}`
+      }
+      
+      window.location.href = newUrl + currentSearch
     }
   }
 

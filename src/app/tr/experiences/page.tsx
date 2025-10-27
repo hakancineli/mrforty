@@ -121,7 +121,7 @@ export default function TrExperiencesPage() {
         <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
-              Türkiye\'deki Benzersiz Deneyimler
+              Türkiye'deki Benzersiz Deneyimler
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
               Sıcak hava balonu yolculuklarından özel yacht turlarına kadar unutulmaz deneyimler keşfedin
@@ -287,7 +287,7 @@ export default function TrExperiencesPage() {
             Mükemmel Deneyiminizi Oluşturun
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Seyahat uzmanlarımızın sizin için özel bir deneyim tasarlamasına izin verin
+            Seyahat uzmanlarımızın sizin için özel bir deneyim tasarlamasına izin Verin
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-tertiary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
