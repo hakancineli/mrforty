@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { MapPin, Phone, Mail, Clock, Star, Users, Award, Image as ImageIcon } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Star, Users, Award, Image as ImageIcon, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -112,6 +112,17 @@ export default function AboutPage() {
                           <div className="flex items-center gap-2 text-gray-600">
                             <Phone className="w-4 h-4" />
                             <span>{member.phone}</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-gray-600 mt-2">
+                            <a
+                              href={`https://wa.me/${member.phone.replace(/\s/g, '')}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
+                            >
+                              <MessageCircle className="w-4 h-4" />
+                              <span>WhatsApp</span>
+                            </a>
                           </div>
                           <div className="flex items-center gap-2 text-gray-600">
                             <Clock className="w-4 h-4" />

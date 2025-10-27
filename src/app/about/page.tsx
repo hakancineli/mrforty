@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Star, Users, Award } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Star, Users, Award, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -21,7 +21,7 @@ export default function AboutPage() {
       image: '/team/mehmet.jpg',
       bio: 'Mehmet is our expert tour guide with extensive knowledge of Turkish history and culture. He speaks fluent English, Turkish, and Arabic, making him perfect for international clients.',
       email: 'mehmet@mrfortytravel.com',
-      phone: '+90 506 641 17 85',
+      phone: '+90 506 641 17 83',
       linkedin: 'https://linkedin.com/in/mehmet-ozkan'
     },
     
@@ -105,10 +105,10 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Ekibimizle Tanışın</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {team.map((member) => (
-              <div key={member.id} className="text-center">
-                <div className="relative w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
+              <div key={member.id} className="flex flex-col md:flex-row items-center gap-8">
+                <div className="relative w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full flex-shrink-0">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -116,12 +116,12 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-gray-600 mb-4">{member.position}</p>
-                <p className="text-gray-600 mb-6 text-sm leading-relaxed">{member.bio}</p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+                <div className="text-center md:text-left">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-gray-600 mb-4">{member.position}</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{member.bio}</p>
                   {member.id === 1 || member.id === 2 ? (
-                    <>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
                       <div className="flex items-center gap-2 text-gray-600">
                         <Mail className="w-4 h-4" />
                         <span>{member.email}</span>
@@ -130,11 +130,18 @@ export default function AboutPage() {
                         <Phone className="w-4 h-4" />
                         <span>{member.phone}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <Clock className="w-4 h-4" />
-                        <span>Mon-Fri: 9:00-18:00</span>
+                      <div className="flex items-center gap-2 text-gray-600 mt-2">
+                        <a
+                          href={`https://wa.me/${member.phone.replace(/\s/g, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
+                        >
+                          <MessageCircle className="w-4 h-4" />
+                          <span>WhatsApp</span>
+                        </a>
                       </div>
-                    </>
+                    </div>
                   ) : null}
                 </div>
               </div>
