@@ -182,8 +182,7 @@ export default function TrPage() {
         
         <div className="relative z-10 text-center text-white px-4 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif">
-            Türkiye'yi keşfedin
-            <span className="text-primary-400"> ile</span>
+            Türkiye'yi Mr. Forty ile keşfedin
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Türkiye'nin en güzel destinasyonlarında lüks seyahat, premium oteller ve özel turlar deneyimi
