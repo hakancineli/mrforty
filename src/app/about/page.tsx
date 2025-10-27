@@ -16,32 +16,22 @@ export default function AboutPage() {
     },
     {
       id: 2,
-      name: 'Ayşe Yılmaz',
-      position: 'Travel Consultant',
-      image: '/team/ayse.jpg',
-      bio: 'Ayşe specializes in cultural tours and luxury accommodations. With her deep knowledge of Turkish history and culture, she creates authentic experiences for our clients.',
-      email: 'ayse@mrfortytravel.com',
-      phone: '+90 212 555 0141',
-      linkedin: 'https://linkedin.com/in/ayse-yilmaz'
-    },
-    {
-      id: 3,
-      name: 'Mehmet Özkan',
+      name: 'Mehmet KIRK',
       position: 'Tour Guide',
       image: '/team/mehmet.jpg',
       bio: 'Mehmet is our expert tour guide with extensive knowledge of Turkish history and culture. He speaks fluent English, Turkish, and Arabic, making him perfect for international clients.',
       email: 'mehmet@mrfortytravel.com',
-      phone: '+90 212 555 0142',
+      phone: '+90 506 641 17 85',
       linkedin: 'https://linkedin.com/in/mehmet-ozkan'
     },
     {
-      id: 4,
+      id: 3,
       name: 'Elif Demir',
       position: 'Customer Relations',
       image: '/team/elif.jpg',
       bio: 'Elif ensures every client has a seamless experience from booking to travel. Her attention to detail and warm personality makes her the perfect point of contact for our clients.',
       email: 'elif@mrfortytravel.com',
-      phone: '+90 212 555 0143',
+      phone: '+90 506 641 17 85',
       linkedin: 'https://linkedin.com/in/elif-demir'
     }
   ]
