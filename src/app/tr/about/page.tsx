@@ -86,16 +86,7 @@ export default function AboutPage() {
                 phone: '+90 506 641 17 85',
                 linkedin: 'https://linkedin.com/in/mehmet-ozkan'
               },
-              {
-                id: 3,
-                name: 'Elif Demir',
-                position: 'Müşteri İlişkileri',
-                image: '/team/elif.jpg',
-                bio: 'Elif, her müşterinin rezervasyondan seyahate kadar sorunsuz bir deneyim yaşamasını sağlayan sıcak kişiliğimizdir. Detaylara gösterdiği özen ve samimi yaklaşımıyla müşterilerimiz için mükemmel bir iletişim noktası olmaktadır.',
-                email: 'elif@mrfortytravel.com',
-                phone: '+90 506 641 17 85',
-                linkedin: 'https://linkedin.com/in/elif-demir'
-              }
+             
             ].map((member) => (
               <div key={member.id} className="text-center">
                 <div className="flex flex-col items-center gap-4">

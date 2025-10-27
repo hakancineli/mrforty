@@ -24,16 +24,7 @@ export default function AboutPage() {
       phone: '+90 506 641 17 85',
       linkedin: 'https://linkedin.com/in/mehmet-ozkan'
     },
-    {
-      id: 3,
-      name: 'Elif Demir',
-      position: 'Customer Relations',
-      image: '/team/elif.jpg',
-      bio: 'Elif ensures every client has a seamless experience from booking to travel. Her attention to detail and warm personality makes her the perfect point of contact for our clients.',
-      email: 'elif@mrfortytravel.com',
-      phone: '+90 506 641 17 85',
-      linkedin: 'https://linkedin.com/in/elif-demir'
-    }
+    
   ]
 
   const achievements = [
@@ -113,7 +104,7 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Meet Our Team</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Ekibimizle Tanışın</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
               <div key={member.id} className="text-center">
