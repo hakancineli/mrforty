@@ -18,6 +18,7 @@ const toursData = {
     category: 'cruise',
     difficulty: 'easy',
     groupSize: '2-20',
+    duration: '3 hours',
     highlights: ['Bosphorus Bridge', 'Dolmabahçe Palace', 'Ortaköy Mosque'],
     description: 'Experience the magic of Istanbul from the water with our luxury cruise including dinner and entertainment.',
     fullDescription: 'Join us for an unforgettable evening on the Bosphorus Strait. Our luxury cruise offers stunning views of Istanbul\'s iconic landmarks, including the majestic Bosphorus Bridge, Dolmabahçe Palace, and Ortaköy Mosque. Enjoy a gourmet dinner with live entertainment as you sail through the illuminated waters of this historic waterway that separates Europe and Asia.',
@@ -92,6 +93,7 @@ const toursData = {
     category: 'adventure',
     difficulty: 'moderate',
     groupSize: '4-16',
+    duration: '1 day',
     highlights: ['Sunrise Flight', 'Fairy Chimneys', 'Underground Cities'],
     description: 'Float above the magical landscapes of Cappadocia in a hot air balloon at sunrise.',
     fullDescription: 'Experience the breathtaking beauty of Cappadocia from a unique perspective - floating above the fairy chimneys and cave dwellings in a hot air balloon at sunrise. Our experienced pilots ensure a safe and memorable journey as you drift peacefully over this otherworldly landscape, watching the sun paint the sky in brilliant colors. This once-in-a-lifetime adventure includes a traditional champagne celebration upon landing.',
@@ -167,6 +169,7 @@ const toursData = {
     category: 'cultural',
     difficulty: 'easy',
     groupSize: '2-15',
+    duration: 'Full day',
     highlights: ['Celsus Library', 'Grand Theatre', 'Temple of Artemis'],
     description: 'Discover the ancient wonders of Ephesus with our expert guides and entry tickets.',
     fullDescription: 'Step back in time and explore the magnificent ruins of Ephesus, once the second-largest city in the Roman Empire. Our expert guides will bring history to life as you walk through the ancient streets, visit the impressive Library of Celsus, the Grand Theatre with its remarkable acoustics, and the Temple of Artemis, one of the Seven Wonders of the Ancient World. This comprehensive tour includes skip-the-line tickets and comfortable transportation.',
@@ -251,6 +254,7 @@ const toursData = {
     category: 'nature',
     difficulty: 'easy',
     groupSize: '2-25',
+    duration: 'Full day',
     highlights: ['Travertine Terraces', 'Hierapolis', 'Cleopatra Pool'],
     description: 'Relax in the healing waters of Pamukkale and explore the ancient Hierapolis.',
     fullDescription: 'Discover the natural wonder of Pamukkale, where calcium-rich thermal waters have created stunning white travertine terraces over thousands of years. Our tour combines relaxation in the therapeutic pools with exploration of the ancient city of Hierapolis. Walk barefoot on the mineral-rich terraces, swim in the warm waters believed to have healing properties, and visit the remarkably preserved Cleopatra Pool. This full-day experience includes transportation, lunch, and expert guidance.',
@@ -331,10 +335,11 @@ const toursData = {
     rating: 4.9,
     reviews: 167,
     price: 450,
-    image: '/images/destinations/bodrum.jpg',
+    image: '/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk Gulet Turu.jpeg',
     category: 'cruise',
     difficulty: 'easy',
     groupSize: '2-12',
+    duration: '3 days',
     highlights: ['Traditional Gulet', 'Swimming Bays', 'Turkish Cuisine'],
     description: 'Sail the turquoise waters of the Aegean Sea on our traditional wooden gulet with famous Turkish cuisine.',
     fullDescription: 'Experience the ultimate Turkish sailing adventure on our traditional wooden gulet, handcrafted with antique techniques. Cruise along the stunning Aegean coastline, stopping at secluded bays for swimming in crystal-clear waters, and enjoying authentic Turkish cuisine prepared by our onboard chef. This all-inclusive journey features comfortable cabins, friendly crew, and opportunities for water sports, fishing, and simply relaxing on deck while watching spectacular sunsets over the sea.',
@@ -411,119 +416,77 @@ const toursData = {
   },
   6: {
     id: 6,
-    title: 'Mount Ararat Trekking',
-    location: 'Eastern Anatolia',
-    rating: 4.6,
-    reviews: 89,
-    price: 680,
-    image: '/images/destinations/fethiye.jpg',
-    category: 'adventure',
-    difficulty: 'challenging',
-    groupSize: '4-8',
-    highlights: ['Summit Attempt', 'Glacial Lakes', 'Kurdish Culture'],
-    description: 'Challenge yourself with Turkey\'s highest peak trek with our experienced mountain guides.',
-    fullDescription: 'Embark on an adventure of a lifetime with our challenging Mount Ararat trekking expedition. This 5-day journey takes you through diverse landscapes, from lush valleys to rocky slopes, as you ascend Turkey\'s highest peak (5,137m). Our experienced mountain guides ensure your safety while sharing insights into local Kurdish culture and the geological significance of the glacial lakes you\'ll encounter. This challenging trek rewards you with breathtaking views and a tremendous sense of accomplishment.',
+    title: 'Sapanca Maşukiye Tour',
+    location: 'Sapanca',
+    rating: 4.8,
+    reviews: 125,
+    price: 180,
+    image: '/tours/Sapanca Maşukiye/Sapanca Maşukiye.jpeg',
+    category: 'nature',
+    difficulty: 'easy',
+    groupSize: '2-15',
+    duration: 'Full day',
+    highlights: ['Sapanca Lake', 'Maşukiye Forest', 'Nature Views'],
+    description: 'Enjoy a day in Sapanca Maşukiye with our guided tour.',
+    fullDescription: 'Join us for a day trip to Sapanca Maşukiye, a natural paradise located near Istanbul. You will walk through green pine forests, enjoy stunning lake views, and taste famous local delicacies at lakeside restaurants. This tour is perfect for escaping the hustle and bustle of the city and relaxing in the embrace of nature.',
     features: [
-      'Experienced mountain guides',
-      'Small group sizes for safety',
-      'Camping equipment and meals',
-      'Cultural insights into Kurdish communities',
-      'Glacial lake exploration',
-      'Summit attempt on Turkey\'s highest peak',
-      'Comprehensive safety equipment',
-      'Support vehicle for emergencies'
+      'Hotel pickup and drop-off',
+      'Professional guide',
+      'Lunch at a lakeside restaurant',
+      'Free time for exploration',
+      'Visit to a historical site',
+      'Tasting of local delicacies'
     ],
     itinerary: [
       {
-        time: 'Day 1: 08:00',
-        activity: 'Base camp arrival',
-        description: 'Arrive at base camp, meet guides, equipment check'
-      },
-      {
-        time: 'Day 1: 10:00',
-        activity: 'Begin trek',
-        description: 'Start ascent through valleys and forests'
-      },
-      {
-        time: 'Day 1: 17:00',
-        activity: 'Camp setup',
-        description: 'Set up first mountain camp'
-      },
-      {
-        time: 'Day 2: 07:00',
-        activity: 'Morning trek',
-        description: 'Continue ascent through rocky terrain'
-      },
-      {
-        time: 'Day 2: 14:00',
-        activity: 'Glacial lakes',
-        description: 'Explore glacial lakes and rest'
-      },
-      {
-        time: 'Day 2: 17:00',
-        activity: 'Mountain camp',
-        description: 'Set up second mountain camp'
-      },
-      {
-        time: 'Day 3: 06:00',
-        activity: 'Final ascent',
-        description: 'Begin final push toward summit'
-      },
-      {
-        time: 'Day 3: 14:00',
-        activity: 'Summit attempt',
-        description: 'Reach summit area and celebrate achievement'
-      },
-      {
-        time: 'Day 3: 17:00',
-        activity: 'Descent',
-        description: 'Begin descent to base camp'
-      },
-      {
-        time: 'Day 4: 08:00',
-        activity: 'Cultural exploration',
-        description: 'Visit local Kurdish villages and cultural sites'
-      },
-      {
-        time: 'Day 4: 16:00',
-        activity: 'Rest day',
-        description: 'Rest and prepare for final ascent'
-      },
-      {
-        time: 'Day 5: 07:00',
-        activity: 'Final summit attempt',
-        description: 'Final opportunity to reach summit'
-      },
-      {
-        time: 'Day 5: 15:00',
-        activity: 'Celebration',
-        description: 'Return to base camp, celebration dinner'
-      },
-      {
-        time: 'Day 5: 18:00',
+        time: '08:00',
         activity: 'Departure',
-        description: 'Transfer back to accommodation'
+        description: 'Departure from the designated meeting point'
+      },
+      {
+        time: '09:30',
+        activity: 'Arrival in Sapanca',
+        description: 'Arrival at Sapanca Maşukiye and tour introduction'
+      },
+      {
+        time: '10:00',
+        activity: 'Forest Tour',
+        description: 'Walking through green pine forests'
+      },
+      {
+        time: '12:00',
+        activity: 'Lunch by the Lake',
+        description: 'Lunch at a local restaurant with lake view'
+      },
+      {
+        time: '14:00',
+        activity: 'Free Time',
+        description: 'Free time for exploration or shopping'
+      },
+      {
+        time: '16:30',
+        activity: 'Return',
+        description: 'Return to the original meeting point'
       }
     ],
     included: [
-      'Experienced mountain guides',
-      'All camping equipment',
-      'All meals during trek',
-      'Support vehicle',
-      'Cultural experiences',
-      'Safety equipment',
-      'Accommodation before and after trek'
+      'Hotel pickup and drop-off',
+      'Professional guide',
+      'Lunch',
+      'Free time for exploration',
+      'Visit to a historical site',
+      'Tasting of local delicacies'
     ],
     notIncluded: [
-      'Personal trekking gear',
-      'Travel insurance',
-      'Tips for guides',
-      'Personal expenses'
+      'Dinner',
+      'Beverages',
+      'Personal expenses',
+      'Tips for guide'
     ],
     contact: {
       phone: '+90 532 123 4567',
       email: 'info@fortytravel.com',
-      address: 'Doğubeyazıt, Eastern Anatolia, Turkey'
+      address: 'Sapanca, Istanbul, Turkey'
     }
   }
 }

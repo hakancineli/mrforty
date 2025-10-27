@@ -23,6 +23,19 @@ export default function Header() {
 
   const currentPath = getCurrentPath()
   const isLangPage = /^\/(en|tr|ar|ru)(\/.*)?$/.test(currentPath)
+
+  // Set current language based on URL
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname
+      const langMatch = path.match(/^\/(en|tr|ar|ru)/)
+      if (langMatch) {
+        setCurrentLang(langMatch[1])
+      } else {
+        setCurrentLang('en')
+      }
+    }
+  }, [])
   
   // Navigation items based on current language
   const getNavigation = () => {

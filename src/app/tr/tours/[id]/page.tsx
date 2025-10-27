@@ -16,69 +16,70 @@ const toursData = {
     price: 89,
     image: '/images/destinations/istanbul.jpg',
     category: 'cruise',
-    difficulty: 'kolay',
+    difficulty: 'Kolay',
     groupSize: '2-20',
+    duration: '3 saat',
     highlights: ['Boğaz Köprüsü', 'Dolmabahçe Sarayı', 'Ortaköy Camii'],
-    description: 'Lüks Boğaz turumuzla İstanbulun büyüsünü sudan deneyimleyin.',
-    fullDescription: 'Boğaz Boğazı\'nda unutulmaz bir akşam için lüks turumuza katılın. Lüks turumuz, Avrupa ve Asya\'yı ayıran bu tarihi su yolunun üzerindeki İstanbulun ikonik manzaralarından nefes kesici manzaralar sunar. Bunlar arasında görkemli Boğaz Köprüsü, Dolmabahçe Sarayı ve Ortaköy Camii bulunmaktadır. Aydınlatılmış suların üzerinde akşam yemeği ve canlı eğlence eşliğinde seyirken geleneksel ve uluslararası mutfaktan lezzetli bir akşam yemeğinin tadını çıkarın.',
+    description: 'İstanbul\'un büyüsünü sudan deneyimleyin, akşam yemeği ve eğlence içeren lüks turumuzla.',
+    fullDescription: 'Unutulmaz bir akşam Boğaz\'da bize katılın. Lüks gezimiz, Boğaz Köprüsü\'nün heybetli manzarası, Dolmabahçe Sarayı ve Ortaköy Camii gibi İstanbul\'un ikonik simge yapılarının nefes kesen manzaralarını sunuyor. Avrupa ve Asya\'yı ayıran bu su yollarında seyir halindeyken lüks akşam yemeği ve canlı eğlenceye varın.',
     features: [
-      'İstanbulun ikonik manzaralarının gece manzaraları',
-      'Geleneksel ve uluslararası mutfakta lezzetli akşam yemeği',
-      'Canlı müzik ve eğlence',
-      'Rahat oturma alanlarına sahip lüks yat',
-      'Tarihi yorumlar içeren profesyonel rehber',
+      'İstanbul\'un simge yapılarının gece manzaraları',
+      'Geleneksel Türk mutfağı ile lüks akşam yemeği',
+      'Canlı müzik ve dans gösterileri',
+      'Rahat koltukları olan lüks yatlar',
+      'Tarihi bilgilerle profesyonel rehber',
       'Ücretsiz içecekler ve atıştırmalıklar',
-      'İstanbulun aydınlatılmış manzarası için fotoğraf fırsatları'
+      'Aydınlatılmış İstanbul manzarasıyla fotoğraf fırsatları'
     ],
     itinerary: [
       {
         time: '19:00',
-        activity: 'İskelede binme',
-        description: 'Ekip ile tanışma ve hoş geldi içecekler'
+        activity: 'Yanağa Binme',
+        description: 'Hoş geldin içecekleri ve mürettebatla tanışma'
       },
       {
         time: '19:30',
-        activity: 'Akşam yemeği servisi başlar',
-        description: 'Türk ve uluslararası mutfaktan çok çeşitli akşam yemeği'
+        activity: 'Akşam Yemeği Başlangıcı',
+        description: 'Türk ve uluslararası mutfaktan çok yemekli akşam yemeği'
       },
       {
         time: '20:30',
-        activity: 'Eğlence gösterisi',
-        description: 'Canlı müzik ve geleneksel dans performansları'
+        activity: 'Eğlence Gösterisi',
+        description: 'Canlı müzik ve geleneksel danslar'
       },
       {
         time: '21:30',
-        activity: 'Boğaz Köprüsü geçişi',
-        description: 'Fotoğraf fırsatlarıyla aydınlatılmış köprü altından geçiş'
+        activity: 'Boğaz Köprüsü Geçişi',
+        description: 'Aydınlatılmış köprünün altından geçiş ve fotoğraf çekimi'
       },
       {
         time: '22:00',
-        activity: 'Dolmabahçe Sarayı manzaraları',
-        description: 'Osmanlı sarayı ve güzel bahçelerinin manzaraları'
+        activity: 'Dolmabahçe Sarayı Manzarası',
+        description: 'Osmanlı sarayını ve güzel bahçelerini izleme'
       },
       {
         time: '22:30',
-        activity: 'İskelede geri dönüş',
-        description: 'Otele transfer ve iskeleden iniş'
+        activity: 'Yanağa Dönüş',
+        description: 'İniş ve otele dönüş'
       }
     ],
     included: [
       'Lüks yat turu',
-      'Gurme akşam yemeği',
+      'Lüks akşam yemeği',
       'Canlı eğlence',
-      'Hoş geldi içecekler',
+      'Hoş geldin içecekleri',
       'Profesyonel rehber',
       'Fotoğraf fırsatları'
     ],
     notIncluded: [
-      'Otel transferleri',
-      'Satın alınabilir alkollü içecekler',
+      'Otelden otele transfer',
+      'Alkollü içecekler (satın alınabilir)',
       'Bahşişler'
     ],
     contact: {
       phone: '+90 532 123 4567',
       email: 'info@fortytravel.com',
-      address: 'Kabataş İskelesi, İstanbul, Türkiye'
+      address: 'Kabataş Yanağı, İstanbul, Türkiye'
     }
   },
   2: {
@@ -90,55 +91,56 @@ const toursData = {
     price: 150,
     image: '/images/destinations/cappadocia.jpg',
     category: 'adventure',
-    difficulty: 'orta',
+    difficulty: 'Orta',
     groupSize: '4-16',
-    highlights: ['Gündoğumu Uçuşu', 'Peri Bacaları', 'Yeraltı Şehirleri'],
-    description: 'Kapadokyanın büyülü manzaralarını üzerinde sıcak hava balonuyla gezin.',
-    fullDescription: 'Kapadokyanın peri bacaları ve mağara evlerinin üzerinde eşsiz bir bakış açısından deneyimleyin. Gün doğumunda sıcak hava balonumuzla bu diğer dünya manzarasının üzerinde süzülün. Deneyimli pilotlarımız, bu büyülü manzara üzerinde barışç bir şekilde süzülürken güvenli ve unutulmaz bir yolculuk sağlar. Bu bir kez ömür boyunca yaşanacak macera, inişte geleneksel şampanya kutlaması ve inişle birlikte tamamlanır.',
+    duration: 'Bir gün',
+    highlights: ['Gün doğumu uçuşu', 'Peri bacaları', 'Yeraltı şehirleri'],
+    description: 'Gün doğumunda sıcak hava balonuyla Kapadokya\'nın büyülü manzaralarının üzerinde süzülün.',
+    fullDescription: 'Kapadokya\'nın güzelliğini benzersiz bir perspektiften deneyimleyin - peri bacaları ve mağara konaklarının üzerinde gün doğumunda sıcak hava balonuyla süzülün. Deneyimli pilotlarımız, bu harika manzaranın üzerinde sessizce süzülürken güvenli ve unutulmaz bir yolculuk sağlar. Gün doğumu gökyüzünü canlı renklerle boyarken, bu bir ömür boyu unutulmayacak macera geleneksel şampanya kutlaması içerir.',
     features: [
-      'Gündoğumu sıcak hava balonu uçuşu',
+      'Gün doğumu sıcak hava balonu turu',
       'Profesyonel ve deneyimli pilotlar',
-      'İnişte geleneksel şampanya kutlaması',
+      'İnişte şampanya kutlaması',
       'Uçuş sertifikası',
-      'Kapsamlı sigorta kapsamı',
-      'Otel alış-verişi ve bırma hizmeti',
-      'Kişiselleştirilmiş deneyim için küçük grup boyutları'
+      'Kapsamlı sigorta',
+      'Otelden otele transfer hizmeti',
+      'Kişisel deneyim için küçük gruplar'
     ],
     itinerary: [
       {
         time: '04:30',
-        activity: 'Otel alış-verişi',
-        description: 'Otelinizden alınış ve kalkış yerine transfer'
+        activity: 'Otel Transferi',
+        description: 'Otelinizden alınış ve kalkış alanına transfer'
       },
       {
         time: '05:00',
-        activity: 'Hazırlık şişirme ve güvenlik bilgilendirmesi',
-        description: 'Balon şişirmesini ve güvenlik bilgilendirmesini izleyin'
+        activity: 'Hazırlık ve Şişirme',
+        description: 'Balon şişirilmesini izleme ve güvenlik talimatları'
       },
       {
         time: '05:30',
         activity: 'Kalkış',
-        description: 'Gün doğumuyla birlikte göğe nazikçe başlangıç'
+        description: 'Gün doğumuyla birlikte gökyüzüne sakin yükseliş'
       },
       {
         time: '06:00-07:30',
-        activity: 'Peri bacaları üzerinde uçuş',
-        description: 'Kapadokyanın ikonik manzarasının üzerinde süzülme'
+        activity: 'Peri Bacaları Üzerinde Uçuş',
+        description: 'Kapadokya\'nın ikonik manzaralarının üzerinde süzülme'
       },
       {
         time: '07:30',
-        activity: 'İniş ve kutlama',
-        description: 'Nazikçe iniş ve şampanya kutlaması'
+        activity: 'İniş ve Kutlama',
+        description: 'Yumuşak iniş ve şampanya kutlaması'
       },
       {
         time: '08:00',
-        activity: 'Otele geri dönüş',
-        description: 'Otele kahvaltı ile birlikte geri dönüş'
+        activity: 'Otele Transfer',
+        description: 'Kahvaltı ile otele dönüş'
       }
     ],
     included: [
-      'Otel alış-verişi ve bırma',
-      'Sıcak hava balonu uçuşu',
+      'Otelden otele transfer',
+      'Sıcak hava balonu turu',
       'Profesyonel pilot',
       'Şampanya kutlaması',
       'Uçuş sertifikası',
@@ -148,7 +150,7 @@ const toursData = {
     notIncluded: [
       'Ekstra içecekler',
       'Kişisel harcamalar',
-      'Pilot için bahşişler'
+      'Pilota bahşiş'
     ],
     contact: {
       phone: '+90 532 123 4567',
@@ -165,73 +167,74 @@ const toursData = {
     price: 75,
     image: '/images/destinations/pamukkale.jpg',
     category: 'cultural',
-    difficulty: 'kolay',
+    difficulty: 'Kolay',
     groupSize: '2-15',
+    duration: 'Tam gün',
     highlights: ['Celsus Kütüphanesi', 'Büyük Tiyatro', 'Artemis Tapınağı'],
-    description: 'Uzman rehberlerle Efesin antik harikalarını keşfedin.',
-    fullDescription: 'Zaman içinde geriye gidin ve Roma İmparatorluğu\'nun ikinci büyük şehri olan Efesin muhteşem harabelerini keşfedin. Uzman rehberlerimiz, antik sokaklarda yürürken tarihi yaşatacak. İzlenilen Celsus Kütüphanesi, olağanüstü akustiğe sahip Büyük Tiyatro ve Antik Dünyanın Yedi Harikasından biri olan Artemis Tapınağı gibi etkileyici yerleri ziyaret edin. Bu kapsamlı tur, sıra beklemeden biletler ve rahat ulaşım içerir.',
+    description: 'Uzman rehberlerimizle Efes\'in harikalarını keşfedin ve giriş biletleri dahil olsun.',
+    fullDescription: 'Zamanda geriye gidin ve Roma İmparatorluğu\'nun ikinci büyük şehri olan Efes\'in harika kalıntılarını keşfedin. Profesyonel rehberlerimiz, antik kentin sokaklarında yürürken tarihe hayat katacak, Celsus Kütüphanesi\'nin etkileyici yapısını, inanılmaz akustiğe sahip Büyük Tiyatro\'yu ve Dünyanın Yedi Harikası\'ndan biri olan Artemis Tapınağı\'nı ziyaret edecekler. Bu kapsamlı tur, hızlı giriş biletleri ve konforlu transfer içerir.',
     features: [
-      'Uzman arkeolog rehber',
-      'Tüm yerler için sıra beklemeden giriş biletleri',
-      'Klimalı ulaşım',
-      'Kişiselleştirilmiş deneyim için küçük grup boyutları',
-      'Tüm önemli antik yerleri ziyaret',
-      'Alışveriş ve keşif için serbest zaman',
+      'Profesyonel arkeoloji rehberi',
+      'Tüm siteler için hızlı giriş biletleri',
+      'Klimalı transfer',
+      'Kişisel deneyim için küçük gruplar',
+      'Tüm ana sitelerin ziyareti',
+      'Alışveriş ve kişisel keşif için zaman',
       'Kapsamlı tarihi bilgiler'
     ],
     itinerary: [
       {
         time: '08:00',
-        activity: 'Otel alış-verişi',
-        description: 'İzmir\'deki otelinizden alınış'
+        activity: 'Otel Transferi',
+        description: 'İzmir\'deki otelden alınış'
       },
       {
         time: '09:30',
-        activity: 'Efese varış',
-        description: 'Antik şehre varış ve turun genel bakışı'
+        activity: 'Efes\'e Varış',
+        description: 'Antik kente varış ve tur genel bakışı'
       },
       {
         time: '10:00',
         activity: 'Celsus Kütüphanesi',
-        description: 'Ünlü antik kütüphaneyi ve detaylı açıklamalar'
+        description: 'Ünlü kütüphaneyi ziyaret ve detaylı açıklamalar'
       },
       {
         time: '11:00',
         activity: 'Büyük Tiyatro',
-        description: 'Olağanüstü korunmuş antik tiyatroyu keşfedin'
+        description: 'Harika korunmuş tiyatronun keşfi'
       },
       {
         time: '12:00',
-        activity: 'Öğle molası',
-        description: 'Yerel bir restoranda geleneksel Türk öğle yemeği'
+        activity: 'Öğle Yemeği Molası',
+        description: 'Yerel restoranda geleneksel Türk öğle yemeği'
       },
       {
         time: '13:00',
         activity: 'Artemis Tapınağı',
-        description: 'Antik Dünyanın Yedi Harikasından biri olan tapınağı ziyaret edin'
+        description: 'Dünyanın Yedi Harikası\'ndan biri olan Artemis Tapınağı ziyareti'
       },
       {
         time: '15:00',
-        activity: 'Serbest zaman',
+        activity: 'Serbest Zaman',
         description: 'Alışveriş ve kişisel keşif için zaman'
       },
       {
         time: '17:00',
-        activity: 'Otele geri dönüş',
+        activity: 'Otele Dönüş',
         description: 'Otele transfer'
       }
     ],
     included: [
       'Uzman rehber',
-      'Tüm yerler için giriş biletleri',
-      'Ulaşım',
+      'Tüm siteler için giriş biletleri',
+      'Transfer',
       'Öğle yemeği',
-      'Alışveriş için serbest zaman',
-      'Küçük grup boyutu'
+      'Alışveriş zamanı',
+      'Küçük grup'
     ],
     notIncluded: [
       'Kişisel harcamalar',
-      'Rehber için bahşişler',
+      'Rehbere bahşiş',
       'Akşam yemeği'
     ],
     contact: {
@@ -249,74 +252,75 @@ const toursData = {
     price: 95,
     image: '/images/destinations/pamukkale.jpg',
     category: 'nature',
-    difficulty: 'kolay',
+    difficulty: 'Kolay',
     groupSize: '2-25',
-    highlights: ['Traverten Teraslar', 'Hierapolis', 'Kleopatra Havuzu'],
-    description: 'Pamukkalenin şifalı sularında dinlenin ve antik Hierapolis\'i keşfedin.',
-    fullDescription: 'Pamukkale\'nin doğal harikasını keşfedin, burada kalsiyum açısından zengin termal suları binlerce yıl içinde etkileyici beyaz traverten terasları oluşturmuştur. Turumuz, terapötik havuzlarda rahatlamayı antik Hierapolis şehrini keşfetmeyi birleştirir. Mineral açısından zengin teraslarda çıplak ayaklarla yürüyün, şifalı olduğu düşünülen ılık sularda yüzün ve inanılmaz şekilde korunmuş Kleopatra Havuzu\'nu ziyaret edin. Bu tam günlük deneyim ulaşım, öğle yemeği ve uzman rehberlik içerir.',
+    duration: 'Tam gün',
+    highlights: ['Travertenler', 'Hierapolis', 'Kleopatra Havuzu'],
+    description: 'Pamukkale\'nin şifalı sularında dinlenin ve antik Hierapolis\'i keşfedin.',
+    fullDescription: 'Pamukkale\'nin doğal harikalarını keşfedin, burada kalsiyum açısından zengin termal sular binlerce yıl boyunca beyaz traverten yüzeyler oluşturmuştur. Turumuz, termal havuzlarda dinlenmeyi ve antik Hierapolis şehrini keşfetmeyi birleştiriyor. Mineraller açısından zengin travertenler üzerinde yalınayak yürüyün, şifalı özelliklere sahip olduğu düşünülen ılık sularda yüzün ve harika korunmuş Kleopatra Havuzu\'nu ziyaret edin. Bu tam günlük deneyim transfer, öğle yemeği ve uzman rehberlik içerir.',
     features: [
-      'Pamukkale\'nin termal havuzlarına erişim',
-      'Antik Hierapolis harabelerini ziyaret',
-      'Tarihi içgörüleri olan profesyonel rehber',
+      'Pamukkale termal havuzlarına erişim',
+      'Hierapolis kalıntıları ziyareti',
+      'Tarihi içgörülerle profesyonel rehber',
       'Kleopatra Havuzu\'nda yüzme',
-      'Traverten teras keşfi',
-      'Yereye ve siteden ulaşım',
+      'Travertenlerin keşfi',
+      'Siteden transfer',
       'Geleneksel öğle yemeği dahil'
     ],
     itinerary: [
       {
         time: '08:00',
-        activity: 'Otel alış-verişi',
+        activity: 'Otel Transferi',
         description: 'Otelinizden alınış'
       },
       {
         time: '10:00',
-        activity: 'Pamukkale\'ye varış',
-        description: 'Yereye varış ve güvenlik bilgilendirmesi'
+        activity: 'Pamukkale\'ye Varış',
+        description: 'Siteye varış ve güvenlik talimatları'
       },
       {
         time: '10:30',
-        activity: 'Traverten teraslar',
-        description: 'Beyaz kalsiyum teraslarında yürüyüş turu'
+        activity: 'Traventenler',
+        description: 'Beyaz kalsiyum yüzeyler üzerinde yürüyüş turu'
       },
       {
         time: '12:00',
-        activity: 'Hierapolis harabeleri',
-        description: 'Rehber eşliğinde antik şehri keşfi'
+        activity: 'Hierapolis Kalıntıları',
+        description: 'Rehberle antik şehri keşfetme'
       },
       {
         time: '13:00',
-        activity: 'Öğle yemeği',
-        description: 'Yerel bir restoranda geleneksel Türk öğle yemeği'
+        activity: 'Öğle Yemeği',
+        description: 'Yerel restoranda geleneksel Türk öğle yemeği'
       },
       {
         time: '14:00',
-        activity: 'Yüzme zamanı',
-        description: 'Termal havuzlarda serbest zaman'
+        activity: 'Yüzme Zamanı',
+        description: 'Termal havuzlarda yüzme için serbest zaman'
       },
       {
         time: '16:00',
         activity: 'Kleopatra Havuzu',
-        description: 'Antik termal havuzu ziyareti'
+        description: 'Antik termal havuz ziyareti'
       },
       {
         time: '17:00',
-        activity: 'Otele geri dönüş',
+        activity: 'Otele Dönüş',
         description: 'Otele transfer'
       }
     ],
     included: [
-      'Ulaşım',
+      'Transfer',
       'Profesyonel rehber',
       'Giriş ücretleri',
       'Öğle yemeği',
       'Yüzme erişimi',
-      'Küçük grup boyutu'
+      'Küçük grup'
     ],
     notIncluded: [
-      'Yüzme takımları ve havlular',
+      'Yüzme kıyafetleri ve havlular',
       'Kişisel harcamalar',
-      'Rehber için bahşişler'
+      'Rehbere bahşiş'
     ],
     contact: {
       phone: '+90 532 123 4567',
@@ -331,77 +335,78 @@ const toursData = {
     rating: 4.9,
     reviews: 167,
     price: 450,
-    image: '/images/destinations/bodrum.jpg',
+    image: '/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk Gulet Turu.jpeg',
     category: 'cruise',
-    difficulty: 'kolay',
+    difficulty: 'Kolay',
     groupSize: '2-12',
-    highlights: ['Özel Gulet', 'Yüzme Koyları', 'Türk Mutfağı'],
-    description: 'Geleneksel ahşap guletimizle Ege Denizi\'nin turkuaz sularında yelken açın.',
-    fullDescription: 'Geleneksel tekniklerle yapılmış ahşap guletimizle nihai Türk yelken macerasını yaşayın. Ege Denizi\'nin nefes kesici kıyı şeridi boyunca seyirken, kristal berrak sularda yüzme için izole edilmiş koylarda durun ve gemideki aşçımız tarafından hazırlanan otantik Türk mutfağının tadını çıkarın. Bu her şey dahil yolculuk, rahat kabinler, dostane ekip ve su sporları, balıkçılık ve sadece güverte batan muhteşem gün batışlarını izleme fırsatları sunar.',
+    duration: '3 gün',
+    highlights: ['Geleneksel guletler', 'Yüzme koyları', 'Türk mutfağı'],
+    description: 'Geleneksel ahşap guletimizle Ege Denizi\'nin mavi sularında seyrüsefa edin ve ünlü Türk mutfağını tadın.',
+    fullDescription: 'Geleneksel ahşap guletimizde nihai Türk deniz macerasını yaşayın. Ege Denizi\'nin muhteşem sahili boyunca yelken açın, kristal berraklığında sularda yüzmek için izole koylarda durun ve gemi aşçımızın hazırladığı otantik Türk mutfağının tadını çıkarın. Bu kapsamlı yolculuk, rahat kabinler, dost canlısı mürettebat, su sporları, balıkçılık ve batan güneşi izlerken güvertede basitçe dinlenme fırsatları sunar.',
     features: [
-      'Geleneksel ahşap gulet gemisi',
+      'Geleneksel ahşap gulet teknesi',
       'Tüm öğünler ve içecekler dahil',
-      'İzole edilmiş koylarda yüzme durakları',
+      'İzole koylarda yüzme molağı',
       'Su sporları ekipmanları',
-      'Balıkçılık malzemeleri',
-      'Rahat kabinler ve en-suite tesisler',
-      'Deneyimli kaptan ve ekip',
-      'Gün batışı izleme fırsatları'
+      'Balıkçılık ekipmanları',
+      'Özel banyolu konforlu kabinler',
+      'Profesyonel kaptan ve mürettebat',
+      'Havlu ve yatak örtüleri'
     ],
     itinerary: [
       {
         time: '09:00',
-        activity: 'İskelede binme ve hoş geldi',
-        description: 'Bodrum limanındaki gulete binme ve hoş geldi içecekler'
+        activity: 'Tekneye Binme ve Hoş Geldin',
+        description: 'Bodrum limanında gulete binme ve hoş geldin içecekleri'
       },
       {
         time: '10:00',
-        activity: 'Sabah yelken açma',
-        description: 'Kahvaltı ile birlikte Ege kıyı şeridi boyunca yelken açma'
+        activity: 'Sabah Seyri',
+        description: 'Kahvaltı ile Ege sahili boyunca yelken açma'
       },
       {
         time: '12:00',
-        activity: 'Yüzme ve öğle yemeği',
-        description: 'İzole edilmiş bir koyda yüzme ve gemide öğle yemeği'
+        activity: 'Yüzme ve Öğle Yemeği',
+        description: 'İzole koyda yüzme molası ve gemide öğle yemeği'
       },
       {
         time: '14:00',
-        content: 'Öğleden yelken açma',
-        description: 'Başka manzaralı bir konuma yelken açma'
+        activity: 'Öğleden Sonra Seyri',
+        description: 'Başka bir harika yere devam eden yelken açma'
       },
       {
         time: '16:00',
-        activity: 'Akşam yüzmesi ve akşam yemeği',
-        description: 'Yüzme durakı, ardından yerel malzemelerle hazırlanmış akşam yemeği'
+        activity: 'Akşam Yüzmesi ve Akşam Yemeği',
+        description: 'Yüzme molası ardından yerel malzemelerle hazırlanmış akşam yemeği'
       },
       {
         time: '18:00',
-        activity: 'Gün batışı izleme',
-        description: 'İçeceklerle güverte dinlenirken gün batışını izleme'
+        activity: 'Gün Batımı İzleme',
+        description: 'İçeceklerle güvertede dinlenme ve gün batımı izleme'
       },
       {
         time: '20:00',
-        activity: 'Demirde kalma',
-        description: 'Sakin bir koyda rahat kabinlerde uyuma'
+        activity: 'Demirleme Yerinde Konaklama',
+        description: 'Sakin bir koyda demirleme ve konforlu kabinlerde uyku'
       },
       {
         time: '08:00',
-        activity: 'Kahvaltı ve dönüş',
-        description: 'Gemide kahvaltı ve Bodrum limanına dönüş'
+        activity: 'Kahvaltı ve Dönüş',
+        description: 'Bodrum limanına dönüş öncesi gemide kahvaltı'
       }
     ],
     included: [
       'Özel kabinde konaklama',
       'Tüm öğünler ve içecekler',
-      'Yüzme ve su sporları ekipmanları',
-      'Balıkçılık malzemeleri',
-      'Profesyonel kaptan ve ekip',
-      'Havlular ve çarşaflar'
+      'Yüzme mola yerleri ve su sporları ekipmanları',
+      'Balıkçılık ekipmanları',
+      'Profesyonel kaptan ve mürettebat',
+      'Havlu ve örtüler'
     ],
     notIncluded: [
-      'Satın alınabilir alkollü içecekler',
+      'Alkollü içecekler (satın alınabilir)',
       'Kişisel harcamalar',
-      'Ekip için bahşişler'
+      'Mürettebata bahşiş'
     ],
     contact: {
       phone: '+90 532 123 4567',
@@ -411,131 +416,89 @@ const toursData = {
   },
   6: {
     id: 6,
-    title: 'Ağrı Dağı Trekking',
-    location: 'Doğu Anadolu',
-    rating: 4.6,
-    reviews: 89,
-    price: 680,
-    image: '/images/destinations/fethiye.jpg',
-    category: 'adventure',
-    difficulty: 'zorlu',
-    groupSize: '4-8',
-    highlights: ['Zirve Tırmanışı', 'Buzul Gölleri', 'Kürt Kültürü'],
-    description: 'Deneyimli dağ rehberleri eşliğinde Türkiye\'nin en yüksek zirvesini trekking ile kendinize sorun.',
-    fullDescription: 'Ömür boyunca yaşanacak bir macera için zorlu Ağrı Dağı trekking seferimize katılın. Bu 5 günlük yolculuk, verimli vadilerden kayalık yamaçlara kadar çeşitli manzaralardan geçerek Türkiye\'nin en yüksek zirvesine (5.137m) tırmanışı içerir. Deneyimli dağ rehberlerimiz güvenliğinizi sağlarken yerel Kürt topluluklarına ve karşılaşacağınız buzul göllerinin jeolojik önemini paylaşırlar. Bu zorlu trek, nefes kesici manzaralar ve muazzam bir başarı hissi ile ödüllendirir.',
+    title: 'Sapanca Maşukiye Turu',
+    location: 'Sapanca',
+    rating: 4.8,
+    reviews: 125,
+    price: 180,
+    image: '/tours/Sapanca Maşukiye/Sapanca Maşukiye.jpeg',
+    category: 'nature',
+    difficulty: 'Kolay',
+    groupSize: '2-15',
+    duration: 'Bir gün',
+    highlights: ['Sapanca Gölü', 'Maşukiye Ormanı', 'Doğa manzaraları'],
+    description: 'Sapanca Maşukiye\'de bir gün geçirin ve rehberli turumuzla keyifli zamanlar yaşayın.',
+    fullDescription: 'İstanbul\'a yakın bulunan Sapanca Maşukiye, doğal bir cennettir. Yeşil çam ormanlarında yürüyüş yapacak, gölün nefes kesen manzaralarının tadını çıkaracak ve göl manzaralı restoranlarda yerel lezzetleri tadacaksınız. Şehrin gürültüsünden kaçmak ve doğanın kucağında dinlenmek için mükemmel bir tur.',
     features: [
-      'Deneyimli dağ rehberleri',
-      'Güvenlik için küçük grup boyutları',
-      'Kamp ekipmanları ve öğünler',
-      'Kürt topluluklarına kültürel içgörüler',
-      'Buzul gölü keşfi',
-      'Türkiye\'nin en yüksek zirvesine tırmanış denemesi',
-      'Kapsamlı güvenlik ekipmanları',
-      'Acil durumlar için destek aracı'
+      'Otelden otele transfer',
+      'Profesyonel rehber',
+      'Göl kenarında öğle yemeği',
+      'Keşif için serbest zaman',
+      'Tarihi bir yer ziyareti',
+      'Yerel lezzetleri tatma'
     ],
     itinerary: [
       {
-        time: '1. Gün: 08:00',
-        activity: 'Kampa varış',
-        description: 'Kampa varış, rehberlerle tanışma, ekipman kontrolü'
+        time: '08:00',
+        activity: 'Hareket',
+        description: 'Belirlenen buluşma noktasından hareket'
       },
       {
-        time: '1. Gün: 10:00',
-        activity: 'Tırmanış başlangıcı',
-        description: 'Vadiler ve ormanlardan tırmanış başlangıcı'
+        time: '09:30',
+        activity: 'Sapanca\'ya Varış',
+        description: 'Sapanca Maşukiye\'ye varış ve tur tanıtımı'
       },
       {
-        time: '1. Gün: 17:00',
-        activity: 'Kurma',
-        description: 'İlk dağ kampı kurma'
+        time: '10:00',
+        activity: 'Orman Turu',
+        description: 'Yeşil çam ormanlarında yürüyüş'
       },
       {
-        time: '2. Gün: 07:00',
-        activity: 'Sabah tırmanışı',
-        description: 'Kayalık arazide devam eden tırmanış'
+        time: '12:00',
+        activity: 'Göl Kenarında Öğle Yemeği',
+        description: 'Göl manzaralı yerel restoranda öğle yemeği'
       },
       {
-        time: '2. Gün: 14:00',
-        activity: 'Buzul gölleri',
-        description: 'Buzul göllerini keşfi ve dinlenme'
+        time: '14:00',
+        activity: 'Serbest Zaman',
+        description: 'Keşif veya alışveriş için serbest zaman'
       },
       {
-        time: '2. Gün: 17:00',
-        activity: 'Dağ kampı',
-        description: 'İkinci dağ kampı kurma'
-      },
-      {
-        time: '3. Gün: 06:00',
-        activity: 'Son tırmanış',
-        description: 'Zirve alanına doğru son itiş'
-      },
-      {
-        time: '3. Gün: 14:00',
-        activity: 'Zirve denemesi',
-        description: 'Zirve alanına ulaşma ve başarıyı kutlama'
-      },
-      {
-        time: '3. Gün: 17:00',
-        activity: 'İniş',
-        description: 'Kampa doğru iniş başlangıcı'
-      },
-      {
-        time: '4. Gün: 08:00',
-        activity: 'Kültürel keşif',
-        description: 'Yerel Kürt köylerini ve kültürel yerlerini ziyaret etme'
-      },
-      {
-        time: '4. Gün: 16:00',
-        activity: 'Dinlenme günü',
-        description: 'Son tırmanış için dinlenme ve hazırlık'
-      },
-      {
-        time: '5. Gün: 07:00',
-        activity: 'Son zirve denemesi',
-        description: 'Zirveye ulaşmak için son fırsat'
-      },
-      {
-        time: '5. Gün: 15:00',
-        activity: 'Kutlama',
-        description: 'Kampa dönüş ve kutlama yemeği'
-      },
-      {
-        time: '5. Gün: 18:00',
-        activity: 'Ayrılış',
-        description: 'Konaklamaya transfer'
+        time: '16:30',
+        activity: 'Dönüş',
+        description: 'Orijinal buluşma noktasına dönüş'
       }
     ],
     included: [
-      'Deneyimli dağ rehberleri',
-      'Tüm kamp ekipmanları',
-      'Trek sırasında tüm öğünler',
-      'Destek aracı',
-      'Kültürel deneyimler',
-      'Güvenlik ekipmanları',
-      'Trek öncesi ve sonrası konaklama'
+      'Otelden otele transfer',
+      'Profesyonel rehber',
+      'Öğle yemeği',
+      'Keşif için serbest zaman',
+      'Tarihi bir yer ziyareti',
+      'Yerel lezzetleri tatma'
     ],
     notIncluded: [
-      'Kişisel trekking ekipmanları',
-      'Seyahat sigortası',
-      'Rehberler için bahşişler',
-      'Kişisel harcamalar'
+      'Akşam yemeği',
+      'İçecekler',
+      'Kişisel harcamalar',
+      'Rehbere bahşiş'
     ],
     contact: {
       phone: '+90 532 123 4567',
       email: 'info@fortytravel.com',
-      address: 'Doğubeyazıt, Doğu Anadolu, Türkiye'
+      address: 'Sapanca, İstanbul, Türkiye'
     }
   }
 }
 
 const amenities = {
-  wifi: { icon: Wifi, label: 'Ücretsiz WiFi' },
+  wifi: { icon: Wifi, label: 'Ücretsiz Wi-Fi' },
   parking: { icon: Car, label: 'Ücretsiz Otopark' },
   spa: { icon: Dumbbell, label: 'Spa ve Wellness' },
   restaurant: { icon: Coffee, label: 'Restoran' },
   bar: { icon: Coffee, label: 'Bar ve Lounge' },
-  pool: { icon: Dumbbell, label: 'Yüzme Havuzu' },
-  concierge: { icon: Users, label: 'Konserj Hizmeti' },
+  pool: { icon: Dumbbell, label: 'Havuz' },
+  concierge: { icon: Users, label: 'Concierge Hizmeti' },
   'room-service': { icon: Coffee, label: 'Oda Servisi' },
   gym: { icon: Dumbbell, label: 'Fitness Merkezi' },
   beach: { icon: MapPin, label: 'Özel Plaj' },
@@ -550,7 +513,7 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Tur Bulunamadı</h1>
-          <p className="text-gray-600 mb-8">Aradığınız tur bulunamıyor.</p>
+          <p className="text-gray-600 mb-8">Aradığınız tur mevcut değil.</p>
           <Link href="/tr/tours" className="btn-primary">
             Turlara Geri Dön
           </Link>
@@ -639,7 +602,7 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
               {/* Included & Not Included */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-bold mb-4">Neler Dahil</h3>
+                  <h3 className="text-xl font-bold mb-4">Dahil Olanlar</h3>
                   <div className="space-y-2">
                     {tour.included.map((item, index) => (
                       <div key={index} className="flex items-center gap-3">
@@ -650,7 +613,7 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-4">Neler Dahil Değil</h3>
+                  <h3 className="text-xl font-bold mb-4">Dahil Olmayanlar</h3>
                   <div className="space-y-2">
                     {tour.notIncluded.map((item, index) => (
                       <div key={index} className="flex items-center gap-3">
@@ -669,7 +632,7 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
               <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4">
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-primary-600">€{tour.price}</div>
-                  <div className="text-gray-600">kişi başına</div>
+                  <div className="text-gray-600">Kişi Başı</div>
                 </div>
                 
                 <div className="space-y-4 mb-6">
@@ -685,13 +648,13 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Seyahatçi Sayısı
+                      Yolcu Sayısı
                     </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" title="Seyahatçi Sayısı">
-                      <option>1 Seyahatçi</option>
-                      <option>2 Seyahatçi</option>
-                      <option>3 Seyahatçi</option>
-                      <option>4+ Seyahatçi</option>
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" title="Yolcu Sayısı">
+                      <option>1 Yolcu</option>
+                      <option>2 Yolcu</option>
+                      <option>3 Yolcu</option>
+                      <option>4+ Yolcu</option>
                     </select>
                   </div>
                 </div>
@@ -700,7 +663,7 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
                   Şimdi Rezervasyon Yap
                 </button>
                 <button className="w-full btn-secondary">
-                  Tur ile İletişime Geç
+                    Tur ile İletişime Geç
                 </button>
               </div>
 
@@ -718,7 +681,7 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
                   <div className="flex items-center gap-3">
                     <Users className="w-5 h-5 text-gray-600" />
                     <div>
-                      <div className="font-semibold text-gray-900">Grup Boyutu</div>
+                      <div className="font-semibold text-gray-900">Grup Büyüklüğü</div>
                       <div className="text-gray-600">{tour.groupSize}</div>
                     </div>
                   </div>
