@@ -42,7 +42,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">MrForty Hikayesi</h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                2010 yılında küçük bir butik seyahat acentası olarak başlayan MrForty, yıllar içinde Türkiye\'nin zengin kültürünü ve nefes kesen manzaralarını lüks ve konforlu bir şekilde yaşamanız için hizmet veriyoruz. Misyonumuz, her seyahatinizin unutulmaz bir deneyim olmasını sağlamak.
+                2025 yılında küçük bir butik seyahat acentası olarak başlayan MrForty, yıllar içinde Türkiye\'nin zengin kültürünü ve nefes kesen manzaralarını lüks ve konforlu bir şekilde yaşamanız için hizmet veriyoruz. Misyonumuz, her seyahatinizin unutulmaz bir deneyim olmasını sağlamak.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Bugün MrForty, Türk misafirperverliğinin zirvesini temsil etmektedir. Geleneksel sıcaklığı modern lüks ile birleştiren deneyimli profesyoneller ekibimiz, her yolculuğun beklentilerini aşmasını ve unutulmaz anılar biriktirmek için gece gündüz çalışmaktadır.

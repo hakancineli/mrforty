@@ -29,7 +29,7 @@ export default function AboutPage() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold mb-6">قصة MrForty</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              في MrForty، نقدم خدماتنا منذ عام 2010 لتمكينك من عيش الثقافة الغنية لتركيا ومناظرها الخلابة بطريقة فاخرة ومريحة. مهمتنا هي ضمان أن تكون كل رحلة تجربة لا تُنسى.
+              في MrForty، نقدم خدماتنا منذ عام 2025 لتمكينك من عيش الثقافة الغنية لتركيا ومناظرها الخلابة بطريقة فاخرة ومريحة. مهمتنا هي ضمان أن تكون كل رحلة تجربة لا تُنسى.
             </p>
             
             <h3 className="text-2xl font-semibold mb-4">قيمنا</h3>

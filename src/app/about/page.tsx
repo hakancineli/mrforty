@@ -83,7 +83,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Story</h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Founded in 2010, MrForty started as a small boutique travel agency with a simple mission: to provide exceptional travel experiences that showcase the beauty and culture of Turkey. Over the years, we've grown into a leading luxury travel company, but our core values remain the same: personalized service, attention to detail, and a passion for creating unforgettable memories.
+                Founded in 2025, MrForty started as a small boutique travel agency with a simple mission: to provide exceptional travel experiences that showcase the beauty and culture of Turkey. Over the years, we've grown into a leading luxury travel company, but our core values remain the same: personalized service, attention to detail, and a passion for creating unforgettable memories.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Today, MrForty represents the pinnacle of Turkish hospitality, combining traditional warmth with modern luxury. Our team of experienced professionals works tirelessly to ensure every journey exceeds expectations, whether it's a romantic getaway, a family vacation, or a business trip.
