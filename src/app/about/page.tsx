@@ -129,18 +129,22 @@ export default function AboutPage() {
                 <p className="text-gray-600 mb-4">{member.position}</p>
                 <p className="text-gray-600 mb-6 text-sm leading-relaxed">{member.bio}</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Mail className="w-4 h-4" />
-                    <span>{member.email}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Phone className="w-4 h-4" />
-                    <span>{member.phone}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Clock className="w-4 h-4" />
-                    <span>Mon-Fri: 9:00-18:00</span>
-                  </div>
+                  {member.id === 1 || member.id === 2 ? (
+                    <>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Mail className="w-4 h-4" />
+                        <span>{member.email}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Phone className="w-4 h-4" />
+                        <span>{member.phone}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Clock className="w-4 h-4" />
+                        <span>Mon-Fri: 9:00-18:00</span>
+                      </div>
+                    </>
+                  ) : null}
                 </div>
               </div>
             ))}
