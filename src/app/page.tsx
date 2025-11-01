@@ -305,7 +305,7 @@ export default function HomePage() {
           <div className="relative">
             <div className="overflow-hidden">
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out carousel-container"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {services.map((service, index) => (
