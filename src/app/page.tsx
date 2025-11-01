@@ -1,8 +1,66 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock } from 'lucide-react'
+import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock, Home, ChevronLeft, ChevronRight as ChevronRightIcon } from 'lucide-react'
 
 export default function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  
+  const services = [
+    {
+      icon: Hotel,
+      title: 'Luxury Hotels',
+      description: 'Hand-picked premium hotels and resorts in Turkey\'s most beautiful locations',
+      link: '/hotels'
+    },
+    {
+      icon: Plane,
+      title: 'Exclusive Tours',
+      description: 'Private guided tours and unique experiences tailored to your preferences',
+      link: '/tours'
+    },
+    {
+      icon: Car,
+      title: 'VIP Transfers',
+      description: 'Premium transportation services with professional drivers',
+      link: '/transfers'
+    },
+    {
+      icon: Camera,
+      title: 'Experiences',
+      description: 'Unique activities and adventures in every destination',
+      link: '/experiences'
+    },
+    {
+      icon: Plane,
+      title: 'Flights',
+      description: 'Book domestic and international flights with best prices and schedules',
+      link: '/flights'
+    },
+    {
+      icon: Car,
+      title: 'Rent A Car',
+      description: 'Premium car rental fleet including luxury vehicles for your comfort',
+      link: '/rent-a-car'
+    },
+    {
+      icon: Home,
+      title: 'Real Estate',
+      description: 'Premium properties for rent and sale with citizenship investment programs',
+      link: '/real-estate'
+    }
+  ]
+
+  // Auto-advance slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))
+    }, 5000)
+    
+    return () => clearInterval(interval)
+  }, [services.length])
   const hotels = [
     {
       id: 1,
@@ -13,7 +71,7 @@ export default function HomePage() {
       price: 450,
       image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
-      description: 'Luxury hotel in the heart of Istanbul with stunning Bosphorus views'
+      description: 'Luxury hotel in heart of Istanbul with stunning Bosphorus views'
     },
     {
       id: 2,
@@ -24,7 +82,7 @@ export default function HomePage() {
       price: 380,
       image: '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-1.jpeg',
       amenities: ['wifi', 'parking', 'pool', 'spa', 'bar'],
-      description: 'Elegant hotel overlooking the Bosphorus with world-class amenities'
+      description: 'Elegant hotel overlooking Bosphorus with world-class amenities'
     },
     {
       id: 3,
@@ -46,7 +104,7 @@ export default function HomePage() {
       price: 350,
       image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
       amenities: ['wifi', 'pool', 'spa', 'beach-access', 'golf'],
-      description: 'Luxury resort on the Mediterranean coast with private beach'
+      description: 'Luxury resort on Mediterranean coast with private beach'
     },
     {
       id: 5,
@@ -68,7 +126,7 @@ export default function HomePage() {
       price: 320,
       image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       amenities: ['wifi', 'restaurant', 'bar', 'meeting-rooms'],
-      description: 'Boutique hotel in the historic Sultanahmet district'
+      description: 'Boutique hotel in historic Sultanahmet district'
     }
   ]
 
@@ -243,50 +301,67 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Hotel,
-                title: 'Luxury Hotels',
-                description: 'Hand-picked premium hotels and resorts in Turkey\'s most beautiful locations',
-                link: '/hotels'
-              },
-              {
-                icon: Plane,
-                title: 'Exclusive Tours',
-                description: 'Private guided tours and unique experiences tailored to your preferences',
-                link: '/tours'
-              },
-              {
-                icon: Car,
-                title: 'VIP Transfers',
-                description: 'Premium transportation services with professional drivers',
-                link: '/transfers'
-              },
-              {
-                icon: Camera,
-                title: 'Experiences',
-                description: 'Unique activities and adventures in every destination',
-                link: '/experiences'
-              }
-            ].map((service, index) => (
-              <div key={index} className="card group cursor-pointer">
-                <div className="p-8">
-                  <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
-                    <service.icon className="w-8 h-8 text-primary-600" />
+          {/* Services Carousel */}
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {services.map((service, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                      <div className="card group cursor-pointer">
+                        <div className="p-8">
+                          <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
+                            <service.icon className="w-8 h-8 text-primary-600" />
+                          </div>
+                          <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                          <p className="text-gray-600 mb-6">{service.description}</p>
+                          <Link
+                            href={service.link}
+                            className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                          >
+                            Explore
+                            <ChevronRight className="w-4 h-4 ml-1" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <Link 
-                    href={service.link}
-                    className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
-                  >
-                    Explore
-                    <ChevronRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+            
+            {/* Navigation Buttons */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev === 0 ? services.length - 1 : prev - 1))}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
+            </button>
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
+              aria-label="Next slide"
+            >
+              <ChevronRightIcon className="w-6 h-6 text-gray-600" />
+            </button>
+            
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {services.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-primary-600' : 'bg-gray-300'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -297,7 +372,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Popular Destinations</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover Turkey\'s most iconic cities and hidden gems
+              Discover Turkey's most iconic cities and hidden gems
             </p>
           </div>
           
