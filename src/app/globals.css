@@ -111,3 +111,41 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Safari compatibility fixes */
+.prose {
+  min-height: 100px;
+  opacity: 1 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.prose p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Force content visibility in Safari */
+.prose * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Safari specific fix for dynamic content */
+@supports (-webkit-appearance: none) {
+  .prose {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}

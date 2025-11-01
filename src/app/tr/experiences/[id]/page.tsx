@@ -3,7 +3,7 @@
 import { MapPin, Calendar, Clock, Star, ChevronLeft, Heart, Share2, User, MessageCircle, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BookingModal from '@/components/BookingModal'
 
 // Dinamik veri - gerçek uygulamada bu API'den gelecek
@@ -59,9 +59,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["kapadokya", "balon turu", "şafak", "macera"],
       gallery: [
-        "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg",
-        "/images/destinations/cappadocia.jpg",
-        "/images/destinations/cappadocia.jpg"
+        "/experiences-gallery/:experiences:1 /Cappadocia Hot AirBallon.jpeg",
+        "/experiences-gallery/:experiences:1 /cappadocia3.jpeg",
+        "/experiences-gallery/:experiences:1 /kapadokyasunday1.jpeg"
       ],
       relatedExperiences: [
         { id: 2, title: "Ege'nin Mavi Sularında Özel Yat Serüveni", image: "/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk üst Görsel.jpeg" },
@@ -167,9 +167,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["istanbul", "türk hamamı", "kültür", "rahatlama"],
       gallery: [
-        "/images/destinations/istanbul.jpg",
-        "/team/seyfettin.jpg",
-        "/images/destinations/istanbul.jpg"
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath-2.jpeg",
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath-3.jpeg",
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath4.jpeg"
       ],
       relatedExperiences: [
         { id: 1, title: "Gökyüzünde Şafak: Kapadokya Balon Deneyimi", image: "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg" },
@@ -220,9 +220,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["pamukkale", "paraşüt", "macera", "doğa"],
       gallery: [
-        "/images/destinations/pamukkale.jpg",
-        "/images/destinations/pamukkale.jpg",
-        "/images/destinations/pamukkale.jpg"
+        "/experiences-gallery/:experiences:4/pamukkale1.jpeg",
+        "/experiences-gallery/:experiences:4/pamukkale2.jpeg",
+        "/experiences-gallery/:experiences:4/pamukkale3.jpeg"
       ],
       relatedExperiences: [
         { id: 1, title: "Gökyüzünde Şafak: Kapadokya Balon Deneyimi", image: "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg" },
@@ -266,9 +266,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["istanbul", "yemek turu", "gastronomi", "sokak lezzetleri"],
       gallery: [
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-1.jpeg",
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-2.jpeg",
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-3.jpeg"
+        "/experiences-gallery/:experiences:5/gourmet-street-food-1.jpeg",
+        "/experiences-gallery/:experiences:5/gourmet-street-food-2.jpeg",
+        "/experiences-gallery/:experiences:5/gourmet-street-food-3.jpeg"
       ],
       relatedExperiences: [
         { id: 3, title: "Osmanlı Gizemi: Geleneksel Türk Hamamı Ritüeli", image: "/team/seyfettin.jpg" },
@@ -311,9 +311,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["kaş", "dalış", "akdeniz", "su altı"],
       gallery: [
-        "/images/destinations/bodrum.jpg",
-        "/images/destinations/bodrum.jpg",
-        "/images/destinations/bodrum.jpg"
+        "/experiences-gallery/:experiences:6/kas-dalis-at-11.03.41-1024x683.jpeg",
+        "/experiences-gallery/:experiences:6/tuplu-dalis-wp1.jpeg",
+        "/experiences-gallery/:experiences:6/ucak-salış2.jpeg"
       ],
       relatedExperiences: [
         { id: 2, title: "Ege'nin Mavi Sularında Özel Yat Serüveni", image: "/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk üst Görsel.jpeg" },
@@ -441,8 +441,9 @@ export default function TrExperienceDetailPage({ params }: { params: { id: strin
 
             {/* Content */}
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div 
+              <div
                 className="prose prose-lg max-w-none"
+                style={{ minHeight: '200px', opacity: 1 }}
                 dangerouslySetInnerHTML={{ __html: experience.content }}
               />
             </div>

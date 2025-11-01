@@ -7,6 +7,7 @@ const nextConfig = {
         hostname: 'localhost',
       },
     ],
+    unoptimized: true, // Safari compatibility
   },
   swcMinify: true,
   poweredByHeader: false,
@@ -14,6 +15,26 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  // Safari compatibility headers
+  headers: async () => [
+    {
+      source: '/(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'no-cache, no-store, must-revalidate',
+        },
+        {
+          key: 'Pragma',
+          value: 'no-cache',
+        },
+        {
+          key: 'Expires',
+          value: '0',
+        },
+      ],
+    },
+  ],
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.optimization.splitChunks = {

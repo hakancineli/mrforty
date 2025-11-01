@@ -3,7 +3,7 @@
 import { MapPin, Calendar, Clock, Star, ChevronLeft, Heart, Share2, User, MessageCircle, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BookingModal from '@/components/BookingModal'
 
 // Dinamik veri - gerçek uygulamada bu API'den gelecek
@@ -59,9 +59,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["كبادوكيا", "رحلة المنطاد", "الفجر", "مغامرة"],
       gallery: [
-        "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg",
-        "/images/destinations/cappadocia.jpg",
-        "/images/destinations/cappadocia.jpg"
+        "/experiences-gallery/:experiences:1 /Cappadocia Hot AirBallon.jpeg",
+        "/experiences-gallery/:experiences:1 /cappadocia3.jpeg",
+        "/experiences-gallery/:experiences:1 /kapadokyasunday1.jpeg"
       ],
       relatedExperiences: [
         { id: 2, title: "مغامرة اليخت الخاص في المياه الزرقاء لبحر إيجه", image: "/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk üst Görsel.jpeg" },
@@ -171,9 +171,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["إسطنبول", "الحمام التركي", "ثقافة", "استرخاء"],
       gallery: [
-        "/images/destinations/istanbul.jpg",
-        "/team/seyfettin.jpg",
-        "/images/destinations/istanbul.jpg"
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath-2.jpeg",
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath-3.jpeg",
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath4.jpeg"
       ],
       relatedExperiences: [
         { id: 1, title: "فجر السماء: تجربة منطاد الهواء في كبادوكيا", image: "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg" },
@@ -220,9 +220,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["باموكالي", "الطيران الشراعي", "مغامرة", "طبيعة"],
       gallery: [
-        "/images/destinations/pamukkale.jpg",
-        "/images/destinations/pamukkale.jpg",
-        "/images/destinations/pamukkale.jpg"
+        "/experiences-gallery/:experiences:4/pamukkale1.jpeg",
+        "/experiences-gallery/:experiences:4/pamukkale2.jpeg",
+        "/experiences-gallery/:experiences:4/pamukkale3.jpeg"
       ],
       relatedExperiences: [
         { id: 1, title: "فجر السماء: تجربة منطاد الهواء في كبادوكيا", image: "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg" },
@@ -266,9 +266,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["إسطنبول", "جولة الطعام", "مطبخ", "نكهات الشوارع"],
       gallery: [
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-1.jpeg",
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-2.jpeg",
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-3.jpeg"
+        "/experiences-gallery/:experiences:5/gourmet-street-food-1.jpeg",
+        "/experiences-gallery/:experiences:5/gourmet-street-food-2.jpeg",
+        "/experiences-gallery/:experiences:5/gourmet-street-food-3.jpeg"
       ],
       relatedExperiences: [
         { id: 3, title: "سر العثماني: طقوس الحمام التركي التقليدي", image: "/team/seyfettin.jpg" },
@@ -318,9 +318,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["كاش", "الغوص", "المتوسط", "تحت الماء"],
       gallery: [
-        "/images/destinations/bodrum.jpg",
-        "/images/destinations/bodrum.jpg",
-        "/images/destinations/bodrum.jpg"
+        "/experiences-gallery/:experiences:6/kas-dalis-at-11.03.41-1024x683.jpeg",
+        "/experiences-gallery/:experiences:6/tuplu-dalis-wp1.jpeg",
+        "/experiences-gallery/:experiences:6/ucak-salış2.jpeg"
       ],
       relatedExperiences: [
         { id: 2, title: "مغامرة اليخت الخاص في المياه الزرقاء لبحر إيجه", image: "/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk üst Görsel.jpeg" },
@@ -448,8 +448,9 @@ export default function ArExperienceDetailPage({ params }: { params: { id: strin
 
             {/* Content */}
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div 
+              <div
                 className="prose prose-lg max-w-none"
+                style={{ minHeight: '200px', opacity: 1 }}
                 dangerouslySetInnerHTML={{ __html: experience.content }}
               />
             </div>

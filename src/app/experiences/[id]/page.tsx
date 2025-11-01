@@ -3,7 +3,7 @@
 import { MapPin, Calendar, Clock, Star, ChevronLeft, Heart, Share2, User, MessageCircle, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BookingModal from '@/components/BookingModal'
 
 // Dynamic data - will come from API in real application
@@ -59,9 +59,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["cappadocia", "balloon tour", "dawn", "adventure"],
       gallery: [
-        "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg",
-        "/images/destinations/cappadocia.jpg",
-        "/images/destinations/cappadocia.jpg"
+        "/experiences-gallery/:experiences:1 /Cappadocia Hot AirBallon.jpeg",
+        "/experiences-gallery/:experiences:1 /cappadocia3.jpeg",
+        "/experiences-gallery/:experiences:1 /kapadokyasunday1.jpeg"
       ],
       relatedExperiences: [
         { id: 2, title: "Private Yacht Journey in the Blue Waters of Aegean", image: "/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk üst Görsel.jpeg" },
@@ -167,9 +167,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["istanbul", "turkish bath", "culture", "relaxation"],
       gallery: [
-        "/experiences-gallery/:experiences:2/shutterstock_2209682499.jpeg",
-        "/experiences-gallery/:experiences:2/Traditional_Turkish_Bath_Experience_Relaxation_in_Ottoman_Style1.jpeg",
-        "/experiences-gallery/:experiences:2/turkhamam.jpeg"
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath-2.jpeg",
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath-3.jpeg",
+        "/experiences-gallery/:experiences:3/traditional-turkish-bath4.jpeg"
       ],
       relatedExperiences: [
         { id: 1, title: "Dawn in the Sky: Cappadocia Balloon Experience", image: "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg" },
@@ -220,9 +220,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["pamukkale", "paragliding", "adventure", "nature"],
       gallery: [
-        "/images/destinations/pamukkale.jpg",
-        "/images/destinations/pamukkale.jpg",
-        "/images/destinations/pamukkale.jpg"
+        "/experiences-gallery/:experiences:4/pamukkale1.jpeg",
+        "/experiences-gallery/:experiences:4/pamukkale2.jpeg",
+        "/experiences-gallery/:experiences:4/pamukkale3.jpeg"
       ],
       relatedExperiences: [
         { id: 1, title: "Dawn in the Sky: Cappadocia Balloon Experience", image: "/tours/Cappadocia Hot Air Balloon/Cappadocia Hot Air Balloon.jpeg" },
@@ -270,9 +270,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["istanbul", "food tour", "gastronomy", "street flavors"],
       gallery: [
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-1.jpeg",
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-2.jpeg",
-        "/experiences-gallery/:experiences:1 /gurme-sokak-lezzetleri-3.jpeg"
+        "/experiences-gallery/:experiences:5/gourmet-street-food-1.jpeg",
+        "/experiences-gallery/:experiences:5/gourmet-street-food-2.jpeg",
+        "/experiences-gallery/:experiences:5/gourmet-street-food-3.jpeg"
       ],
       relatedExperiences: [
         { id: 3, title: "Ottoman Mystery: Traditional Turkish Bath Ritual", image: "/team/seyfettin.jpg" },
@@ -322,9 +322,9 @@ const getExperienceData = (id: string) => {
       `,
       tags: ["kaş", "diving", "mediterranean", "underwater"],
       gallery: [
-        "/images/destinations/bodrum.jpg",
-        "/images/destinations/bodrum.jpg",
-        "/images/destinations/bodrum.jpg"
+        "/experiences-gallery/:experiences:6/kas-dalis-at-11.03.41-1024x683.jpeg",
+        "/experiences-gallery/:experiences:6/tuplu-dalis-wp1.jpeg",
+        "/experiences-gallery/:experiences:6/ucak-salış2.jpeg"
       ],
       relatedExperiences: [
         { id: 2, title: "Private Yacht Journey in the Blue Waters of Aegean", image: "/tours/Mavi Yolculuk Gulet Turu/Mavi Yolculuk üst Görsel.jpeg" },
@@ -340,6 +340,24 @@ export default function ExperienceDetailPage({ params }: { params: { id: string 
   const experience = getExperienceData(params.id)
   const [isBookingOpen, setIsBookingOpen] = useState(false)
   const [isContactOpen, setIsContactOpen] = useState(false)
+  const [isSafari, setIsSafari] = useState(false)
+
+  // Safari detection and content fix
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent
+    const isSafariBrowser = /^((?!chrome|android).)*safari/i.test(userAgent)
+    setIsSafari(isSafariBrowser)
+    
+    // Force content visibility in Safari
+    if (isSafariBrowser) {
+      const proseElements = document.querySelectorAll('.prose') as NodeListOf<HTMLElement>
+      proseElements.forEach(element => {
+        element.style.opacity = '1'
+        element.style.visibility = 'visible'
+        element.style.display = 'block'
+      })
+    }
+  }, [])
 
   if (!experience) {
     return (
@@ -452,8 +470,9 @@ export default function ExperienceDetailPage({ params }: { params: { id: string 
 
             {/* Content */}
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div 
+              <div
                 className="prose prose-lg max-w-none"
+                style={{ minHeight: '200px', opacity: 1 }}
                 dangerouslySetInnerHTML={{ __html: experience.content }}
               />
             </div>
