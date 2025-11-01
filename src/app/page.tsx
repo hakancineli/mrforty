@@ -5,6 +5,28 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock, Home, ChevronLeft, ChevronRight as ChevronRightIcon } from 'lucide-react'
 
+// Service Card Component
+const ServiceCard = ({ service }: { service: { icon: any; title: string; description: string; link: string } }) => {
+  return (
+    <div className="card group cursor-pointer">
+      <div className="p-8">
+        <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
+          <service.icon className="w-8 h-8 text-primary-600" />
+        </div>
+        <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+        <p className="text-gray-600 mb-6">{service.description}</p>
+        <Link
+          href={service.link}
+          className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
+        >
+          Explore
+          <ChevronRight className="w-4 h-4 ml-1" />
+        </Link>
+      </div>
+    </div>
+  )
+}
+
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   
@@ -292,7 +314,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-32 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Premium Services</h2>
@@ -310,24 +332,7 @@ export default function HomePage() {
               >
                 {services.map((service, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                      <div className="card group cursor-pointer">
-                        <div className="p-8">
-                          <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
-                            <service.icon className="w-8 h-8 text-primary-600" />
-                          </div>
-                          <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
-                          <p className="text-gray-600 mb-6">{service.description}</p>
-                          <Link
-                            href={service.link}
-                            className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
-                          >
-                            Explore
-                            <ChevronRight className="w-4 h-4 ml-1" />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
+                    <ServiceCard service={service} />
                   </div>
                 ))}
               </div>
