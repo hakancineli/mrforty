@@ -78,7 +78,7 @@ export default function HomePage() {
   // Auto-advance slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))
+      setCurrentSlide((prev) => (prev === Math.ceil(services.length / 4) - 1 ? 0 : prev + 1))
     }, 5000)
     
     return () => clearInterval(interval)
@@ -314,7 +314,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-32 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Premium Services</h2>
@@ -323,16 +323,31 @@ export default function HomePage() {
             </p>
           </div>
           
-          {/* Services Carousel */}
+          {/* Services Carousel - 4 cards visible */}
           <div className="relative">
             <div className="overflow-hidden">
               <div
-                className="flex transition-transform duration-500 ease-in-out carousel-container"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 25}%)` }}
               >
                 {services.map((service, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <ServiceCard service={service} />
+                  <div key={index} className="w-1/4 flex-shrink-0 px-3">
+                    <div className="card group cursor-pointer h-full">
+                      <div className="p-6">
+                        <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
+                          <service.icon className="w-8 h-8 text-primary-600" />
+                        </div>
+                        <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+                        <p className="text-gray-600 mb-6">{service.description}</p>
+                        <Link
+                          href={service.link}
+                          className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                        >
+                          Explore
+                          <ChevronRight className="w-4 h-4 ml-1" />
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -340,14 +355,14 @@ export default function HomePage() {
             
             {/* Navigation Buttons */}
             <button
-              onClick={() => setCurrentSlide((prev) => (prev === 0 ? services.length - 1 : prev - 1))}
+              onClick={() => setCurrentSlide((prev) => (prev === 0 ? Math.ceil(services.length / 4) - 1 : prev - 1))}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6 text-gray-600" />
             </button>
             <button
-              onClick={() => setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))}
+              onClick={() => setCurrentSlide((prev) => (prev === Math.ceil(services.length / 4) - 1 ? 0 : prev + 1))}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
               aria-label="Next slide"
             >
@@ -356,7 +371,7 @@ export default function HomePage() {
             
             {/* Dots Indicator */}
             <div className="flex justify-center mt-8 space-x-2">
-              {services.map((_, index) => (
+              {Array.from({ length: Math.ceil(services.length / 4) }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
