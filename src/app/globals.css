@@ -74,55 +74,79 @@ body {
 
 /* Custom components */
 .btn-primary {
-  background-color: rgb(var(--primary-600));
+  background-color: #2563eb;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
   transition: color 0.2s, background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: rgb(var(--primary-700));
+  background-color: #1d4ed8;
 }
 
 .btn-secondary {
-  background-color: rgb(var(--secondary-600));
+  background-color: #475569;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
   transition: color 0.2s, background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
-  background-color: rgb(var(--secondary-700));
+  background-color: #334155;
 }
 
 .btn-tertiary {
-  background-color: rgb(var(--tertiary-600));
+  background-color: #c026d3;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
   transition: color 0.2s, background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-tertiary:hover {
-  background-color: rgb(var(--tertiary-700));
+  background-color: #a21caf;
 }
 
 .btn-quaternary {
-  background-color: rgb(var(--quaternary-600));
+  background-color: #0d9488;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
   transition: color 0.2s, background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-quaternary:hover {
-  background-color: rgb(var(--quaternary-700));
+  background-color: #0f766e;
 }
 
 .card {
