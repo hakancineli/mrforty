@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock, Home, ChevronLeft, ChevronRight as ChevronRightIcon } from 'lucide-react'
+import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock, Home, ChevronLeft, ChevronRight as ChevronRightIcon, Key, Building } from 'lucide-react'
 
 // Service Card Component
 const ServiceCard = ({ service }: { service: { icon: any; title: string; description: string; link: string } }) => {
@@ -62,13 +62,13 @@ export default function HomePage() {
       link: '/flights'
     },
     {
-      icon: Car,
+      icon: Key,
       title: 'Rent A Car',
       description: 'Premium car rental fleet including luxury vehicles for your comfort',
       link: '/rent-a-car'
     },
     {
-      icon: Home,
+      icon: Building,
       title: 'Real Estate',
       description: 'Premium properties for rent and sale with citizenship investment programs',
       link: '/real-estate'
@@ -323,15 +323,15 @@ export default function HomePage() {
             </p>
           </div>
           
-          {/* Services Carousel - 4 cards visible */}
+          {/* Services Carousel - Fixed width cards with sliding */}
           <div className="relative">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 25}%)` }}
+                style={{ transform: `translateX(-${currentSlide * 256}px)` }}
               >
                 {services.map((service, index) => (
-                  <div key={index} className="w-1/4 flex-shrink-0 px-3">
+                  <div key={index} className="flex-shrink-0 w-64">
                     <div className="card group cursor-pointer h-full">
                       <div className="p-6">
                         <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
@@ -355,14 +355,14 @@ export default function HomePage() {
             
             {/* Navigation Buttons */}
             <button
-              onClick={() => setCurrentSlide((prev) => (prev === 0 ? Math.ceil(services.length / 4) - 1 : prev - 1))}
+              onClick={() => setCurrentSlide((prev) => (prev === 0 ? services.length - 1 : prev - 1))}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6 text-gray-600" />
             </button>
             <button
-              onClick={() => setCurrentSlide((prev) => (prev === Math.ceil(services.length / 4) - 1 ? 0 : prev + 1))}
+              onClick={() => setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
               aria-label="Next slide"
             >
@@ -371,14 +371,14 @@ export default function HomePage() {
             
             {/* Dots Indicator */}
             <div className="flex justify-center mt-8 space-x-2">
-              {Array.from({ length: Math.ceil(services.length / 4) }).map((_, index) => (
+              {services.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
                     index === currentSlide ? 'bg-primary-600' : 'bg-gray-300'
                   }`}
-                  aria-label={`Go to slide ${index + 1}`}
+                  aria-label={`Go to service ${index + 1}`}
                 />
               ))}
             </div>
