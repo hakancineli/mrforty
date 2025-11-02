@@ -78,7 +78,7 @@ export default function HomePage() {
   // Auto-advance slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === Math.ceil(services.length / 4) - 1 ? 0 : prev + 1))
+      setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))
     }, 5000)
     
     return () => clearInterval(interval)
@@ -323,15 +323,16 @@ export default function HomePage() {
             </p>
           </div>
           
-          {/* Services Carousel - Fixed width cards with sliding */}
+          {/* Services Carousel - Infinite loop with first 4 visible */}
           <div className="relative">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 256}px)` }}
               >
-                {services.map((service, index) => (
-                  <div key={index} className="flex-shrink-0 w-64">
+                {/* Clone services for infinite loop effect */}
+                {[...services, ...services].map((service, index) => (
+                  <div key={`${service.title}-${index}`} className="flex-shrink-0 w-64">
                     <div className="card group cursor-pointer h-full">
                       <div className="p-6">
                         <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
