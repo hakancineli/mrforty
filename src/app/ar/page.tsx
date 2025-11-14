@@ -309,10 +309,10 @@ export default function ArPage() {
                 rating: 4.8
               },
               {
-                name: 'كابادوكيا',
-                image: '/images/destinations/cappadocia.jpg',
-                tours: 32,
-                rating: 4.9
+                name: 'طرابزون',
+                image: '/images/destinations/bodrum.jpg',
+                tours: 15,
+                rating: 4.6
               },
               {
                 name: 'أنطاليا',
@@ -321,25 +321,13 @@ export default function ArPage() {
                 rating: 4.7
               },
               {
-                name: 'بودروم',
-                image: '/images/destinations/bodrum.jpg',
-                tours: 24,
-                rating: 4.8
-              },
-              {
-                name: 'باموكالي',
-                image: '/images/destinations/pamukkale.jpg',
-                tours: 18,
-                rating: 4.9
-              },
-              {
-                name: 'فيثيي',
-                image: '/images/destinations/fethiye.jpg',
-                tours: 22,
-                rating: 4.7
+                name: 'بورصة',
+                image: '/images/destinations/cappadocia.jpg',
+                tours: 20,
+                rating: 4.5
               }
             ].map((destination, index) => (
-              <div key={index} className="card group cursor-pointer">
+              <div key={index} className="card group cursor-pointer" onClick={() => window.location.href = `/ar/hotels?city=${destination.name.toLowerCase()}`}>
                 <div className="relative h-64 overflow-hidden">
                   <Image
                     src={destination.image}
@@ -355,7 +343,7 @@ export default function ArPage() {
                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         <span>{destination.rating}</span>
                       </div>
-                      <span>{destination.tours} جولة</span>
+                      <span>{destination.tours} فنادق</span>
                     </div>
                   </div>
                 </div>

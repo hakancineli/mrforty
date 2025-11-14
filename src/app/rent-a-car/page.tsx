@@ -16,9 +16,9 @@ export default function RentACarPage() {
       category: 'Luxury Sedan',
       image: '/rent-a-car/bmw-7-series.jpg',
       features: ['4 Passengers', 'Automatic', 'Hybrid', 'Leather Seats'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '$250',
+      weeklyPrice: '$1,500',
+      monthlyPrice: '$5,000'
     },
     {
       id: 'audi',
@@ -26,9 +26,9 @@ export default function RentACarPage() {
       category: 'Luxury Sedan',
       image: '/rent-a-car/audi-a8.jpg',
       features: ['4 Passengers', 'Automatic', 'Petrol', 'Quattro Drive'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '$280',
+      weeklyPrice: '$1,700',
+      monthlyPrice: '$5,800'
     },
     {
       id: 'mercedes',
@@ -36,9 +36,9 @@ export default function RentACarPage() {
       category: 'Luxury Sedan',
       image: '/rent-a-car/mercedes-s-class.jpg',
       features: ['4 Passengers', 'Automatic', 'Hybrid', 'AIR-BALANCE'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '$300',
+      weeklyPrice: '$1,850',
+      monthlyPrice: '$6,500'
     },
     {
       id: 'range-rover',
@@ -46,9 +46,9 @@ export default function RentACarPage() {
       category: 'Luxury SUV',
       image: '/rent-a-car/range-rover-sport.jpg',
       features: ['5 Passengers', 'Automatic', 'Diesel', '4WD'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '$350',
+      weeklyPrice: '$2,100',
+      monthlyPrice: '$7,500'
     },
     {
       id: 'porsche',
@@ -56,9 +56,9 @@ export default function RentACarPage() {
       category: 'Luxury Sports',
       image: '/rent-a-car/porsche-panamera.jpg',
       features: ['4 Passengers', 'Automatic', 'Petrol', 'Sport Chrono'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '$400',
+      weeklyPrice: '$2,500',
+      monthlyPrice: '$8,500'
     },
     {
       id: 'passat',
@@ -66,9 +66,9 @@ export default function RentACarPage() {
       category: 'Premium Sedan',
       image: '/rent-a-car/volkswagen-passat.jpg',
       features: ['5 Passengers', 'Automatic', 'Diesel', 'DSG'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '$150',
+      weeklyPrice: '$900',
+      monthlyPrice: '$3,200'
     }
   ]
 

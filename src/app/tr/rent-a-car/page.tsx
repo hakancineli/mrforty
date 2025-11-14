@@ -16,9 +16,9 @@ export default function RentACarPage() {
       category: 'Lüks Sedan',
       image: '/rent-a-car/bmw-7-series.jpg',
       features: ['4 Yolcu', 'Otomatik', 'Hibrit', 'Deri Koltuklar'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '₺8.500',
+      weeklyPrice: '₺51.000',
+      monthlyPrice: '₺170.000'
     },
     {
       id: 'audi',
@@ -26,9 +26,9 @@ export default function RentACarPage() {
       category: 'Lüks Sedan',
       image: '/rent-a-car/audi-a8.jpg',
       features: ['4 Yolcu', 'Otomatik', 'Benzin', 'Quattro Çekiş'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '₺9.500',
+      weeklyPrice: '₺57.800',
+      monthlyPrice: '₺197.200'
     },
     {
       id: 'mercedes',
@@ -36,9 +36,9 @@ export default function RentACarPage() {
       category: 'Lüks Sedan',
       image: '/rent-a-car/mercedes-s-class.jpg',
       features: ['4 Yolcu', 'Otomatik', 'Hibrit', 'AIR-BALANCE'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '₺10.200',
+      weeklyPrice: '₺62.900',
+      monthlyPrice: '₺221.000'
     },
     {
       id: 'range-rover',
@@ -46,9 +46,9 @@ export default function RentACarPage() {
       category: 'Lüks SUV',
       image: '/rent-a-car/range-rover-sport.jpg',
       features: ['5 Yolcu', 'Otomatik', 'Dizel', '4WD'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '₺11.900',
+      weeklyPrice: '₺71.400',
+      monthlyPrice: '₺255.000'
     },
     {
       id: 'porsche',
@@ -56,9 +56,9 @@ export default function RentACarPage() {
       category: 'Lüks Spor',
       image: '/rent-a-car/porsche-panamera.jpg',
       features: ['4 Yolcu', 'Otomatik', 'Benzin', 'Sport Chrono'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '₺13.600',
+      weeklyPrice: '₺85.000',
+      monthlyPrice: '₺289.000'
     },
     {
       id: 'passat',
@@ -66,9 +66,9 @@ export default function RentACarPage() {
       category: 'Premium Sedan',
       image: '/rent-a-car/volkswagen-passat.jpg',
       features: ['5 Yolcu', 'Otomatik', 'Dizel', 'DSG'],
-      dailyPrice: '',
-      weeklyPrice: '',
-      monthlyPrice: ''
+      dailyPrice: '₺5.100',
+      weeklyPrice: '₺30.600',
+      monthlyPrice: '₺108.800'
     }
   ]
 
