@@ -60,8 +60,10 @@ const DestinationCard = ({ destination, tick }: { destination: { name: string; i
           alt={destination.name}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           onError={handleError}
-          priority={destination.name === 'Istanbul'}
+          priority
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-4 left-4 text-white">
