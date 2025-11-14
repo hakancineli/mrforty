@@ -29,7 +29,7 @@ const ServiceCard = ({ service }: { service: { icon: any; title: string; descrip
 
 // Destination Card with slideshow controlled by shared tick
 const DestinationCard = ({ destination, tick }: { destination: { name: string; image: string; gallery?: string[]; tours: number; rating: number }, tick: number }) => {
-  const [offset, setOffset] = useState(0) // advances locally on image error
+  const [offset, setOffset] = useState(0) // advances locally on image error and on mobile auto-rotate
   const images = destination.gallery && destination.gallery.length > 0 ? destination.gallery : [destination.image]
   const idx = images.length > 0 ? ((tick + offset) % images.length) : 0
 
@@ -38,6 +38,18 @@ const DestinationCard = ({ destination, tick }: { destination: { name: string; i
       setOffset((v) => (v + 1) % images.length)
     }
   }
+
+  // Mobile-only auto-rotation to ensure slideshow on small screens (keeps desktop in sync via shared tick)
+  useEffect(() => {
+    if (images.length <= 1) return
+    if (typeof window === 'undefined') return
+    const isMobile = window.matchMedia('(max-width: 767px)').matches
+    if (!isMobile) return
+    const id = setInterval(() => {
+      setOffset((v) => (v + 1) % images.length)
+    }, 3500)
+    return () => clearInterval(id)
+  }, [images.length])
 
   return (
     <Link href={`/hotels/city/${destination.name.toLowerCase()}`} className="card group cursor-pointer">
