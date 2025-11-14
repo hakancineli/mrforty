@@ -451,10 +451,10 @@ export default function HomePage() {
                 rating: 4.8
               },
               {
-                name: 'Cappadocia',
-                image: '/images/destinations/cappadocia.jpg',
-                tours: 32,
-                rating: 4.9
+                name: 'Trabzon',
+                image: '/images/destinations/bodrum.jpg',
+                tours: 15,
+                rating: 4.6
               },
               {
                 name: 'Antalya',
@@ -463,25 +463,13 @@ export default function HomePage() {
                 rating: 4.7
               },
               {
-                name: 'Bodrum',
-                image: '/images/destinations/bodrum.jpg',
-                tours: 24,
-                rating: 4.8
-              },
-              {
-                name: 'Pamukkale',
-                image: '/images/destinations/pamukkale.jpg',
-                tours: 18,
-                rating: 4.9
-              },
-              {
-                name: 'Fethiye',
-                image: '/images/destinations/fethiye.jpg',
-                tours: 22,
-                rating: 4.7
+                name: 'Bursa',
+                image: '/images/destinations/cappadocia.jpg',
+                tours: 20,
+                rating: 4.5
               }
             ].map((destination, index) => (
-              <div key={index} className="card group cursor-pointer">
+              <div key={index} className="card group cursor-pointer" onClick={() => window.location.href = `/hotels?city=${destination.name.toLowerCase()}`}>
                 <div className="relative h-64 overflow-hidden">
                   <Image
                     src={destination.image}
@@ -497,7 +485,7 @@ export default function HomePage() {
                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         <span>{destination.rating}</span>
                       </div>
-                      <span>{destination.tours} Tours</span>
+                      <span>{destination.tours} Hotels</span>
                     </div>
                   </div>
                 </div>
