@@ -27,8 +27,56 @@ const ServiceCard = ({ service }: { service: { icon: any; title: string; descrip
   )
 }
 
+// Destination Card with slideshow controlled by shared tick
+const DestinationCard = ({ destination, tick }: { destination: { name: string; image: string; gallery?: string[]; tours: number; rating: number }, tick: number }) => {
+  const [offset, setOffset] = useState(0) // advances locally on image error
+  const images = destination.gallery && destination.gallery.length > 0 ? destination.gallery : [destination.image]
+  const idx = images.length > 0 ? ((tick + offset) % images.length) : 0
+
+  const handleError = () => {
+    if (images.length > 1) {
+      setOffset((v) => (v + 1) % images.length)
+    }
+  }
+
+  return (
+    <Link href={`/hotels/city/${destination.name.toLowerCase()}`} className="card group cursor-pointer">
+      <div className="relative h-[28rem] overflow-hidden">
+        <Image
+          key={images[idx]}
+          src={images[idx]}
+          alt={destination.name}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          onError={handleError}
+          priority={destination.name === 'Istanbul'}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute bottom-4 left-4 text-white">
+          <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
+          <div className="flex items-center gap-4 text-sm">
+            <div className="flex items-center gap-1">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <span>{destination.rating}</span>
+            </div>
+            <span>{destination.tours} Hotels</span>
+          </div>
+        </div>
+        {images.length > 1 && (
+          <div className="absolute right-3 bottom-3 flex gap-1">
+            {images.map((_, i) => (
+              <span key={i} className={`w-2 h-2 rounded-full ${i === idx ? 'bg-white' : 'bg-white/50'}`} />
+            ))}
+          </div>
+        )}
+      </div>
+    </Link>
+  )
+}
+
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [destinationsTick, setDestinationsTick] = useState(0)
   
   // Get current language
   const getCurrentLanguage = () => {
@@ -124,6 +172,12 @@ export default function HomePage() {
     
     return () => clearInterval(interval)
   }, [services.length])
+
+  // Sync all destination cards every 3.5s
+  useEffect(() => {
+    const t = setInterval(() => setDestinationsTick((v) => v + 1), 3500)
+    return () => clearInterval(t)
+  }, [])
   const hotels = [
     {
       id: 1,
@@ -442,54 +496,62 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 name: 'Istanbul',
                 image: '/images/destinations/istanbul.jpg',
+                gallery: [
+                  '/images/destinations/Istanbul/istanbul-1.jpg',
+                  '/images/destinations/Istanbul/istanbul-2.jpg',
+                  '/images/destinations/Istanbul/istanbul-3.jpg',
+                  '/images/destinations/Istanbul/istanbul-4.jpg',
+                  '/images/destinations/Istanbul/istanbul-5.jpg',
+                ],
                 tours: 45,
                 rating: 4.8
               },
               {
                 name: 'Trabzon',
                 image: '/images/destinations/bodrum.jpg',
+                gallery: [
+                  '/images/destinations/Trabzon/trabzon-1.jpg',
+                  '/images/destinations/Trabzon/trabzon-2.jpg',
+                  '/images/destinations/Trabzon/trabzon-3.jpg',
+                  '/images/destinations/Trabzon/trabzon-4.jpg',
+                  '/images/destinations/Trabzon/trabzon-5.jpg',
+                ],
                 tours: 15,
                 rating: 4.6
               },
               {
                 name: 'Antalya',
                 image: '/images/destinations/antalya.jpg',
+                gallery: [
+                  '/images/destinations/Antalya/antalya-1.jpg',
+                  '/images/destinations/Antalya/antalya-2.jpg',
+                  '/images/destinations/Antalya/antalya-3.jpg',
+                  '/images/destinations/Antalya/antalya-4.jpg',
+                  '/images/destinations/Antalya/antalya-5.jpg',
+                ],
                 tours: 28,
                 rating: 4.7
               },
               {
                 name: 'Bursa',
                 image: '/images/destinations/cappadocia.jpg',
+                gallery: [
+                  '/images/destinations/Bursa/bursa-1.jpg',
+                  '/images/destinations/Bursa/bursa-2.jpg',
+                  '/images/destinations/Bursa/bursa-3.jpg',
+                  '/images/destinations/Bursa/bursa-4.jpg',
+                  '/images/destinations/Bursa/bursa-5.jpg',
+                ],
                 tours: 20,
                 rating: 4.5
               }
             ].map((destination, index) => (
-              <div key={index} className="card group cursor-pointer" onClick={() => window.location.href = `/hotels?city=${destination.name.toLowerCase()}`}>
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={destination.image}
-                    alt={destination.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
-                    <div className="flex items-center gap-4 text-sm">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        <span>{destination.rating}</span>
-                      </div>
-                      <span>{destination.tours} Hotels</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <DestinationCard key={index} destination={destination as any} tick={destinationsTick} />
             ))}
           </div>
         </div>

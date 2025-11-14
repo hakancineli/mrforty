@@ -18,7 +18,7 @@ export default function RealEstatePage() {
       bedrooms: 3,
       bathrooms: 2,
       area: '180 m²',
-      price: '$3,500/month',
+      price: '$4,200/month',
       image: '/real-estate/luxury-apartment-1.jpg',
       features: ['Sea View', 'Furnished', 'Parking', '24/7 Security']
     },
@@ -30,7 +30,7 @@ export default function RealEstatePage() {
       bedrooms: 5,
       bathrooms: 4,
       area: '450 m²',
-      price: '$8,000/month',
+      price: '$9,500/month',
       image: '/real-estate/modern-villa-1.jpg',
       features: ['Private Pool', 'Garden', 'Garage', 'Smart Home']
     },
@@ -42,7 +42,7 @@ export default function RealEstatePage() {
       bedrooms: 4,
       bathrooms: 3,
       area: '320 m²',
-      price: '$6,500/month',
+      price: '$7,800/month',
       image: '/real-estate/penthouse-1.jpg',
       features: ['Rooftop Terrace', 'City View', 'Jacuzzi', 'Premium Location']
     }
@@ -57,7 +57,7 @@ export default function RealEstatePage() {
       bedrooms: 2,
       bathrooms: 1,
       area: '120 m²',
-      price: '$450,000',
+      price: '$525,000',
       image: '/real-estate/investment-property-1.jpg',
       features: ['High ROI', 'Rental Income', 'City Center', 'New Build']
     },
@@ -69,7 +69,7 @@ export default function RealEstatePage() {
       bedrooms: 4,
       bathrooms: 3,
       area: '280 m²',
-      price: '$1,200,000',
+      price: '$1,380,000',
       image: '/real-estate/beach-house-1.jpg',
       features: ['Beach Access', 'Private Garden', 'Sea View', 'Luxury Finishes']
     },
@@ -81,7 +81,7 @@ export default function RealEstatePage() {
       bedrooms: 0,
       bathrooms: 2,
       area: '500 m²',
-      price: '$2,500,000',
+      price: '$2,850,000',
       image: '/real-estate/commercial-property-1.jpg',
       features: ['Business District', 'High Visibility', 'Modern Design', 'Parking']
     }

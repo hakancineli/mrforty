@@ -18,7 +18,7 @@ export default function RealEstatePage() {
       bedrooms: 3,
       bathrooms: 2,
       area: '180 m²',
-      price: '$3,500/ay',
+      price: '₺15.400/ay',
       image: '/real-estate/luxury-apartment-1.jpg',
       features: ['Deniz Manzarası', 'Eşyalı', 'Otopark', '7/24 Güvenlik']
     },
@@ -30,7 +30,7 @@ export default function RealEstatePage() {
       bedrooms: 5,
       bathrooms: 4,
       area: '450 m²',
-      price: '$8,000/ay',
+      price: '₺35.200/ay',
       image: '/real-estate/modern-villa-1.jpg',
       features: ['Özel Havuz', 'Bahçe', 'Garaj', 'Akıllı Ev']
     },
@@ -42,7 +42,7 @@ export default function RealEstatePage() {
       bedrooms: 4,
       bathrooms: 3,
       area: '320 m²',
-      price: '$6,500/ay',
+      price: '₺28.600/ay',
       image: '/real-estate/penthouse-1.jpg',
       features: ['Çatı Terası', 'Şehir Manzarası', 'Jakuzi', 'Premium Konum']
     }
@@ -57,7 +57,7 @@ export default function RealEstatePage() {
       bedrooms: 2,
       bathrooms: 1,
       area: '120 m²',
-      price: '$450,000',
+      price: '₺1.890.000',
       image: '/real-estate/investment-property-1.jpg',
       features: ['Yüksek ROI', 'Kira Geliri', 'Şehir Merkezi', 'Yeni Yapı']
     },
@@ -69,7 +69,7 @@ export default function RealEstatePage() {
       bedrooms: 4,
       bathrooms: 3,
       area: '280 m²',
-      price: '$1,200,000',
+      price: '₺5.040.000',
       image: '/real-estate/beach-house-1.jpg',
       features: ['Plaj Erişimi', 'Özel Bahçe', 'Deniz Manzarası', 'Lüks Detaylar']
     },
@@ -81,7 +81,7 @@ export default function RealEstatePage() {
       bedrooms: 0,
       bathrooms: 2,
       area: '500 m²',
-      price: '$2,500,000',
+      price: '₺10.500.000',
       image: '/real-estate/commercial-property-1.jpg',
       features: ['İş Merkezi', 'Yüksek Görünürlük', 'Modern Tasarım', 'Otopark']
     }

@@ -3,6 +3,37 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+const cities = [
+  {
+    id: 'istanbul',
+    name: 'Istanbul',
+    description: 'Where East Meets West',
+    image: '/images/destinations/istanbul.jpg',
+    hotelCount: 10
+  },
+  {
+    id: 'trabzon',
+    name: 'Trabzon',
+    description: 'Black Sea Beauty',
+    image: '/images/destinations/trabzon.jpg',
+    hotelCount: 10
+  },
+  {
+    id: 'antalya',
+    name: 'Antalya',
+    description: 'Turkish Riviera',
+    image: '/images/destinations/antalya.jpg',
+    hotelCount: 10
+  },
+  {
+    id: 'bursa',
+    name: 'Bursa',
+    description: 'Green Bursa',
+    image: '/images/destinations/bursa.jpg',
+    hotelCount: 10
+  }
+];
+
 export default function HotelsPage() {
   const hotels = [
     {
@@ -97,9 +128,42 @@ export default function HotelsPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
               Luxury Hotels in Turkey
             </h1>
-            <p className="text-xl max-w-2xl mx-auto opacity-90">
-              Hand-picked premium accommodations for unforgettable experiences
+            <p className="text-xl max-w-2xl mx-auto opacity-90 mb-2">
+              Discover the best hotels in Turkey's most popular destinations
             </p>
+            <h2 className="text-2xl font-bold mt-10 mb-6 text-center">Featured Hotels</h2>
+            <p className="text-xl max-w-2xl mx-auto opacity-90">
+                Hand-picked premium accommodations for unforgettable experiences
+              </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Destinations */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <h2 className="text-2xl font-bold mb-6 text-center">Popular Destinations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {cities.map((city) => (
+              <Link key={city.id} href={`/hotels/city/${city.id}`}>
+                <div className="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-64">
+                  <div className="absolute inset-0">
+                    <Image
+                      src={city.image}
+                      alt={city.name}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300" />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <h3 className="text-xl font-bold">{city.name}</h3>
+                    <p className="text-sm opacity-90">{city.description}</p>
+                    <p className="text-sm mt-1">{city.hotelCount} hotels</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

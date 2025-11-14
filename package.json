@@ -7,7 +7,9 @@
     "dev:fast": "NODE_OPTIONS='--max-old-space-size=4096' next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "download:istanbul": "node scripts/download-hotel-images.mjs",
+    "download:destinations": "node scripts/download-destination-images.mjs"
   },
   "dependencies": {
     "critters": "^0.0.23",
@@ -24,6 +26,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.33",
     "postcss": "^8",
+    "puppeteer": "^22.15.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

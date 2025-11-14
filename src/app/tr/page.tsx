@@ -326,7 +326,11 @@ export default function TrPage() {
                 rating: 4.5
               }
             ].map((destination, index) => (
-              <div key={index} className="card group cursor-pointer" onClick={() => window.location.href = `/tr/hotels?city=${destination.name.toLowerCase()}`}>
+              <Link
+                key={index}
+                href={`/tr/hotels/city/${({ 'İstanbul': 'istanbul', 'Trabzon': 'trabzon', 'Antalya': 'antalya', 'Bursa': 'bursa' } as Record<string,string>)[destination.name] || destination.name.toLowerCase()}`}
+                className="card group cursor-pointer"
+              >
                 <div className="relative h-64 overflow-hidden">
                   <Image
                     src={destination.image}
@@ -346,7 +350,7 @@ export default function TrPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
