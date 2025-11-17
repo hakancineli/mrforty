@@ -74,7 +74,7 @@ export default function TransfersPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 pt-20">
+        <div className="relative z-10 h-full flex items-end justify-center text-center text-white px-4 pb-8">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
               خدمات النقل VIP
