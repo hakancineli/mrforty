@@ -123,7 +123,7 @@ export default function ToursPage() {
             className="object-cover opacity-30"
           />
         </div>
-        <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
+        <div className="relative z-10 h-full flex items-end justify-center text-center text-white px-4 pb-8">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
               Unforgettable Tours in Turkey

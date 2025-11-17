@@ -77,7 +77,7 @@ export default function RentACarPage() {
       {/* Hero Section */}
       <section className="relative h-96 bg-gradient-to-r from-gray-900 to-gray-700">
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative container mx-auto px-4 h-full flex items-center">
+        <div className="relative container mx-auto px-4 h-full flex items-end pb-8">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold text-white mb-6">
               Premium Araç Kiralama Hizmetleri
