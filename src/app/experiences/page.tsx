@@ -198,7 +198,7 @@ export default function ExperiencesPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative z-10 h-full flex items-center justify-center text-white px-4 pt-20">
+        <div className="relative z-10 h-full flex items-end justify-center text-white px-4 pb-12">
           <div className="text-center max-w-4xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif">
               Unforgettable Experiences in Turkey
