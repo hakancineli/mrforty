@@ -1,8 +1,96 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock } from 'lucide-react'
+import { Search, MapPin, Calendar, Users, Star, ChevronRight, Plane, Hotel, Car, Camera, Clock, ChevronLeft, ChevronRight as ChevronRightIcon, Key, Building } from 'lucide-react'
+
+// Service Card Component
+const ServiceCard = ({ service }: { service: { icon: any; title: string; description: string; link: string } }) => {
+  return (
+    <div className="card group cursor-pointer">
+      <div className="p-8">
+        <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
+          <service.icon className="w-8 h-8 text-primary-600" />
+        </div>
+        <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+        <p className="text-gray-600 mb-6">{service.description}</p>
+        <Link
+          href={service.link}
+          className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
+        >
+          اكتشف
+          <ChevronRight className="w-4 h-4 ml-1" />
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+// Destination Card with slideshow controlled by shared tick
+const DestinationCard = ({ destination, tick }: { destination: { name: string; image: string; gallery?: string[]; tours: number; rating: number }, tick: number }) => {
+  const [offset, setOffset] = useState(0) // advances locally on image error and on mobile auto-rotate
+  const images = destination.gallery && destination.gallery.length > 0 ? destination.gallery : [destination.image]
+  const idx = images.length > 0 ? ((tick + offset) % images.length) : 0
+
+  const handleError = () => {
+    if (images.length > 1) {
+      setOffset((v) => (v + 1) % images.length)
+    }
+  }
+
+  // Mobile-only auto-rotation to ensure slideshow on small screens (keeps desktop in sync via shared tick)
+  useEffect(() => {
+    if (images.length <= 1) return
+    if (typeof window === 'undefined') return
+    const isMobile = window.matchMedia('(max-width: 767px)').matches
+    if (!isMobile) return
+    const id = setInterval(() => {
+      setOffset((v) => (v + 1) % images.length)
+    }, 3500)
+    return () => clearInterval(id)
+  }, [images.length])
+
+  return (
+    <Link href={`/ar/hotels/city/${destination.name.toLowerCase()}`} className="card group cursor-pointer">
+      <div className="relative h-[28rem] overflow-hidden">
+        <Image
+          key={images[idx]}
+          src={images[idx]}
+          alt={destination.name}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          onError={handleError}
+          priority
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute bottom-4 left-4 text-white">
+          <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
+          <div className="flex items-center gap-4 text-sm">
+            <div className="flex items-center gap-1">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <span>{destination.rating}</span>
+            </div>
+            <span>{destination.tours} فنادق</span>
+          </div>
+        </div>
+        {images.length > 1 && (
+          <div className="absolute right-3 bottom-3 flex gap-1">
+            {images.map((_, i) => (
+              <span key={i} className={`w-2 h-2 rounded-full ${i === idx ? 'bg-white' : 'bg-white/50'}`} />
+            ))}
+          </div>
+        )}
+      </div>
+    </Link>
+  )
+}
 
 export default function ArPage() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [destinationsTick, setDestinationsTick] = useState(0)
   const hotels = [
     {
       id: 1,
@@ -165,6 +253,94 @@ export default function ArPage() {
     }
   ]
 
+  const services = [
+    {
+      icon: Hotel,
+      title: 'Luxury Hotels',
+      titleTr: 'Lüks Oteller',
+      titleAr: 'الفنادق الفاخرة',
+      description: 'Hand-picked premium hotels and resorts in Turkey\'s most beautiful locations',
+      descriptionTr: 'Türkiye\'nin en güzel lokasyonlarında özenle seçilmiş premium oteller ve tatil köyleri',
+      descriptionAr: 'أفضل الفنادق والمنتجعات المختارة في أجمل المواقع في تركيا',
+      link: '/ar/hotels'
+    },
+    {
+      icon: Plane,
+      title: 'Exclusive Tours',
+      titleTr: 'Özel Turlar',
+      titleAr: 'جولات حصرية',
+      description: 'Private guided tours and unique experiences tailored to your preferences',
+      descriptionTr: 'Tercihlerinize göre özel rehberli turlar ve benzersiz deneyimler',
+      descriptionAr: 'جولات خاصة موجهة وتجارب فريدة حسب تفضيلاتك',
+      link: '/ar/tours'
+    },
+    {
+      icon: Car,
+      title: 'VIP Transfers',
+      titleTr: 'VIP Transferler',
+      titleAr: 'نقل VIP',
+      description: 'Premium transportation services with professional drivers',
+      descriptionTr: 'Profesyonel sürücülerle birinci sınıf ulaşım hizmetleri',
+      descriptionAr: 'خدمات نقل فاخرة مع سائقين محترفين',
+      link: '/ar/transfers'
+    },
+    {
+      icon: Camera,
+      title: 'Experiences',
+      titleTr: 'Deneyimler',
+      titleAr: 'تجارب',
+      description: 'Unique activities and adventures in every destination',
+      descriptionTr: 'Her destinasyonda benzersiz aktiviteler ve maceralar',
+      descriptionAr: 'أنشطة ومغامرات فريدة في كل وجهة',
+      link: '/ar/experiences'
+    },
+    {
+      icon: Plane,
+      title: 'Flights',
+      titleTr: 'Uçuşlar',
+      titleAr: 'رحلات الطيران',
+      description: 'Book domestic and international flights with best prices and schedules',
+      descriptionTr: 'En iyi fiyat ve tarifelerle yurt içi ve yurt dışı uçuş rezervasyonu yapın',
+      descriptionAr: 'احجز رحلات داخلية ودولية بأفضل الأسعار والجداول الزمنية',
+      link: '/ar/flights'
+    },
+    {
+      icon: Key,
+      title: 'Rent A Car',
+      titleTr: 'Araç Kiralama',
+      titleAr: 'تأجرة السيارات',
+      description: 'Premium car rental fleet including luxury vehicles for your comfort',
+      descriptionTr: 'Konforunuz için lüks araçlar da dahil olmak üzere premium araç kiralama filosu',
+      descriptionAr: 'أسطول سيارات فاخرة تشمل مركبات فاخرة لراحتك',
+      link: '/ar/rent-a-car'
+    },
+    {
+      icon: Building,
+      title: 'Real Estate',
+      titleTr: 'Emlak',
+      titleAr: 'العقارات',
+      description: 'Premium properties for rent and sale with citizenship investment programs',
+      descriptionTr: 'Vatandaşlık yatırım programları ile kiralık ve satılık premium mülkler',
+      descriptionAr: 'عقارات مميزة للإيجار والبيع مع برامج استثمار المواطنة',
+      link: '/ar/real-estate'
+    }
+  ]
+
+  // Auto-advance slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))
+    }, 5000)
+    
+    return () => clearInterval(interval)
+  }, [services.length])
+
+  // Sync all destination cards every 3.5s
+  useEffect(() => {
+    const t = setInterval(() => setDestinationsTick((v) => v + 1), 3500)
+    return () => clearInterval(t)
+  }, [])
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -242,50 +418,70 @@ export default function ArPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Hotel,
-                title: 'فنادق فاخرة',
-                description: 'فنادق ومنتجعات مختارة بعناية في أجمل مواقع تركيا',
-                link: '/ar/hotels'
-              },
-              {
-                icon: Plane,
-                title: 'جولات حصرية',
-                description: 'جولات موجهة وتجارب فريدة مصممة حسب تفضيلاتك',
-                link: '/ar/tours'
-              },
-              {
-                icon: Car,
-                title: 'نقل VIP',
-                description: 'خدمات النقل المميزة مع السائقين المحترفين',
-                link: '/ar/transfers'
-              },
-              {
-                icon: Camera,
-                title: 'تجارب',
-                description: 'أنشطة فريدة ومغامرات في كل وجهة',
-                link: '/ar/experiences'
-              }
-            ].map((service, index) => (
-              <div key={index} className="card group cursor-pointer">
-                <div className="p-8">
-                  <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
-                    <service.icon className="w-8 h-8 text-primary-600" />
+          {/* Services Carousel - Infinite loop with first 4 visible */}
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 256}px)` }}
+              >
+                {/* Clone services for infinite loop effect */}
+                {[...services, ...services].map((service, index) => (
+                  <div key={`${service.title}-${index}`} className="flex-shrink-0 w-64">
+                    <div className="card group cursor-pointer h-full">
+                      <div className="p-6">
+                        <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors">
+                          <service.icon className="w-8 h-8 text-primary-600" />
+                        </div>
+                        <h3 className="text-xl font-semibold mb-4">
+                          {service.titleAr}
+                        </h3>
+                        <p className="text-gray-600 mb-6">
+                          {service.descriptionAr}
+                        </p>
+                        <Link
+                          href={service.link}
+                          className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                        >
+                          استكشف
+                          <ChevronRight className="w-4 h-4 ml-1" />
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <Link 
-                    href={service.link}
-                    className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
-                  >
-                    استكشف
-                    <ChevronRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+            
+            {/* Navigation Buttons */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev === 0 ? services.length - 1 : prev - 1))}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
+            </button>
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
+              aria-label="Next slide"
+            >
+              <ChevronRightIcon className="w-6 h-6 text-gray-600" />
+            </button>
+            
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {services.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-primary-600' : 'bg-gray-300'
+                  }`}
+                  aria-label={`Go to service ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -300,58 +496,62 @@ export default function ArPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 name: 'اسطنبول',
                 image: '/images/destinations/istanbul.jpg',
+                gallery: [
+                  '/images/destinations/Istanbul/istanbul-1.jpg',
+                  '/images/destinations/Istanbul/istanbul-2.jpg',
+                  '/images/destinations/Istanbul/istanbul-3.jpg',
+                  '/images/destinations/Istanbul/istanbul-4.jpg',
+                  '/images/destinations/Istanbul/istanbul-5.jpg',
+                ],
                 tours: 45,
                 rating: 4.8
               },
               {
                 name: 'طرابزون',
                 image: '/images/destinations/bodrum.jpg',
+                gallery: [
+                  '/images/destinations/Trabzon/trabzon-1.jpg',
+                  '/images/destinations/Trabzon/trabzon-2.jpg',
+                  '/images/destinations/Trabzon/trabzon-3.jpg',
+                  '/images/destinations/Trabzon/trabzon-4.jpg',
+                  '/images/destinations/Trabzon/trabzon-5.jpg',
+                ],
                 tours: 15,
                 rating: 4.6
               },
               {
                 name: 'أنطاليا',
                 image: '/images/destinations/antalya.jpg',
+                gallery: [
+                  '/images/destinations/Antalya/antalya-1.jpg',
+                  '/images/destinations/Antalya/antalya-2.jpg',
+                  '/images/destinations/Antalya/antalya-3.jpg',
+                  '/images/destinations/Antalya/antalya-4.jpg',
+                  '/images/destinations/Antalya/antalya-5.jpg',
+                ],
                 tours: 28,
                 rating: 4.7
               },
               {
                 name: 'بورصة',
                 image: '/images/destinations/cappadocia.jpg',
+                gallery: [
+                  '/images/destinations/Bursa/bursa-1.jpg',
+                  '/images/destinations/Bursa/bursa-2.jpg',
+                  '/images/destinations/Bursa/bursa-3.jpg',
+                  '/images/destinations/Bursa/bursa-4.jpg',
+                  '/images/destinations/Bursa/bursa-5.jpg',
+                ],
                 tours: 20,
                 rating: 4.5
               }
             ].map((destination, index) => (
-              <Link
-                key={index}
-                href={`/ar/hotels/city/${({ 'اسطنبول': 'istanbul', 'طرابزون': 'trabzon', 'أنطاليا': 'antalya', 'بورصة': 'bursa' } as Record<string,string>)[destination.name] || destination.name.toLowerCase()}`}
-                className="card group cursor-pointer"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={destination.image}
-                    alt={destination.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
-                    <div className="flex items-center gap-4 text-sm">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        <span>{destination.rating}</span>
-                      </div>
-                      <span>{destination.tours} فنادق</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <DestinationCard key={index} destination={destination as any} tick={destinationsTick} />
             ))}
           </div>
         </div>

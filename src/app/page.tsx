@@ -371,11 +371,11 @@ export default function HomePage() {
         
         <div className="relative z-10 text-center text-white px-4 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif">
-            Discover Turkey with
+            Türkiye'yi Keşfedin
             <span className="text-primary-400"></span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Experience luxury travel, premium hotels, and exclusive tours in the most beautiful destinations of Turkey
+            Türkiye'nin en güzel destinasyonlarında lüks seyahat, premium oteller ve özel turlar deneyimleyin
           </p>
           
           {/* Search Bar */}
@@ -385,7 +385,7 @@ export default function HomePage() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Where to?"
+                  placeholder="Nereye?"
                   className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   title="Destination"
                 />
@@ -396,7 +396,7 @@ export default function HomePage() {
                 <input
                   type="date"
                   className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  title="Departure Date"
+                  title="Kalkış Tarihi"
                 />
               </div>
               
@@ -415,7 +415,7 @@ export default function HomePage() {
               
               <button className="btn-primary flex items-center justify-center gap-2">
                 <Search className="w-5 h-5" />
-                Search
+                Ara
               </button>
             </div>
           </div>
@@ -426,9 +426,9 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Premium Services</h2>
+            <h2 className="text-4xl font-bold mb-4">Premium Hizmetlerimiz</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From luxury accommodations to exclusive tours, we provide everything you need for an unforgettable journey
+              Lüks konaklamalardan özel turlara kadar, unutulmaz bir yolculuk için ihtiyacınız olan her şeyi sağlıyoruz
             </p>
           </div>
           
@@ -504,9 +504,9 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Popular Destinations</h2>
+            <h2 className="text-4xl font-bold mb-4">Popüler Destinasyonlar</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover Turkey's most iconic cities and hidden gems
+              Türkiye'nin en ikonik şehirlerini ve gizli mücevherlerini keşfedin
             </p>
           </div>
           
@@ -575,9 +575,9 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Luxury Hotels</h2>
+            <h2 className="text-4xl font-bold mb-4">Lüks Otellerimiz</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Unforgettable accommodation experiences in Turkey's most exclusive hotels
+              Türkiye'nin en seçkin otellerinde unutulmaz konaklama deneyimleri
             </p>
           </div>
           
@@ -638,9 +638,9 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Exclusive Tours</h2>
+            <h2 className="text-4xl font-bold mb-4">Özel Turlarımız</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover Turkey with our expert guides from ancient cities to natural wonders
+              Uzman rehberlerimizle antik şehirlerden doğal harikalarına kadar Türkiye'yi keşfedin
             </p>
           </div>
           
@@ -722,10 +722,10 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Start Planning
+              Planlamaya Başla
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-              Contact Us
+              Bize Ulaşın
             </button>
           </div>
         </div>
