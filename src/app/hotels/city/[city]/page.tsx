@@ -8,8 +8,8 @@ const cityHotelsData = {
   istanbul: [
     {
       id: 1,
-      name: 'The Ritz-Carlton İstanbul',
-      location: 'İstanbul, Türkiye',
+      name: 'The Ritz-Carlton Istanbul',
+      location: 'Istanbul, Turkey',
       rating: 4.8,
       reviews: 324,
       price: 8500,
@@ -22,28 +22,28 @@ const cityHotelsData = {
         '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
-      description: 'İstanbulun kalbinde zamansız zarafetin modern sofistikeyle buluştuğu benzersiz lüks deneyimi yaşayın.',
-      fullDescription: 'İstanbulun canlı kalbinde yer alan The Ritz-Carlton İstanbul, rafine lüks ve kusursuz hizmetin sığınağıdır. Otelimiz, zamansız zarafeti çağdaş konforla birleştirerek, dünyanın en büyüleyici şehirlerinden birinde unutulmaz bir deneyim sunar.',
+      description: 'Experience timeless elegance blended with modern sophistication in the heart of Istanbul.',
+      fullDescription: 'Located in the vibrant heart of Istanbul, The Ritz-Carlton Istanbul is a sanctuary of refined luxury and impeccable service. Our hotel combines timeless elegance with contemporary comfort to offer an unforgettable experience in one of the world\'s most captivating cities.',
       features: [
-        'Boğaz manzaralı lüks odalar ve suitler',
-        'Ödüllü spa ve wellness merkezi',
-        'Birden fazla fine dining restoran',
-        'Panoramik şehir manzaralı çatı terası',
-        'Son teknoloji fitness merkezi',
-        'Kapalı yüzme havuzu',
-        '24 saat oda servisi',
-        'Özel concierge hizmeti'
+        'Luxury rooms and suites with Bosphorus views',
+        'Award-winning spa and wellness center',
+        'Multiple fine dining restaurants',
+        'Rooftop terrace with panoramic city views',
+        'State-of-the-art fitness center',
+        'Indoor swimming pool',
+        '24-hour room service',
+        'Personalized concierge service'
       ],
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Sıraselviler Cad. No:58, 34367 Beşiktaş, İstanbul, Türkiye'
+        address: 'Sıraselviler Cad. No:58, 34367 Beşiktaş, Istanbul, Turkey'
       }
     },
     {
       id: 2,
       name: 'Swissotel The Bosphorus',
-      location: 'İstanbul, Türkiye',
+      location: 'Istanbul, Turkey',
       rating: 4.7,
       reviews: 256,
       price: 7200,
@@ -56,26 +56,26 @@ const cityHotelsData = {
         '/hotels/Swissotel The Bosphorus Görseller/Swissotel The Bosphorus-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'bar', 'gym', 'restaurant'],
-      description: 'Boğaz manzaralı, dünya standartlarında olanaklara sahip şık otel.',
-      fullDescription: 'Swissotel The Bosphorus, İstanbul, Boğaz manzaralı zarif konaklama sunmaktadır. Otelimiz, konaklamanızı konforlu ve unutulmaz kılmak için tasarlanmış modern odalar, istisnai yemek seçenekleri ve bir dizi tesis sunmaktadır.',
+      description: 'Elegant hotel with Bosphorus views and world-class amenities.',
+      fullDescription: 'Swissotel The Bosphorus, Istanbul, offers elegant accommodation with Bosphorus views. Our hotel provides modern rooms designed to make your stay comfortable and unforgettable, exceptional dining options, and a range of facilities.',
       features: [
-        'Boğaz Boğazı manzarası',
-        'Premium olanaklara sahip modern odalar',
-        'Birden fazla restoran ve bar',
-        'Kapalı yüzme havuzu',
-        'Full servis spa',
-        'Fitness merkezi'
+        'Bosphorus view',
+        'Modern rooms with premium amenities',
+        'Multiple restaurants and bars',
+        'Indoor swimming pool',
+        'Full-service spa',
+        'Fitness center'
       ],
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Bayıldım Cad. No:2, 34357 Beşiktaş, İstanbul, Türkiye'
+        address: 'Bayıldım Cad. No:2, 34357 Beşiktaş, Istanbul, Turkey'
       }
     },
     {
       id: 3,
       name: 'CVK Park Bosphorus Hotel',
-      location: 'İstanbul, Türkiye',
+      location: 'Istanbul, Turkey',
       rating: 4.7,
       reviews: 289,
       price: 6800,
@@ -88,28 +88,28 @@ const cityHotelsData = {
         '/hotels/CVK Park Bosphorus Hotel Istanbul/cvk-park-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'concierge', 'room-service'],
-      description: 'Boğaz manzaralı modern ve şık otel',
-      fullDescription: 'CVK Park Bosphorus Hotel İstanbul, İstanbulun kalbinde, etkileyici Boğaz manzaralarıyla modern ve şık bir oteldir. Otelimiz, çağdaş tasarımı üstün hizmetle birleştirerek konuklarımıza konfor ve lüks sunmaktadır.',
+      description: 'Modern and stylish hotel with Bosphorus views',
+      fullDescription: 'CVK Park Bosphorus Hotel Istanbul is a modern and stylish hotel in the heart of Istanbul, with impressive Bosphorus views. Our hotel combines contemporary design with superior service to offer comfort and luxury to our guests.',
       features: [
-        'Boğaz manzaralı modern odalar ve suitler',
-        'Full servis spa ve wellness merkezi',
-        'Birden fazla fine dining restoran',
-        'Son teknoloji fitness merkezi',
-        'Kapalı yüzme havuzu',
-        '24 saat oda servisi',
-        'Özel concierge hizmeti',
-        'Toplantı ve etkinlik alanları'
+        'Modern rooms and suites with Bosphorus views',
+        'Full-service spa and wellness center',
+        'Multiple fine dining restaurants',
+        'State-of-the-art fitness center',
+        'Indoor swimming pool',
+        '24-hour room service',
+        'Personalized concierge service',
+        'Meeting and event spaces'
       ],
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Gümüşsuyu Mah. Balmumcu Sk. No:1, 34349 Beşiktaş, İstanbul, Türkiye'
+        address: 'Gümüşsuyu Mah. Balmumcu Sk. No:1, 34349 Beşiktaş, Istanbul, Turkey'
       }
     },
     {
       id: 4,
       name: 'Mövenpick Hotel Istanbul',
-      location: 'İstanbul, Türkiye',
+      location: 'Istanbul, Turkey',
       rating: 4.6,
       reviews: 198,
       price: 5500,
@@ -123,7 +123,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Contemporary hotel with Swiss hospitality standards',
-      fullDescription: 'Mövenpick Hotel Istanbul brings Swiss hospitality to the heart of Istanbul, offering modern facilities and exceptional service.',
+      fullDescription: 'Mövenpick Hotel Istanbul brings Swiss hospitality to the heart of Istanbul, offering contemporary accommodation with modern amenities and exceptional service.',
       features: [
         'Contemporary rooms with city views',
         'Swiss hospitality standards',
@@ -135,13 +135,13 @@ const cityHotelsData = {
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Piyalepaşa Blvd. No:1, 34445 Beyoğlu, İstanbul, Türkiye'
+        address: 'Piyalepaşa Blvd. No:1, 34445 Beyoğlu, Istanbul, Turkey'
       }
     },
     {
       id: 5,
       name: 'Grand Hyatt Istanbul',
-      location: 'İstanbul, Türkiye',
+      location: 'Istanbul, Turkey',
       rating: 4.7,
       reviews: 245,
       price: 7500,
@@ -154,10 +154,10 @@ const cityHotelsData = {
         '/hotels/Grand Hyatt Istanbul/grand-hyatt-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge'],
-      description: 'Luxury hotel in the heart of Istanbul’s business district',
-      fullDescription: 'Grand Hyatt Istanbul offers luxury accommodation in the heart of Istanbul’s business district, combining modern comfort with exceptional service and world-class amenities.',
+      description: 'Luxury hotel in the heart of Istanbul\'s business district',
+      fullDescription: 'Grand Hyatt Istanbul offers luxury accommodation in the heart of Istanbul\'s business district, combining modern comfort with exceptional service and world-class amenities.',
       features: [
-        'Luxurious rooms with city views',
+        'Luxury rooms with city views',
         'World-class spa and wellness',
         'Multiple dining venues',
         'Rooftop pool with city views',
@@ -167,13 +167,13 @@ const cityHotelsData = {
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Taskisla Cad. No:1, 34433 Taksim, İstanbul, Türkiye'
+        address: 'Taskisla Cad. No:1, 34433 Taksim, Istanbul, Turkey'
       }
     },
     {
       id: 6,
       name: 'Conrad Istanbul',
-      location: 'İstanbul, Türkiye',
+      location: 'Istanbul, Turkey',
       rating: 4.6,
       reviews: 189,
       price: 6200,
@@ -187,10 +187,10 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Modern luxury hotel with Bosphorus views',
-      fullDescription: 'Conrad Istanbul offers modern luxury stays with impressive Bosphorus views, combining contemporary design with exceptional service and world-class amenities.',
+      fullDescription: 'Conrad Istanbul offers modern luxury accommodation with impressive Bosphorus views, combining contemporary design with exceptional service and world-class amenities.',
       features: [
         'Modern rooms with Bosphorus views',
-        'Luxury spa and wellness',
+        'Luxury spa and wellness center',
         'Multiple dining options',
         'Indoor swimming pool',
         'Fitness center',
@@ -199,14 +199,13 @@ const cityHotelsData = {
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Çırağan Cad. No:1, 34349 Beşiktaş, İstanbul, Türkiye'
+        address: 'Çırağan Cad. No:1, 34349 Beşiktaş, Istanbul, Turkey'
       }
-    }
-  ,
+    },
     {
       id: 7,
-      name: 'İstanbul Marriott Hotel',
-      location: 'İstanbul, Türkiye',
+      name: 'Istanbul Marriott Hotel',
+      location: 'Istanbul, Turkey',
       rating: 4.5,
       reviews: 167,
       price: 5800,
@@ -220,7 +219,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Comfortable hotel with Marriott standards',
-      fullDescription: 'İstanbul Marriott Hotel offers comfortable accommodation with Marriott’s renowned service and quality standards in the heart of Istanbul.',
+      fullDescription: 'Istanbul Marriott Hotel offers comfortable accommodation with Marriott\'s renowned service and quality standards, located in the heart of Istanbul.',
       features: [
         'Comfortable rooms with modern amenities',
         'Marriott quality service',
@@ -232,13 +231,13 @@ const cityHotelsData = {
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Abide-i Hürriyet Cad. No:175, 34381 Şişli, İstanbul, Türkiye'
+        address: 'Abide-i Hürriyet Cad. No:175, 34381 Şişli, Istanbul, Turkey'
       }
     },
     {
       id: 8,
-      name: 'W İstanbul',
-      location: 'İstanbul, Türkiye',
+      name: 'W Istanbul',
+      location: 'Istanbul, Turkey',
       rating: 4.7,
       reviews: 203,
       price: 8000,
@@ -251,8 +250,8 @@ const cityHotelsData = {
         '/hotels/W Istanbul/w-istanbul-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge'],
-      description: 'Chic luxury hotel with contemporary design',
-      fullDescription: 'W Istanbul blends contemporary design with exceptional service and world-class amenities right in the heart of the city.',
+      description: 'Stylish luxury hotel with contemporary design',
+      fullDescription: 'W Istanbul offers stylish luxury accommodation with contemporary design, combining modern comfort with exceptional service and world-class amenities in the heart of Istanbul.',
       features: [
         'Stylish rooms with contemporary design',
         'Luxury spa and wellness',
@@ -264,13 +263,13 @@ const cityHotelsData = {
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Süleyman Seba Cad. No:22, 34357 Beşiktaş, İstanbul, Türkiye'
+        address: 'Süleyman Seba Cad. No:22, 34357 Beşiktaş, Istanbul, Turkey'
       }
     },
     {
       id: 9,
-      name: 'Four Seasons İstanbul',
-      location: 'İstanbul, Türkiye',
+      name: 'Four Seasons Istanbul',
+      location: 'Istanbul, Turkey',
       rating: 4.9,
       reviews: 267,
       price: 9200,
@@ -284,9 +283,9 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
       description: 'Ultimate luxury in historic Sultanahmet',
-      fullDescription: 'Four Seasons Istanbul offers ultimate luxury in historic Sultanahmet, blending Ottoman elegance with modern comfort and exceptional service.',
+      fullDescription: 'Four Seasons Istanbul offers ultimate luxury accommodation in the historic Sultanahmet area, combining Ottoman elegance with modern comfort and exceptional service.',
       features: [
-        'Luxurious rooms with historic views',
+        'Luxury rooms with historic views',
         'World-class spa and wellness',
         'Fine dining restaurants',
         'Beautiful courtyard garden',
@@ -297,13 +296,13 @@ const cityHotelsData = {
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Tevkifhane Sok. No:1, 34400 Sultanahmet, İstanbul, Türkiye'
+        address: 'Tevkifhane Sok. No:1, 34400 Sultanahmet, Istanbul, Turkey'
       }
     },
     {
       id: 10,
       name: 'Çırağan Palace Kempinski',
-      location: 'İstanbul, Türkiye',
+      location: 'Istanbul, Turkey',
       rating: 4.9,
       reviews: 312,
       price: 12000,
@@ -316,10 +315,10 @@ const cityHotelsData = {
         '/hotels/Ciragan Palace Kempinski/ciragan-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
-      description: 'Ottoman palace transformed into a luxury hotel',
-      fullDescription: 'Çırağan Palace Kempinski is a former Ottoman palace turned into a luxury hotel, offering unparalleled Bosphorus views and historic elegance.',
+      description: 'Ottoman palace converted into luxury hotel',
+      fullDescription: 'Çırağan Palace Kempinski is an Ottoman palace converted into a luxury hotel, offering unique luxury and service with impressive views and historical elegance on the Bosphorus shore.',
       features: [
-        'Palatial rooms with Bosphorus views',
+        'Palace rooms with Bosphorus views',
         'World-class spa and wellness',
         'Multiple fine dining restaurants',
         'Private beach and pool',
@@ -330,7 +329,7 @@ const cityHotelsData = {
       contact: {
         phone: '+90 532 123 4567',
         email: 'info@fortytravel.com',
-        address: 'Çırağan Cad. No:32, 34349 Beşiktaş, İstanbul, Türkiye'
+        address: 'Çırağan Cad. No:32, 34349 Beşiktaş, Istanbul, Turkey'
       }
     }
   ],
@@ -347,10 +346,21 @@ const cityHotelsData = {
         '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
-      description: 'Luxury hotel in the heart of Trabzon with city views',
-      fullDescription: 'Zorlu Grand Hotel Trabzon offers luxury stays with modern comforts and impeccable service.',
-      features: ['City-view rooms', 'Full-service spa', 'Indoor pool', 'Fitness center'],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Maraş Cd. No:1, Trabzon, Turkey' }
+      description: 'Luxury hotel in the heart of Trabzon',
+      fullDescription: 'Zorlu Grand Hotel Trabzon offers luxury accommodation in the heart of Trabzon, combining modern comfort with exceptional service and world-class amenities.',
+      features: [
+        'Luxury rooms with city views',
+        'Full-service spa and wellness',
+        'Multiple dining options',
+        'Indoor swimming pool',
+        'Fitness center',
+        'Business facilities'
+      ],
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Maraş Cad. No:1, 61000 Trabzon, Turkey'
+      }
     },
     {
       id: 12,
@@ -362,10 +372,21 @@ const cityHotelsData = {
       image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
       gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
-      description: 'Modern international-standard hotel',
-      fullDescription: 'Novotel Trabzon provides comfortable stays for business and leisure travelers.',
-      features: ['Sea-view rooms', 'Fitness center', 'Indoor pool', 'Business facilities'],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Cumhuriyet Cd. No:95, Trabzon, Turkey' }
+      description: 'Modern hotel with international standards',
+      fullDescription: 'Novotel Trabzon offers modern accommodation with international standards, providing comfort and convenience for business and leisure travelers.',
+      features: [
+        'Modern rooms with sea views',
+        'Fitness center',
+        'Indoor swimming pool',
+        'Multiple dining options',
+        'Business center',
+        'Meeting facilities'
+      ],
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Cumhuriyet Cad. No:95, 61000 Trabzon, Turkey'
+      }
     },
     {
       id: 13,
@@ -378,24 +399,20 @@ const cityHotelsData = {
       gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'International luxury with Black Sea views',
-      fullDescription: 'Hilton Trabzon combines world-class service with modern facilities.',
-      features: ['Sea-view rooms', 'Spa & wellness', 'Indoor pool', 'Fine dining'],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Trabzon, Turkey' }
-    },
-    {
-      id: 17,
-      name: 'Wyndham Trabzon',
-      location: 'Trabzon, Turkey',
-      rating: 4.3,
-      reviews: 134,
-      price: 2800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
-      amenities: ['wifi', 'parking', 'gym', 'restaurant', 'bar'],
-      description: 'Comfortable stays with modern amenities',
-      fullDescription: 'Wyndham Trabzon offers reliable service and convenience for travelers.',
-      features: ['Comfortable rooms', 'Modern facilities', 'Fitness center'],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Trabzon, Turkey' }
+      fullDescription: 'Hilton Trabzon offers international luxury accommodation with impressive Black Sea views, combining world-class service with modern amenities.',
+      features: [
+        'Luxury rooms with Black Sea views',
+        'Full-service spa and wellness',
+        'Multiple dining venues',
+        'Indoor swimming pool',
+        'Fitness center',
+        'Business and meeting facilities'
+      ],
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Tanjol Yolu Cad. No:1, 61000 Trabzon, Turkey'
+      }
     },
     {
       id: 14,
@@ -414,7 +431,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'Comfortable hotel with traditional hospitality',
-      fullDescription: 'Grand Tarabya Hotel offers comfortable accommodation with traditional Turkish hospitality in a warm and welcoming environment.',
+      fullDescription: 'Grand Tarabya Hotel offers comfortable accommodation with traditional Turkish hospitality, providing a warm and welcoming atmosphere.',
       features: [
         'Comfortable rooms with modern amenities',
         'Traditional Turkish hospitality',
@@ -422,7 +439,11 @@ const cityHotelsData = {
         'Multiple dining options',
         'Business facilities'
       ],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Uzun Sok. No:45, Trabzon, Turkey' }
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Uzun Sok. No:45, 61000 Trabzon, Turkey'
+      }
     },
     {
       id: 15,
@@ -441,16 +462,20 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Marriott quality with Black Sea charm',
-      fullDescription: 'Marriott Hotel Trabzon combines international Marriott standards with the charm of the Black Sea for a refined stay.',
+      fullDescription: 'Marriott Hotel Trabzon offers accommodation with Marriott quality and Black Sea charm, combining international standards with local hospitality.',
       features: [
-        'Sea-view modern rooms',
-        'Marriott service standards',
+        'Modern rooms with sea views',
+        'Marriott quality service',
         'Full-service spa',
-        'Indoor pool',
+        'Indoor swimming pool',
         'Multiple dining options',
         'Business center'
       ],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Gülbahar Cad. No:123, Trabzon, Turkey' }
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Gülbahar Cad. No:123, 61000 Trabzon, Turkey'
+      }
     },
     {
       id: 16,
@@ -469,16 +494,35 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'beach'],
       description: 'Luxury resort with private beach',
-      fullDescription: 'Rixos Trabzon offers a luxury resort experience with a private beach and world-class facilities.',
+      fullDescription: 'Rixos Trabzon offers luxury resort accommodation with private beach access, combining world-class amenities with impressive Black Sea views.',
       features: [
-        'Sea-view luxury rooms',
+        'Luxury rooms with sea views',
         'Private beach access',
         'Full-service spa and wellness',
         'Multiple swimming pools',
         'Fine dining restaurants',
         'Water sports facilities'
       ],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Yalıncak Cad. No:99, Trabzon, Turkey' }
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Yalıncak Cad. No:99, 61000 Trabzon, Turkey'
+      }
+    },
+    {
+      id: 17,
+      name: 'Wyndham Trabzon',
+      location: 'Trabzon, Turkey',
+      rating: 4.3,
+      reviews: 134,
+      price: 2800,
+      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      amenities: ['wifi', 'parking', 'gym', 'restaurant', 'bar'],
+      description: 'Comfortable stays with modern amenities',
+      fullDescription: 'Wyndham Trabzon offers reliable service and convenience for travelers.',
+      features: ['Comfortable rooms', 'Modern facilities', 'Fitness center'],
+      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Trabzon, Turkey' }
     },
     {
       id: 18,
@@ -497,15 +541,19 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'gym', 'restaurant', 'bar'],
       description: 'Modern comfort with Hampton quality',
-      fullDescription: 'Hampton by Hilton Trabzon offers modern comfort and reliable service for a pleasant stay.',
+      fullDescription: 'Hampton by Hilton Trabzon offers modern comfort with Hampton quality standards, providing reliable service and comfortable accommodation.',
       features: [
-        'Modern rooms',
-        'Hampton service quality',
+        'Rooms with modern amenities',
+        'Hampton quality service',
         'Fitness center',
         'Complimentary breakfast',
         'Business center'
       ],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Turgut Özal Cad. No:67, Trabzon, Turkey' }
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Turgut Özal Cad. No:67, 61000 Trabzon, Turkey'
+      }
     },
     {
       id: 19,
@@ -524,14 +572,18 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'gym', 'restaurant'],
       description: 'Comfortable hotel with garden views',
-      fullDescription: 'Trabzon Park Hotel offers comfortable stays with peaceful garden views in the city center.',
+      fullDescription: 'Trabzon Park Hotel offers comfortable accommodation with garden views, providing a peaceful retreat in the heart of Trabzon.',
       features: [
-        'Comfortable rooms with garden view',
+        'Comfortable rooms with garden views',
         'Peaceful location',
         'Restaurant serving local cuisine',
         'Meeting facilities'
       ],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Kalkınma Cad. No:34, Trabzon, Turkey' }
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Kalkınma Cad. No:34, 61000 Trabzon, Turkey'
+      }
     },
     {
       id: 20,
@@ -550,61 +602,83 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'Traditional hospitality with modern comfort',
-      fullDescription: 'Yazıcı Hotel blends traditional Turkish hospitality with modern comfort for a unique stay in Trabzon.',
+      fullDescription: 'Yazıcı Hotel offers a unique accommodation experience in Trabzon, combining modern comfort with traditional Turkish hospitality.',
       features: [
         'Comfortable rooms with modern amenities',
-        'Traditional hospitality',
+        'Traditional Turkish hospitality',
         'Spa and wellness center',
         'Restaurant serving local cuisine',
         'Business facilities'
       ],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Gülsüm Sokak No:12, Trabzon, Turkey' }
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Gülsüm Sokağı No:12, 61000 Trabzon, Turkey'
+      }
     }
   ],
   antalya: [
     {
       id: 21,
-      name: 'Mardan Palace',
+      name: 'Titanic Mardan Palace',
       location: 'Antalya, Turkey',
       rating: 4.8,
       reviews: 523,
       price: 6500,
       image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
-      gallery: ['/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg'],
+      gallery: [
+        '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+        '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-2.jpeg',
+        '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-3.jpeg',
+        '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-4.jpeg',
+        '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
       description: 'Palace-style luxury resort on the Mediterranean',
-      fullDescription: 'A magnificent palace-style resort with private beach and world-class amenities.',
-      features: ['Private beach', 'Multiple pools', 'Full-service spa', 'Fine dining'],
+      fullDescription: 'A magnificent palace-style resort with private beach and world-class amenities offering unparalleled luxury on the Mediterranean coast.',
+      features: ['Private beach', 'Multiple pools', 'Full-service spa', 'Fine dining', 'Royal palace architecture'],
       contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Kemer, Antalya, Turkey' }
     },
     {
       id: 22,
-      name: 'Regnum Carya',
+      name: 'Regnum Carya Golf & Spa Resort',
       location: 'Antalya, Turkey',
       rating: 4.7,
       reviews: 412,
       price: 5800,
       image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-      gallery: ['/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'],
+      gallery: [
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'Luxury golf resort by the Mediterranean',
-      fullDescription: 'Regnum Carya offers championship golf and premium beach facilities.',
-      features: ['Championship golf', 'Luxury rooms', 'Spa & wellness', 'Private beach'],
+      fullDescription: 'Regnum Carya offers championship golf and premium beach facilities with world-class spa services and Mediterranean luxury.',
+      features: ['Championship golf', 'Luxury rooms', 'Spa & wellness', 'Private beach', 'Golf academy'],
       contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Belek, Antalya, Turkey' }
     },
     {
       id: 23,
-      name: 'Maxx Royal Belek',
+      name: 'Maxx Royal Belek Golf Resort',
       location: 'Antalya, Turkey',
       rating: 4.8,
       reviews: 489,
       price: 7200,
       image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-      gallery: ['/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'],
+      gallery: [
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
+        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'Ultra-luxury resort with golf',
-      fullDescription: 'Maxx Royal Belek offers ultra-luxury stays with golf and beach access.',
-      features: ['Golf courses', 'Ultra-luxury suites', 'Spa', 'Pools'],
+      fullDescription: 'Maxx Royal Belek offers ultra-luxury stays with championship golf courses and private beach access on the Mediterranean coast.',
+      features: ['Golf courses', 'Ultra-luxury suites', 'Spa', 'Pools', 'Private beach', 'Butler service'],
       contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Belek, Antalya, Turkey' }
     },
     {
@@ -624,7 +698,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
       description: 'Luxury beachfront resort',
-      fullDescription: 'Susesi Luxury Resort offers beachfront luxury with Mediterranean views and world-class amenities.',
+      fullDescription: 'Susesi Luxury Resort offers beachfront luxury with Mediterranean views and world-class amenities for an unforgettable stay.',
       features: [
         'Sea-view luxury rooms',
         'Private beach access',
@@ -652,7 +726,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
       description: 'Premium beachfront resort with luxury amenities',
-      fullDescription: 'Calista Luxury Resort offers premium beachfront stays with Mediterranean views and world-class facilities.',
+      fullDescription: 'Calista Luxury Resort offers premium beachfront stays with Mediterranean views and world-class facilities for discerning travelers.',
       features: [
         'Sea-view luxury rooms',
         'Private beach access',
@@ -665,7 +739,7 @@ const cityHotelsData = {
     },
     {
       id: 26,
-      name: 'Kaya Palazzo',
+      name: 'Kaya Palazzo Golf Resort',
       location: 'Antalya, Turkey',
       rating: 4.6,
       reviews: 345,
@@ -680,7 +754,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
       description: 'Elegant Mediterranean resort',
-      fullDescription: 'Kaya Palazzo delivers elegant Mediterranean resort stays with premium facilities and beach access.',
+      fullDescription: 'Kaya Palazzo delivers elegant Mediterranean resort stays with premium facilities and beach access for a luxurious coastal experience.',
       features: [
         'Elegant rooms with Mediterranean charm',
         'Private beach access',
@@ -708,7 +782,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
       description: 'Premium all-inclusive luxury resort',
-      fullDescription: 'Rixos Premium Belek provides premium all-inclusive luxury stays with Mediterranean views and world-class amenities.',
+      fullDescription: 'Rixos Premium Belek provides premium all-inclusive luxury stays with Mediterranean views and world-class amenities for an unforgettable vacation.',
       features: [
         'Sea-view premium rooms',
         'Private beach access',
@@ -736,7 +810,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'Luxury golf and beach resort',
-      fullDescription: 'Cornelia Diamond offers luxury golf and beach resort stays with world-class golf facilities.',
+      fullDescription: 'Cornelia Diamond offers luxury golf and beach resort stays with world-class golf facilities and Mediterranean coastal elegance.',
       features: [
         'Championship golf course',
         'Sea-view luxury rooms',
@@ -749,7 +823,7 @@ const cityHotelsData = {
     },
     {
       id: 29,
-      name: 'Land of Legends Kingdom',
+      name: 'Land of Legends Kingdom Hotel',
       location: 'Antalya, Turkey',
       rating: 4.8,
       reviews: 467,
@@ -764,7 +838,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'water-park'],
       description: 'Theme-park resort with luxury stays',
-      fullDescription: 'Land of Legends Kingdom provides luxury accommodation with theme-park access and extensive entertainment.',
+      fullDescription: 'Land of Legends Kingdom provides luxury accommodation with theme-park access and extensive entertainment for the ultimate family vacation.',
       features: [
         'Theme park access',
         'Themed luxury rooms',
@@ -777,7 +851,7 @@ const cityHotelsData = {
     },
     {
       id: 30,
-      name: 'Sirene Belek',
+      name: 'Sirene Belek Golf Resort',
       location: 'Antalya, Turkey',
       rating: 4.5,
       reviews: 312,
@@ -792,7 +866,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'Golf and beach resort',
-      fullDescription: 'Sirene Belek offers comfortable golf and beach resort stays with Mediterranean views and excellent facilities.',
+      fullDescription: 'Sirene Belek offers comfortable golf and beach resort stays with Mediterranean views and excellent facilities for golf enthusiasts.',
       features: [
         'Golf course access',
         'Sea-view comfortable rooms',
@@ -807,18 +881,24 @@ const cityHotelsData = {
   bursa: [
     {
       id: 31,
-      name: 'Hilton Bursa Convention Center',
+      name: 'Hilton Bursa Convention Center & Spa',
       location: 'Bursa, Turkey',
       rating: 4.6,
       reviews: 210,
       price: 3800,
       image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
-      amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
+      gallery: [
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+      ],
+      amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Modern luxury with convention facilities',
-      fullDescription: 'Hilton Bursa offers modern comfort and event facilities.',
-      features: ['Convention center', 'Spa', 'Fitness'],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Bursa, Turkey' }
+      fullDescription: 'Hilton Bursa offers modern comfort and comprehensive event facilities with world-class spa services for business and leisure travelers.',
+      features: ['Convention center', 'Full-service spa', 'Fitness center', 'Indoor pool', 'Business facilities'],
+      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Ankara Yolu 6. Km, Osmangazi, Bursa, Turkey' }
     },
     {
       id: 32,
@@ -828,27 +908,39 @@ const cityHotelsData = {
       reviews: 180,
       price: 3200,
       image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
-      amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
+      gallery: [
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+      ],
+      amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Comfortable stays with city access',
-      fullDescription: 'Crowne Plaza Bursa provides convenient stays for business and leisure.',
-      features: ['Modern rooms', 'Spa', 'Dining'],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Bursa, Turkey' }
+      fullDescription: 'Crowne Plaza Bursa provides convenient stays for business and leisure travelers with modern amenities and excellent city access.',
+      features: ['Modern rooms', 'Full-service spa', 'Fine dining', 'Indoor pool', 'Business center'],
+      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Atatürk Cad. No:129, Osmangazi, Bursa, Turkey' }
     },
     {
       id: 33,
-      name: 'Almira Hotel',
+      name: 'Almira Hotel Bursa',
       location: 'Bursa, Turkey',
       rating: 4.4,
       reviews: 150,
       price: 2800,
       image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
-      amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
+      gallery: [
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
+        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+      ],
+      amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'City-center comfort hotel',
-      fullDescription: 'Almira Hotel offers convenient city-center accommodation.',
-      features: ['Comfort rooms', 'Spa', 'Restaurant'],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Bursa, Turkey' }
+      fullDescription: 'Almira Hotel offers convenient city-center accommodation with modern amenities and comfortable rooms for business travelers.',
+      features: ['Comfort rooms', 'Spa facilities', 'Restaurant', 'Bar', 'Business center'],
+      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Altıparmak Cad. No:34, Osmangazi, Bursa, Turkey' }
     },
     {
       id: 34,
@@ -906,7 +998,7 @@ const cityHotelsData = {
     },
     {
       id: 36,
-      name: 'WOW Bursa',
+      name: 'WOW Bursa Convention Center',
       location: 'Bursa, Turkey',
       rating: 4.5,
       reviews: 189,
@@ -989,7 +1081,7 @@ const cityHotelsData = {
     },
     {
       id: 39,
-      name: 'Çelik Palas',
+      name: 'Çelik Palas Thermal Hotel',
       location: 'Bursa, Turkey',
       rating: 4.4,
       reviews: 198,
@@ -1016,7 +1108,7 @@ const cityHotelsData = {
     },
     {
       id: 40,
-      name: 'Bursa Holiday Inn',
+      name: 'Holiday Inn Bursa',
       location: 'Bursa, Turkey',
       rating: 4.3,
       reviews: 145,
@@ -1031,7 +1123,7 @@ const cityHotelsData = {
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'Comfort hotel with international standards',
-      fullDescription: 'Bursa Holiday Inn offers comfortable stays with international service standards and modern amenities.',
+      fullDescription: 'Holiday Inn Bursa offers comfortable stays with international service standards and modern amenities for business travelers.',
       features: [
         'Comfortable rooms with modern amenities',
         'International service standards',
@@ -1080,7 +1172,7 @@ export default function CityHotelsPage({ params }: { params: { city: string } })
   }
 
   const cityNames = {
-    istanbul: 'İstanbul',
+    istanbul: 'Istanbul',
     trabzon: 'Trabzon',
     antalya: 'Antalya',
     bursa: 'Bursa'

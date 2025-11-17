@@ -384,6 +384,138 @@ const hotelsData = {
       email: 'info@fortytravel.com',
       address: 'غوموشسويو مح. بالومجو شك. رقم:1، 34349 بشيكتاش، اسطنبول، تركيا'
     }
+  },
+  7: {
+    id: 7,
+    name: 'فندق اسطنبول ماريوت',
+    location: 'اسطنبول، تركيا',
+    rating: 4.5,
+    reviews: 167,
+    price: 300,
+    image: '/hotels/Istanbul Marriott Hotel/istanbul-marriott-1.jpg',
+    gallery: [
+      '/hotels/Istanbul Marriott Hotel/istanbul-marriott-1.jpg',
+      '/hotels/Istanbul Marriott Hotel/istanbul-marriott-2.jpg',
+      '/hotels/Istanbul Marriott Hotel/istanbul-marriott-3.jpg',
+      '/hotels/Istanbul Marriott Hotel/istanbul-marriott-4.jpg',
+      '/hotels/Istanbul Marriott Hotel/istanbul-marriott-5.jpg'
+    ],
+    amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
+    description: 'فندق مريح بمعايير ماريوت',
+    fullDescription: 'فندق اسطنبول ماريوت يقدم راحة العلامة التجارية ماريوت في موقع مركزي. غرف ذكية ومجهزة جيداً، وخدمة ودية، ومرافق مثل مسبح داخلي ومركز لياقة بدنية تجعله مثالياً لكل من المسافرين ورجال الأعمال. مع وصلات نقل فعالة ومطاعم قريبة، من السهل استكشاف المدينة بسهولة.',
+    features: [
+      'غرف مريحة مع وسائل حديثة',
+      'خدمة ماريوت الجودة',
+      'مسبح داخلي'
+    ],
+    roomTypes: [
+      { name: 'غرفة قياسية', size: '28 متر مربع', maxGuests: 2, price: 110, features: ['سرير كوين'] },
+      { name: 'غرفة ديلوكس', size: '36 متر مربع', maxGuests: 3, price: 150, features: ['سرير كينج'] }
+    ],
+    contact: {
+      phone: '+90 506 641 17 83',
+      email: 'info@fortytravel.com',
+      address: 'شارع عبادي الحرية رقم 175، 34381 شيشلي، اسطنبول، تركيا'
+    }
+  },
+  8: {
+    id: 8,
+    name: 'فندق دبليو اسطنبول',
+    location: 'اسطنبول، تركيا',
+    rating: 4.7,
+    reviews: 203,
+    price: 320,
+    image: '/hotels/W Istanbul/w-istanbul-1.jpg',
+    gallery: [
+      '/hotels/W Istanbul/w-istanbul-1.jpg',
+      '/hotels/W Istanbul/w-istanbul-2.jpg',
+      '/hotels/W Istanbul/w-istanbul-3.jpg',
+      '/hotels/W Istanbul/w-istanbul-4.jpg',
+      '/hotels/W Istanbul/w-istanbul-5.jpg'
+    ],
+    amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge'],
+    description: 'فندق فاخر بتصميم عصري',
+    fullDescription: 'فندق دبليو اسطنبول ينبض بإبداع الحي مع تصميم جريء وإضاءة مثيرة ومساحات اجتماعية تأتي حياتها ليلاً ونهاراً. الغرف مصممة للمعيشة العصرية، بينما يقدم المطعم المميز ومنتجع الصغير العافية استراحة فاخرة في قلب المدينة. بالخارج، تنتظرك المقاهي والمعارض وشاطئ البوسفور خلال دقائق.',
+    features: [
+      'غرف أنيقة بتصميم عصري',
+      'منتجع صحي ورفاهية فاخر',
+      'مسبح على السطح'
+    ],
+    roomTypes: [
+      { name: 'غرفة قياسية', size: '28 متر مربع', maxGuests: 2, price: 120, features: ['سرير كوين'] },
+      { name: 'غرفة ديلوكس', size: '36 متر مربع', maxGuests: 3, price: 160, features: ['سرير كينج'] }
+    ],
+    contact: {
+      phone: '+90 506 641 17 83',
+      email: 'info@fortytravel.com',
+      address: 'شارع سليمان سيبا رقم 22، 34357 بشيكتاش، اسطنبول، تركيا'
+    }
+  },
+  9: {
+    id: 9,
+    name: 'فور سيزنز اسطنبول',
+    location: 'اسطنبول، تركيا',
+    rating: 4.9,
+    reviews: 267,
+    price: 400,
+    image: '/hotels/Four Seasons Istanbul/four-seasons-1.jpg',
+    gallery: [
+      '/hotels/Four Seasons Istanbul/four-seasons-1.jpg',
+      '/hotels/Four Seasons Istanbul/four-seasons-2.jpg',
+      '/hotels/Four Seasons Istanbul/four-seasons-3.jpg',
+      '/hotels/Four Seasons Istanbul/four-seasons-4.jpg',
+      '/hotels/Four Seasons Istanbul/four-seasons-5.jpg'
+    ],
+    amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
+    description: 'الرفاهية المطلقة في سلطان أحمد التاريخي',
+    fullDescription: 'فندق فور سيزنز اسطنبول في سلطان أحمد يلتقط سحر اسطنبول الخالد - فناء حجري معروق بالزهور، وديكورات أنيقة، وسطح مع إطلالات بريدية لآيا صوفيا والمسجد الأزرق. تعكس الجناحات تراث الحي مع تفاصيل أنيقة، بينما تقدم الخدمة الشخصية والطعام الوجهة إقامة لا تُنسى في المدينة القديمة.',
+    features: [
+      'غرف فاخرة مع إطلالات تاريخية',
+      'منتجع صحي عالمي المستوى',
+      'مطاعم راقية'
+    ],
+    roomTypes: [
+      { name: 'غرفة ديلوكس', size: '40 متر مربع', maxGuests: 2, price: 180, features: ['سرير كينج'] },
+      { name: 'جناح', size: '65 متر مربع', maxGuests: 3, price: 260, features: ['سرير كينج'] }
+    ],
+    contact: {
+      phone: '+90 506 641 17 83',
+      email: 'info@fortytravel.com',
+      address: 'شارع توقيفخانه رقم 1، 34400 سلطان أحمد، اسطنبول، تركيا'
+    }
+  },
+  10: {
+    id: 10,
+    name: 'تشيراغان بالاس كيمبينيسكي',
+    location: 'اسطنبول، تركيا',
+    rating: 4.9,
+    reviews: 312,
+    price: 480,
+    image: '/hotels/Ciragan Palace Kempinski/ciragan-1.jpg',
+    gallery: [
+      '/hotels/Ciragan Palace Kempinski/ciragan-1.jpg',
+      '/hotels/Ciragan Palace Kempinski/ciragan-2.jpg',
+      '/hotels/Ciragan Palace Kempinski/ciragan-3.jpg',
+      '/hotels/Ciragan Palace Kempinski/ciragan-4.jpg',
+      '/hotels/Ciragan Palace Kempinski/ciragan-5.jpg'
+    ],
+    amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
+    description: 'قصر عثماني تحول إلى فندق فاخر',
+    fullDescription: 'تشيراغان بالاس كيمبينيسكي، الذي كان ذات مرة مسكناً إمبراطورياً عثمانياً، يدمج العظمة القصرية مع الفخامة الحديثة على ضفاف البوسفور. الأعمدة الرخامية، والحدائق المصممة بعناية، ومسبح اللانهاية على شاطئ البحر تخلق مشهداً أيقونياً، بينما تقدم الغرف والجناحات الراقية ملاذاً هادئاً. يحتفل المطعم المميز بالمأكولات التركية والعالمية، وتضمن الخدمة المتميزة أن كل لحظة تشعر بالاستثنائية.',
+    features: [
+      'غرف قصرية مع إطلالات على البوسفور',
+      'منتجع صحي عالمي المستوى',
+      'مطاعم راقية متعددة'
+    ],
+    roomTypes: [
+      { name: 'غرفة ديلوكس', size: '45 متر مربع', maxGuests: 2, price: 220, features: ['سرير كينج'] },
+      { name: 'جناح', size: '70 متر مربع', maxGuests: 3, price: 320, features: ['سرير كينج'] }
+    ],
+    contact: {
+      phone: '+90 506 641 17 83',
+      email: 'info@fortytravel.com',
+      address: 'شارع تشيراغان رقم 32، 34349 بشيكتاش، اسطنبول، تركيا'
+    }
   }
 }
 

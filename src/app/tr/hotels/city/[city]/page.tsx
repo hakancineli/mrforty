@@ -113,13 +113,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 198,
       price: 5500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Movenpick Hotel Istanbul/movenpick-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Movenpick Hotel Istanbul/movenpick-1.jpg',
+        '/hotels/Movenpick Hotel Istanbul/movenpick-2.jpg',
+        '/hotels/Movenpick Hotel Istanbul/movenpick-3.jpg',
+        '/hotels/Movenpick Hotel Istanbul/movenpick-4.jpg',
+        '/hotels/Movenpick Hotel Istanbul/movenpick-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'İsviçre misafirperverliği standartlarında çağdaş otel',
@@ -145,13 +145,13 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 245,
       price: 7500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Grand Hyatt Istanbul/grand-hyatt-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Grand Hyatt Istanbul/grand-hyatt-1.jpg',
+        '/hotels/Grand Hyatt Istanbul/grand-hyatt-2.jpg',
+        '/hotels/Grand Hyatt Istanbul/grand-hyatt-3.jpg',
+        '/hotels/Grand Hyatt Istanbul/grand-hyatt-4.jpg',
+        '/hotels/Grand Hyatt Istanbul/grand-hyatt-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge'],
       description: 'İstanbulun iş merkezinin kalbindeki lüks otel',
@@ -177,13 +177,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 189,
       price: 6200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Conrad Istanbul/conrad-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Conrad Istanbul/conrad-1.jpg',
+        '/hotels/Conrad Istanbul/conrad-2.jpg',
+        '/hotels/Conrad Istanbul/conrad-3.jpg',
+        '/hotels/Conrad Istanbul/conrad-4.jpg',
+        '/hotels/Conrad Istanbul/conrad-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Boğaz manzaralı modern lüks otel',
@@ -209,13 +209,13 @@ const cityHotelsData = {
       rating: 4.5,
       reviews: 167,
       price: 5800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Istanbul Marriott Hotel/istanbul-marriott-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Istanbul Marriott Hotel/istanbul-marriott-1.jpg',
+        '/hotels/Istanbul Marriott Hotel/istanbul-marriott-2.jpg',
+        '/hotels/Istanbul Marriott Hotel/istanbul-marriott-3.jpg',
+        '/hotels/Istanbul Marriott Hotel/istanbul-marriott-4.jpg',
+        '/hotels/Istanbul Marriott Hotel/istanbul-marriott-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Marriott standartlarında konforlu otel',
@@ -241,13 +241,13 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 203,
       price: 8000,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/W Istanbul/w-istanbul-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/W Istanbul/w-istanbul-1.jpg',
+        '/hotels/W Istanbul/w-istanbul-2.jpg',
+        '/hotels/W Istanbul/w-istanbul-3.jpg',
+        '/hotels/W Istanbul/w-istanbul-4.jpg',
+        '/hotels/W Istanbul/w-istanbul-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge'],
       description: 'Çağdaş tasarımlı şık lüks otel',
@@ -273,13 +273,13 @@ const cityHotelsData = {
       rating: 4.9,
       reviews: 267,
       price: 9200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Four Seasons Istanbul/four-seasons-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Four Seasons Istanbul/four-seasons-1.jpg',
+        '/hotels/Four Seasons Istanbul/four-seasons-2.jpg',
+        '/hotels/Four Seasons Istanbul/four-seasons-3.jpg',
+        '/hotels/Four Seasons Istanbul/four-seasons-4.jpg',
+        '/hotels/Four Seasons Istanbul/four-seasons-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
       description: 'Tarihi Sultanahmette son lüks',
@@ -306,13 +306,13 @@ const cityHotelsData = {
       rating: 4.9,
       reviews: 312,
       price: 12000,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Ciragan Palace Kempinski/ciragan-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Ciragan Palace Kempinski/ciragan-1.jpg',
+        '/hotels/Ciragan Palace Kempinski/ciragan-2.jpg',
+        '/hotels/Ciragan Palace Kempinski/ciragan-3.jpg',
+        '/hotels/Ciragan Palace Kempinski/ciragan-4.jpg',
+        '/hotels/Ciragan Palace Kempinski/ciragan-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'concierge', 'room-service'],
       description: 'Lüks otele dönüştürülmüş Osmanlı sarayı',
