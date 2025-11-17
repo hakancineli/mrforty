@@ -67,7 +67,7 @@ export default function TransfersPage() {
       <section className="relative h-80 bg-gradient-to-r from-primary-600 to-primary-800">
         <div className="absolute inset-0">
           <Image
-            src="/transfers-hero.jpg"
+            src="/images/hero-bg.jpg"
             alt="VIP Transfer Services"
             fill
             className="object-cover opacity-30"

@@ -117,7 +117,7 @@ export default function HotelsPage() {
       <section className="relative h-96 bg-gradient-to-r from-primary-600 to-primary-800">
         <div className="absolute inset-0">
           <Image
-            src="/hotels-hero.jpg"
+            src="/images/hero-bg.jpg"
             alt="Luxury Hotels"
             fill
             className="object-cover opacity-30"

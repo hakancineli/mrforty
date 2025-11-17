@@ -117,7 +117,7 @@ export default function ToursPage() {
       <section className="relative h-80 bg-gradient-to-r from-secondary-600 to-secondary-800">
         <div className="absolute inset-0">
           <Image
-            src="/tours-hero.jpg"
+            src="/images/hero-bg.jpg"
             alt="Tours Background"
             fill
             className="object-cover opacity-30"

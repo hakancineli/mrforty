@@ -8,7 +8,7 @@ export default function ContactPage() {
       <section className="relative h-80 bg-gradient-to-r from-quaternary-600 to-quaternary-800">
         <div className="absolute inset-0">
           <Image
-            src="/hero-bg.jpg"
+            src="/images/hero-bg.jpg"
             alt="Contact Background"
             fill
             className="object-cover"
