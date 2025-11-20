@@ -364,6 +364,56 @@ const hotelsData = {
     ],
     contact: { phone: '+90 506 641 17 83', email: 'info@fortytravel.com', address: 'Çırağan Cad. No:32, 34349 Beşiktaş, İstanbul, Türkiye' }
   },
+  21: {
+    id: 21,
+    name: 'Titanic Mardan Palace',
+    location: 'Antalya, Türkiye',
+    rating: 4.8,
+    reviews: 523,
+    price: 650,
+    image: '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+    gallery: [
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-1.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-2.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-3.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-4.jpeg',
+      '/hotels/Titanic Mardan Palace Görselleri/Titanic Mardan Palace-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'kids-club'],
+    description: 'Akdeniz\'de saray tarzı lüks tatil köyü',
+    fullDescription: 'Özel plajı ve dünya standartlarında olanaklarıyla Akdeniz kıyısında benzersiz lüks sunan görkemli saray tarzı tatil köyü.',
+    features: ['Özel plaj', 'Çok sayıda havuz', 'Full servis spa', 'Gurme restoranlar', 'Saray mimarisi'],
+    roomTypes: [
+      { name: 'Deluxe Oda', size: '50 sqm', maxGuests: 2, price: 650, features: ['King yatak', 'Deniz manzarası'] },
+      { name: 'Saray Süit', size: '85 sqm', maxGuests: 4, price: 950, features: ['Oturma alanı', 'Balkon'] }
+    ],
+    contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Kemer, Antalya, Türkiye' }
+  },
+  22: {
+    id: 22,
+    name: 'Regnum Carya Golf & Spa Resort',
+    location: 'Antalya, Türkiye',
+    rating: 4.7,
+    reviews: 412,
+    price: 580,
+    image: '/hotels/Antalya/Regnum Carya/Regnum-Carya-1.jpeg',
+    gallery: [
+      '/hotels/Antalya/Regnum Carya/Regnum-Carya-1.jpeg',
+      '/hotels/Antalya/Regnum Carya/Regnum-Carya-2.jpeg',
+      '/hotels/Antalya/Regnum Carya/Regnum-Carya-3.jpeg',
+      '/hotels/Antalya/Regnum Carya/Regnum-Carya-4.jpeg',
+      '/hotels/Antalya/Regnum Carya/Regnum-Carya-5.jpeg'
+    ],
+    amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
+    description: 'Akdeniz\'de lüks golf tatil köyü',
+    fullDescription: 'Regnum Carya şampiyonluk golf sahaları ve premium plaj olanakları ile dünya standartlarında spa hizmetleri ve Akdeniz lüksü sunar.',
+    features: ['Şampiyonluk golf', 'Lüks odalar', 'Spa & wellness', 'Özel plaj', 'Golf akademisi'],
+    roomTypes: [
+      { name: 'Deluxe Oda', size: '45 sqm', maxGuests: 2, price: 580, features: ['King yatak', 'Bahçe manzarası'] },
+      { name: 'Golf Villa', size: '120 sqm', maxGuests: 4, price: 1200, features: ['Golf manzarası', 'Özel havuz'] }
+    ],
+    contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Belek, Antalya, Türkiye' }
+  },
   11: {
     id: 11,
     name: 'Zorlu Grand Hotel Trabzon',
@@ -371,9 +421,13 @@ const hotelsData = {
     rating: 4.7,
     reviews: 189,
     price: 420,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+    image: '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-1.jpg',
     gallery: [
-      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
+      '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-1.jpg',
+      '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-2.jpg',
+      '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-3.jpg',
+      '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-4.jpg',
+      '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-5.jpg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
     description: 'Trabzon kalbinde lüks otel.',
@@ -401,8 +455,14 @@ const hotelsData = {
     rating: 4.5,
     reviews: 145,
     price: 350,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-1.jpeg',
+    gallery: [
+      '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-1.jpeg',
+      '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-2.jpeg',
+      '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-3.jpeg',
+      '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-4.jpeg',
+      '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
     description: 'Modern uluslararası standart otel.',
     fullDescription: 'Novotel Trabzon, iş ve eğlence gezginleri için konforlu konaklamalar sunar.',
@@ -424,8 +484,14 @@ const hotelsData = {
     rating: 4.6,
     reviews: 167,
     price: 480,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon.JPEG',
+    gallery: [
+      '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon.JPEG',
+      '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon2.jpeg',
+      '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon3.jpeg',
+      '/hotels/Trabzon/Hilton Trabzon/aHilton-Trabzon4.jpeg',
+      '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
     description: 'Karadeniz manzaralı uluslararası lüks.',
     fullDescription: 'Hilton Trabzon, dünya sınıfı hizmeti modern tesislerle birleştirir.',
@@ -447,9 +513,13 @@ const hotelsData = {
     rating: 4.4,
     reviews: 123,
     price: 320,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+    image: '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-1.jpeg',
     gallery: [
-      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
+      '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-1.jpeg',
+      '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-2.jpeg',
+      '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-3.jpeg',
+      '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-4.jpeg',
+      '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
     description: 'Geleneksel misafirperverlikle konforlu otel.',
@@ -477,9 +547,13 @@ const hotelsData = {
     rating: 4.6,
     reviews: 178,
     price: 450,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+    image: '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon1-.jpeg',
     gallery: [
-      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
+      '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon1-.jpeg',
+      '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon2-.jpeg',
+      '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon3-.jpeg',
+      '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon4-.jpeg',
+      '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon5-.jpeg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
     description: 'Karadeniz cazibesiyle Marriott kalitesi.',
@@ -507,9 +581,13 @@ const hotelsData = {
     rating: 4.7,
     reviews: 195,
     price: 520,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+    image: '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-1.jpg',
     gallery: [
-      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
+      '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-1.jpg',
+      '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-2.jpg',
+      '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-3.jpg',
+      '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-4.jpg',
+      '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-5.jpg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'beach'],
     description: 'Özel plajlı lüks resort.',
@@ -536,8 +614,14 @@ const hotelsData = {
     rating: 4.3,
     reviews: 134,
     price: 280,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-1.jpg',
+    gallery: [
+      '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-1.jpg',
+      '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-2.jpeg',
+      '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-3.jpg',
+      '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-4.jpg',
+      '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-5.jpg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
     description: 'Modern olanaklarla konforlu konaklama.',
     fullDescription: 'Wyndham Trabzon, gezginler için güvenilir hizmet ve kolaylık sunar.',
@@ -563,9 +647,13 @@ const hotelsData = {
     rating: 4.4,
     reviews: 145,
     price: 300,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+    image: '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-1.jpg',
     gallery: [
-      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
+      '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-1.jpg',
+      '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-2.jpg',
+      '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-3.jpg',
+      '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-4.jpg',
+      '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-5.jpg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
     description: 'Hampton kalitesi ile modern konfor.',
@@ -592,9 +680,13 @@ const hotelsData = {
     rating: 4.2,
     reviews: 112,
     price: 250,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+    image: '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-1.jpg',
     gallery: [
-      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
+      '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-1.jpg',
+      '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-2.jpg',
+      '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-3.jpg',
+      '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-4.jpg',
+      '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-5.jpg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Bahçe manzaralı konforlu otel.',
@@ -620,9 +712,13 @@ const hotelsData = {
     rating: 4.3,
     reviews: 128,
     price: 380,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+    image: '/hotels/Trabzon/Yazici Hotel/yazici-hotel-1.jpeg',
     gallery: [
-      '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
+      '/hotels/Trabzon/Yazici Hotel/yazici-hotel-1.jpeg',
+      '/hotels/Trabzon/Yazici Hotel/yazici-hotel-2.jpeg',
+      '/hotels/Trabzon/Yazici Hotel/yazici-hotel-3.jpeg',
+      '/hotels/Trabzon/Yazici Hotel/yazici-hotel-4.jpeg',
+      '/hotels/Trabzon/Yazici Hotel/yazici-hotel-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
     description: 'Geleneksel misafirperverlikle modern konfor.',
@@ -648,8 +744,14 @@ const hotelsData = {
     rating: 4.8,
     reviews: 489,
     price: 720,
-    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-    gallery: ['/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'],
+    image: '/hotels/Antalya/Maxx Royal Belek/maxx-royal-1.jpeg',
+    gallery: [
+      '/hotels/Antalya/Maxx Royal Belek/maxx-royal-1.jpeg',
+      '/hotels/Antalya/Maxx Royal Belek/maxx-royal-2.jpeg',
+      '/hotels/Antalya/Maxx Royal Belek/maxx-royal-3.jpeg',
+      '/hotels/Antalya/Maxx Royal Belek/maxx-royal-4.jpeg',
+      '/hotels/Antalya/Maxx Royal Belek/maxx-royal-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
     description: 'Golf ve plaj erişimi olan ultra-lüks resort.',
     fullDescription: 'Maxx Royal Belek, golf ve plaj erişimiyle ultra-lüks konaklamalar sunar.',
@@ -675,9 +777,13 @@ const hotelsData = {
     rating: 4.6,
     reviews: 367,
     price: 520,
-    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    image: '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-1.jpeg',
     gallery: [
-      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'
+      '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-1.jpeg',
+      '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-2.jpeg',
+      '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-3.jpeg',
+      '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-4.jpeg',
+      '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
     description: 'Lüks sahil resort.',
@@ -700,9 +806,13 @@ const hotelsData = {
     rating: 4.7,
     reviews: 398,
     price: 600,
-    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    image: '/hotels/Antalya/Calista Luxury Resort/calista-luxury-1.jpeg',
     gallery: [
-      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'
+      '/hotels/Antalya/Calista Luxury Resort/calista-luxury-1.jpeg',
+      '/hotels/Antalya/Calista Luxury Resort/calista-luxury-2.jpeg',
+      '/hotels/Antalya/Calista Luxury Resort/calista-luxury-3.jpeg',
+      '/hotels/Antalya/Calista Luxury Resort/calista-luxury-4.jpeg',
+      '/hotels/Antalya/Calista Luxury Resort/calista-luxury-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
     description: 'Premium sahil resort.',
@@ -725,9 +835,13 @@ const hotelsData = {
     rating: 4.6,
     reviews: 345,
     price: 550,
-    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    image: '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-1.jpeg',
     gallery: [
-      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'
+      '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-1.jpeg',
+      '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-2.jpeg',
+      '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-3.jpeg',
+      '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-4.jpeg',
+      '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
     description: 'Elegant Akdeniz resort.',
@@ -750,9 +864,13 @@ const hotelsData = {
     rating: 4.7,
     reviews: 423,
     price: 680,
-    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    image: '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-1.jpeg',
     gallery: [
-      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'
+      '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-1.jpeg',
+      '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-2.jpeg',
+      '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-3.jpeg',
+      '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-4.jpeg',
+      '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
     description: 'Premium her şey dahil resort.',
@@ -775,9 +893,13 @@ const hotelsData = {
     rating: 4.6,
     reviews: 389,
     price: 620,
-    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    image: '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-1.jpeg',
     gallery: [
-      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'
+      '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-1.jpeg',
+      '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-2.jpeg',
+      '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-3.jpeg',
+      '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-4.jpeg',
+      '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
     description: 'Lüks golf ve plaj resort.',
@@ -800,9 +922,13 @@ const hotelsData = {
     rating: 4.8,
     reviews: 467,
     price: 750,
-    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    image: '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-1.jpeg',
     gallery: [
-      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'
+      '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-1.jpeg',
+      '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-2.jpeg',
+      '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-3.jpeg',
+      '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-4.jpeg',
+      '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'water-park'],
     description: 'Tema park resort ile lüks konaklama.',
@@ -825,9 +951,13 @@ const hotelsData = {
     rating: 4.5,
     reviews: 312,
     price: 480,
-    image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+    image: '/hotels/Antalya/Sirene Belek/sirene-belek-1.jpeg',
     gallery: [
-      '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'
+      '/hotels/Antalya/Sirene Belek/sirene-belek-1.jpeg',
+      '/hotels/Antalya/Sirene Belek/sirene-belek-2.jpeg',
+      '/hotels/Antalya/Sirene Belek/sirene-belek-3.jpeg',
+      '/hotels/Antalya/Sirene Belek/sirene-belek-4.jpeg',
+      '/hotels/Antalya/Sirene Belek/sirene-belek-5.jpeg'
     ],
     amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
     description: 'Golf ve plaj resort.',
@@ -850,8 +980,14 @@ const hotelsData = {
     rating: 4.6,
     reviews: 210,
     price: 380,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-1.jpeg',
+      '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-2.jpeg',
+      '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-3.jpeg',
+      '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-4.jpeg',
+      '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Kongre tesisleriyle modern lüks.',
     fullDescription: 'Hilton Bursa, modern konfor ve etkinlik tesisleri Sunar.',
@@ -877,8 +1013,14 @@ const hotelsData = {
     rating: 4.3,
     reviews: 145,
     price: 250,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Karinna Hotel/karinna-hotel-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Karinna Hotel/karinna-hotel-1.jpeg',
+      '/hotels/Bursa/Karinna Hotel/karinna-hotel-2.jpeg',
+      '/hotels/Bursa/Karinna Hotel/karinna-hotel-3.jpeg',
+      '/hotels/Bursa/Karinna Hotel/karinna-hotel-4.jpeg',
+      '/hotels/Bursa/Karinna Hotel/karinna-hotel-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Termal tesisleriyle butik otel.',
     fullDescription: 'Karinna Hotel, Bursa\'da termal spa tesisleriyle benzersiz bir wellness deneyimi Sunar.',
@@ -896,8 +1038,14 @@ const hotelsData = {
     rating: 4.4,
     reviews: 178,
     price: 300,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-1.jpeg',
+      '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-2.jpeg',
+      '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-3.jpeg',
+      '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-4.jpeg',
+      '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
     description: 'Termal spa ile modern otel.',
     fullDescription: 'Grand Yazar Hotel, Bursa\'da konfor ve wellness için termal spa tesisleriyle modern konaklama Sunar.',
@@ -915,8 +1063,14 @@ const hotelsData = {
     rating: 4.5,
     reviews: 189,
     price: 350,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-1.jpg',
+    gallery: [
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-1.jpg',
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-2.jpg',
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-3.jpg',
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-4.jpg',
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-5.jpg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
     description: 'Çağdaş tasarım oteli.',
     fullDescription: 'WOW Bursa, iş ve eğlence gezginleri için kapsamlı olanaklarla çağdaş konaklama Sunar.',
@@ -934,8 +1088,14 @@ const hotelsData = {
     rating: 4.3,
     reviews: 156,
     price: 270,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-1.jpg',
+    gallery: [
+      '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-1.jpg',
+      '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-2.jpg',
+      '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-3.jpg',
+      '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-4.jpg',
+      '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-5.jpg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Geleneksel termal otel.',
     fullDescription: 'Gönlüferah Thermal Hotel, Bursa\'da otantik termal spa deneyimleriyle konforlu konaklama Sunar.',
@@ -953,8 +1113,14 @@ const hotelsData = {
     rating: 4.6,
     reviews: 223,
     price: 420,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-1.jpg',
+    gallery: [
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-1.jpg',
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-2.jpg',
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-3.jpg',
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-4.jpg',
+      '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-5.jpg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
     description: 'Lüks termal spa resort.',
     fullDescription: 'Kervansaray Thermal Hotel, Bursa\'da dünya sınıfı termal spa resort deneyimi Sunar.',
@@ -972,8 +1138,14 @@ const hotelsData = {
     rating: 4.4,
     reviews: 198,
     price: 220,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Celik Palas/celik-palas-1.jpg',
+    gallery: [
+      '/hotels/Bursa/Celik Palas/celik-palas-1.jpg',
+      '/hotels/Bursa/Celik Palas/celik-palas-2.jpg',
+      '/hotels/Bursa/Celik Palas/celik-palas-3.jpg',
+      '/hotels/Bursa/Celik Palas/celik-palas-4.jpg',
+      '/hotels/Bursa/Celik Palas/celik-palas-5.jpg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
     description: 'Termal tesisleriyle tarihi otel.',
     fullDescription: 'Çelik Palas, termal spa tesisleri ve konforlu konaklama ile geleneksel zarafeti modern konforla birleştirir.',
@@ -991,8 +1163,14 @@ const hotelsData = {
     rating: 4.3,
     reviews: 145,
     price: 260,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-1.jpeg',
+      '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-2.jpeg',
+      '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-3.jpeg',
+      '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-4.jpeg',
+      '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
     description: 'Uluslararası standartlarda konfor.',
     fullDescription: 'Bursa Holiday Inn, uluslararası hizmet standartları ve modern olanaklarla konforlu konaklama Sunar.',
@@ -1010,8 +1188,14 @@ const hotelsData = {
     rating: 4.5,
     reviews: 180,
     price: 320,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-1.jpeg',
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-2.jpeg',
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-3.jpeg',
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-4.jpeg',
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Şehir merkezine yakın konfor.',
     fullDescription: 'Crowne Plaza Bursa, iş ve eğlence için uygun konaklama Sunar.',
@@ -1037,8 +1221,14 @@ const hotelsData = {
     rating: 4.4,
     reviews: 150,
     price: 280,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-2.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-3.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-4.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Şehir merkezinde konfor.',
     fullDescription: 'Almira Hotel, Bursa şehir merkezinde uygun konaklama Sunar.',
@@ -1064,8 +1254,14 @@ const hotelsData = {
     rating: 4.5,
     reviews: 180,
     price: 320,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-1.jpeg',
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-2.jpeg',
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-3.jpeg',
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-4.jpeg',
+      '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Şehir merkezinde konfor.',
     fullDescription: 'Crowne Plaza Bursa, iş ve eğlence için uygun konaklama Sunar.',
@@ -1091,8 +1287,14 @@ const hotelsData = {
     rating: 4.4,
     reviews: 150,
     price: 280,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-2.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-3.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-4.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Şehir merkezinde konfor.',
     fullDescription: 'Almira Hotel, Bursa şehir merkezinde uygun konaklama Sunar.',
@@ -1118,8 +1320,14 @@ const hotelsData = {
     rating: 4.4,
     reviews: 150,
     price: 280,
-    image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-    gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+    image: '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+    gallery: [
+      '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-2.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-3.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-4.jpeg',
+      '/hotels/Bursa/Almira Hotel/almira-hotel-5.jpeg'
+    ],
     amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
     description: 'Şehir merkezinde konfor.',
     fullDescription: 'Almira Hotel, Bursa şehir merkezinde uygun konaklama Sunar.',

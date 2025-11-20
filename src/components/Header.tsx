@@ -148,14 +148,14 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-48 h-40 flex items-center justify-center">
-              <div className="w-44 h-32 flex items-center justify-center">
+            <div className="w-52 h-40 flex items-center justify-center overflow-visible">
+              <div className="w-full h-full flex items-center justify-center overflow-visible">
                 <Image
                   src="/images/logo.png"
                   alt="MrForty Logo"
                   width={200}
                   height={120}
-                  className="rounded-lg object-contain -mt-1"
+                  className="object-contain"
                   priority
                 />
               </div>

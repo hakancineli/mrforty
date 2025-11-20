@@ -1,7 +1,129 @@
+'use client'
+
 import { MapPin, Star, Calendar, Users, Wifi, Car, Coffee, Dumbbell, Check, Phone, Mail, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+// Destination Card Component
+const DestinationCard = ({ destination, tick }: { destination: { name: string; nameAr: string; image: string; gallery?: string[]; tours: number; rating: number }, tick: number }) => {
+  const [offset, setOffset] = useState(0)
+  const images = destination.gallery && destination.gallery.length > 0 ? destination.gallery : [destination.image]
+  const idx = images.length > 0 ? ((tick + offset) % images.length) : 0
+
+  const handleError = () => {
+    if (images.length > 1) {
+      setOffset((v) => (v + 1) % images.length)
+    }
+  }
+
+  useEffect(() => {
+    if (images.length <= 1) return
+    if (typeof window === 'undefined') return
+    const isMobile = window.matchMedia('(max-width: 767px)').matches
+    if (!isMobile) return
+    const id = setInterval(() => {
+      setOffset((v) => (v + 1) % images.length)
+    }, 3500)
+    return () => clearInterval(id)
+  }, [images.length])
+
+  return (
+    <Link href={`/ar/hotels/city/${destination.name.toLowerCase()}`} className="card group cursor-pointer">
+      <div className="relative h-[28rem] overflow-hidden">
+        <Image
+          key={images[idx]}
+          src={images[idx]}
+          alt={destination.nameAr}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          onError={handleError}
+          priority
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute bottom-4 left-4 text-white">
+          <h3 className="text-2xl font-bold mb-2">{destination.nameAr}</h3>
+          <div className="flex items-center gap-4 text-sm">
+            <div className="flex items-center gap-1">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <span>{destination.rating}</span>
+            </div>
+            <span>{destination.tours} فندق</span>
+          </div>
+        </div>
+        {images.length > 1 && (
+          <div className="absolute right-3 bottom-3 flex gap-1">
+            {images.map((_, i) => (
+              <span key={i} className={`w-2 h-2 rounded-full ${i === idx ? 'bg-white' : 'bg-white/50'}`} />
+            ))}
+          </div>
+        )}
+      </div>
+    </Link>
+  )
+}
+
+// Popular Destinations Data
+const popularDestinations = [
+  {
+    name: 'Istanbul',
+    nameAr: 'اسطنبول',
+    image: '/images/destinations/istanbul.jpg',
+    gallery: [
+      '/images/destinations/Istanbul/istanbul-1.jpg',
+      '/images/destinations/Istanbul/istanbul-2.jpg',
+      '/images/destinations/Istanbul/istanbul-3.jpg',
+      '/images/destinations/Istanbul/istanbul-4.jpg',
+      '/images/destinations/Istanbul/istanbul-5.jpg',
+    ],
+    tours: 45,
+    rating: 4.8
+  },
+  {
+    name: 'Trabzon',
+    nameAr: 'طرابزون',
+    image: '/images/destinations/bodrum.jpg',
+    gallery: [
+      '/images/destinations/Trabzon/trabzon-1.jpg',
+      '/images/destinations/Trabzon/trabzon-2.jpg',
+      '/images/destinations/Trabzon/trabzon-3.jpg',
+      '/images/destinations/Trabzon/trabzon-4.jpg',
+      '/images/destinations/Trabzon/trabzon-5.jpg',
+    ],
+    tours: 15,
+    rating: 4.6
+  },
+  {
+    name: 'Antalya',
+    nameAr: 'أنطاليا',
+    image: '/images/destinations/antalya.jpg',
+    gallery: [
+      '/images/destinations/Antalya/antalya-1.jpg',
+      '/images/destinations/Antalya/antalya-2.jpg',
+      '/images/destinations/Antalya/antalya-3.jpg',
+      '/images/destinations/Antalya/antalya-4.jpg',
+      '/images/destinations/Antalya/antalya-5.jpg',
+    ],
+    tours: 28,
+    rating: 4.7
+  },
+  {
+    name: 'Bursa',
+    nameAr: 'بورصة',
+    image: '/images/destinations/cappadocia.jpg',
+    gallery: [
+      '/images/destinations/Bursa/bursa-1.jpg',
+      '/images/destinations/Bursa/bursa-2.jpg',
+      '/images/destinations/Bursa/bursa-3.jpg',
+      '/images/destinations/Bursa/bursa-4.jpg',
+      '/images/destinations/Bursa/bursa-5.jpg',
+    ],
+    tours: 20,
+    rating: 4.5
+  }
+]
 
 // Şehir otelleri verisi
 const cityHotelsData = {
@@ -276,8 +398,14 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 189,
       price: 4200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-1.jpg',
+      gallery: [
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-1.jpg',
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-2.jpg',
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-3.jpg',
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-4.jpg',
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-5.jpg'
+      ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'فندق فاخر في قلب طرابزون بإطلالات على المدينة',
       fullDescription: 'يقدم فندق زورلو غراند طرابزون إقامة فاخرة مع وسائل راحة عصرية وخدمة ممتازة.',
@@ -291,8 +419,14 @@ const cityHotelsData = {
       rating: 4.5,
       reviews: 145,
       price: 3500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-1.jpeg',
+      gallery: [
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-1.jpeg',
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-2.jpeg',
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-3.jpeg',
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-4.jpeg',
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'فندق حديث بمعايير دولية',
       fullDescription: 'يوفر نوفوتيل طرابزون إقامة مريحة للمسافرين بغرض العمل والترفيه.',
@@ -306,8 +440,14 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 167,
       price: 4800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon.JPEG',
+      gallery: [
+        '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon.JPEG',
+        '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon2.jpeg',
+        '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon3.jpeg',
+        '/hotels/Trabzon/Hilton Trabzon/aHilton-Trabzon4.jpeg',
+        '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'فخامة عالمية بإطلالات على البحر الأسود',
       fullDescription: 'يجمع هيلتون طرابزون بين الخدمة ذات المستوى العالمي والمرافق الحديثة.',
@@ -321,13 +461,13 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 123,
       price: 3200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-1.jpeg',
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-2.jpeg',
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-3.jpeg',
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-4.jpeg',
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'فندق مريح بضيافة تركية تقليدية',
@@ -342,13 +482,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 178,
       price: 4500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon1-.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon1-.jpeg',
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon2-.jpeg',
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon3-.jpeg',
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon4-.jpeg',
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon5-.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'جودة ماريوت مع سحر البحر الأسود',
@@ -363,13 +503,13 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 195,
       price: 5200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-1.jpg',
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-2.jpg',
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-3.jpg',
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-4.jpg',
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'beach'],
       description: 'منتجع فاخر مع شاطئ خاص',
@@ -378,19 +518,40 @@ const cityHotelsData = {
       contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'شارع يالينجاك رقم 99، طرابزون، تركيا' }
     },
     {
+      id: 17,
+      name: 'Wyndham Trabzon',
+      location: 'طرابزون، تركيا',
+      rating: 4.3,
+      reviews: 134,
+      price: 2800,
+      image: '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-1.jpg',
+      gallery: [
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-1.jpg',
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-2.jpeg',
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-3.jpg',
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-4.jpg',
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-5.jpg'
+      ],
+      amenities: ['wifi', 'parking', 'gym', 'restaurant', 'bar'],
+      description: 'إقامة مريحة مع مرافق عصرية',
+      fullDescription: 'يوفر ويندهام طرابزون إقامة مريحة مع مرافق عصرية وخدمة موثوقة للمسافرين.',
+      features: ['غرف مريحة بإطلالة على المدينة', 'مرافق حديثة', 'مركز لياقة', 'خيارات طعام متعددة', 'مرافق أعمال'],
+      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'شارع ميمارسنان رقم 45، طرابزون، تركيا' }
+    },
+    {
       id: 18,
       name: 'Hampton by Hilton Trabzon',
       location: 'طرابزون، تركيا',
       rating: 4.4,
       reviews: 145,
       price: 3000,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-1.jpg',
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-2.jpg',
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-3.jpg',
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-4.jpg',
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'gym', 'restaurant', 'bar'],
       description: 'راحة عصرية بجودة هامبتون',
@@ -405,13 +566,13 @@ const cityHotelsData = {
       rating: 4.2,
       reviews: 112,
       price: 2500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-1.jpg',
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-2.jpg',
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-3.jpg',
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-4.jpg',
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'gym', 'restaurant'],
       description: 'فندق مريح بإطلالات على الحديقة',
@@ -426,13 +587,13 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 128,
       price: 3800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Yazici Hotel/yazici-hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-1.jpeg',
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-2.jpeg',
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-3.jpeg',
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-4.jpeg',
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'ضيافة تقليدية براحة عصرية',
@@ -464,8 +625,14 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 412,
       price: 5800,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-      gallery: ['/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg'],
+      image: '/hotels/Antalya/Regnum Carya/Regnum-Carya-1.jpeg',
+      gallery: [
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-1.jpeg',
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-2.jpeg',
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-3.jpeg',
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-4.jpeg',
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'منتجع غولف فاخر على ساحل المتوسط',
       fullDescription: 'ريجنوم كاريا يقدم ملاعب غولف احترافية ومرافق شاطئية مميزة.',
@@ -643,8 +810,14 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 210,
       price: 3800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-1.jpeg',
+      gallery: [
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-1.jpeg',
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-2.jpeg',
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-3.jpeg',
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-4.jpeg',
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'فخامة عصرية مع مرافق مؤتمرات',
       fullDescription: 'هيلتون بورصة يقدم راحة عصرية ومرافق فعاليات.',
@@ -658,8 +831,14 @@ const cityHotelsData = {
       rating: 4.5,
       reviews: 180,
       price: 3200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-1.jpeg',
+      gallery: [
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-1.jpeg',
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-2.jpeg',
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-3.jpeg',
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-4.jpeg',
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'إقامة مريحة مع سهولة الوصول للمدينة',
       fullDescription: 'كراون بلازا بورصة يوفر إقامة مناسبة لرجال الأعمال والسياح.',
@@ -673,8 +852,14 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 150,
       price: 2800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+      gallery: [
+        '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+        '/hotels/Bursa/Almira Hotel/almira-hotel-2.jpeg',
+        '/hotels/Bursa/Almira Hotel/almira-hotel-3.jpeg',
+        '/hotels/Bursa/Almira Hotel/almira-hotel-4.jpeg',
+        '/hotels/Bursa/Almira Hotel/almira-hotel-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'فندق مريح في مركز المدينة',
       fullDescription: 'فندق الميرا يقدم إقامة مريحة في مركز المدينة.',
@@ -688,13 +873,13 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 145,
       price: 2500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Karinna Hotel/karinna-hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-1.jpeg',
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-2.jpeg',
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-3.jpeg',
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-4.jpeg',
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'فندق بوتيكي بمرافق حرارية',
@@ -709,13 +894,13 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 178,
       price: 3000,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-1.jpeg',
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-2.jpeg',
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-3.jpeg',
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-4.jpeg',
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'فندق حديث مع سبا حراري',
@@ -730,13 +915,13 @@ const cityHotelsData = {
       rating: 4.5,
       reviews: 189,
       price: 3500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/WOW Bursa/wow-bursa-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/WOW Bursa/wow-bursa-1.jpg',
+        '/hotels/Bursa/WOW Bursa/wow-bursa-2.jpg',
+        '/hotels/Bursa/WOW Bursa/wow-bursa-3.jpg',
+        '/hotels/Bursa/WOW Bursa/wow-bursa-4.jpg',
+        '/hotels/Bursa/WOW Bursa/wow-bursa-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'فندق بتصميم عصري',
@@ -751,13 +936,13 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 156,
       price: 2700,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-1.jpg',
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-2.jpg',
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-3.jpg',
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-4.jpg',
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'فندق حراري تقليدي',
@@ -772,13 +957,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 223,
       price: 4200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-1.jpg',
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-2.jpg',
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-3.jpg',
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-4.jpg',
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'منتجع سبا حراري فاخر',
@@ -793,13 +978,13 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 198,
       price: 2200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Celik Palas/celik-palas-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Celik Palas/celik-palas-1.jpg',
+        '/hotels/Bursa/Celik Palas/celik-palas-2.jpg',
+        '/hotels/Bursa/Celik Palas/celik-palas-3.jpg',
+        '/hotels/Bursa/Celik Palas/celik-palas-4.jpg',
+        '/hotels/Bursa/Celik Palas/celik-palas-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'فندق تاريخي بمرافق حرارية',
@@ -814,13 +999,13 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 145,
       price: 2600,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-1.jpeg',
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-2.jpeg',
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-3.jpeg',
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-4.jpeg',
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'فندق مريح بمعايير دولية',
@@ -849,6 +1034,16 @@ const amenities = {
 }
 
 export default function CityHotelsPage({ params }: { params: { city: string } }) {
+  const [destinationsTick, setDestinationsTick] = useState(0)
+  
+  // Slideshow effect for destination cards
+  useEffect(() => {
+    const id = setInterval(() => {
+      setDestinationsTick((t) => t + 1)
+    }, 4000)
+    return () => clearInterval(id)
+  }, [])
+
   const cityHotels = cityHotelsData[params.city as keyof typeof cityHotelsData]
 
   if (!cityHotels) {
@@ -884,6 +1079,24 @@ export default function CityHotelsPage({ params }: { params: { city: string } })
           <div className="absolute bottom-8 left-8 text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-2">فنادق {cityName}</h1>
             <p className="text-xl opacity-90">اكتشف أفضل الفنادق في {cityName}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Destinations Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">استكشف أفضل الوجهات في تركيا</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              اكتشف جمال وثقافة أكثر المدن جاذبية في تركيا
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {popularDestinations.map((destination) => (
+              <DestinationCard key={destination.name} destination={destination} tick={destinationsTick} />
+            ))}
           </div>
         </div>
       </section>

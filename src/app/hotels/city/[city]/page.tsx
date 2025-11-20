@@ -1,7 +1,125 @@
+'use client'
+
 import { MapPin, Star, Calendar, Users, Wifi, Car, Coffee, Dumbbell, Check, Phone, Mail, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+// Destination Card Component
+const DestinationCard = ({ destination, tick }: { destination: { name: string; image: string; gallery?: string[]; tours: number; rating: number }, tick: number }) => {
+  const [offset, setOffset] = useState(0)
+  const images = destination.gallery && destination.gallery.length > 0 ? destination.gallery : [destination.image]
+  const idx = images.length > 0 ? ((tick + offset) % images.length) : 0
+
+  const handleError = () => {
+    if (images.length > 1) {
+      setOffset((v) => (v + 1) % images.length)
+    }
+  }
+
+  useEffect(() => {
+    if (images.length <= 1) return
+    if (typeof window === 'undefined') return
+    const isMobile = window.matchMedia('(max-width: 767px)').matches
+    if (!isMobile) return
+    const id = setInterval(() => {
+      setOffset((v) => (v + 1) % images.length)
+    }, 3500)
+    return () => clearInterval(id)
+  }, [images.length])
+
+  return (
+    <Link href={`/hotels/city/${destination.name.toLowerCase()}`} className="card group cursor-pointer">
+      <div className="relative h-[28rem] overflow-hidden">
+        <Image
+          key={images[idx]}
+          src={images[idx]}
+          alt={destination.name}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          onError={handleError}
+          priority
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute bottom-4 left-4 text-white">
+          <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
+          <div className="flex items-center gap-4 text-sm">
+            <div className="flex items-center gap-1">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <span>{destination.rating}</span>
+            </div>
+            <span>{destination.tours} Hotels</span>
+          </div>
+        </div>
+        {images.length > 1 && (
+          <div className="absolute right-3 bottom-3 flex gap-1">
+            {images.map((_, i) => (
+              <span key={i} className={`w-2 h-2 rounded-full ${i === idx ? 'bg-white' : 'bg-white/50'}`} />
+            ))}
+          </div>
+        )}
+      </div>
+    </Link>
+  )
+}
+
+// Popular Destinations Data
+const popularDestinations = [
+  {
+    name: 'Istanbul',
+    image: '/images/destinations/istanbul.jpg',
+    gallery: [
+      '/images/destinations/Istanbul/istanbul-1.jpg',
+      '/images/destinations/Istanbul/istanbul-2.jpg',
+      '/images/destinations/Istanbul/istanbul-3.jpg',
+      '/images/destinations/Istanbul/istanbul-4.jpg',
+      '/images/destinations/Istanbul/istanbul-5.jpg',
+    ],
+    tours: 45,
+    rating: 4.8
+  },
+  {
+    name: 'Trabzon',
+    image: '/images/destinations/bodrum.jpg',
+    gallery: [
+      '/images/destinations/Trabzon/trabzon-1.jpg',
+      '/images/destinations/Trabzon/trabzon-2.jpg',
+      '/images/destinations/Trabzon/trabzon-3.jpg',
+      '/images/destinations/Trabzon/trabzon-4.jpg',
+      '/images/destinations/Trabzon/trabzon-5.jpg',
+    ],
+    tours: 15,
+    rating: 4.6
+  },
+  {
+    name: 'Antalya',
+    image: '/images/destinations/antalya.jpg',
+    gallery: [
+      '/images/destinations/Antalya/antalya-1.jpg',
+      '/images/destinations/Antalya/antalya-2.jpg',
+      '/images/destinations/Antalya/antalya-3.jpg',
+      '/images/destinations/Antalya/antalya-4.jpg',
+      '/images/destinations/Antalya/antalya-5.jpg',
+    ],
+    tours: 28,
+    rating: 4.7
+  },
+  {
+    name: 'Bursa',
+    image: '/images/destinations/cappadocia.jpg',
+    gallery: [
+      '/images/destinations/Bursa/bursa-1.jpg',
+      '/images/destinations/Bursa/bursa-2.jpg',
+      '/images/destinations/Bursa/bursa-3.jpg',
+      '/images/destinations/Bursa/bursa-4.jpg',
+      '/images/destinations/Bursa/bursa-5.jpg',
+    ],
+    tours: 20,
+    rating: 4.5
+  }
+]
 
 // Şehir otelleri verisi
 const cityHotelsData = {
@@ -341,9 +459,13 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 189,
       price: 4200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-1.jpg',
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-2.jpg',
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-3.jpg',
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-4.jpg',
+        '/hotels/Trabzon/Zorlu Grand Hotel Trabzon/zorlu-grand-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Luxury hotel in the heart of Trabzon',
@@ -369,8 +491,14 @@ const cityHotelsData = {
       rating: 4.5,
       reviews: 145,
       price: 3500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-1.jpeg',
+      gallery: [
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-1.jpeg',
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-2.jpeg',
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-3.jpeg',
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-4.jpeg',
+        '/hotels/Trabzon/Novotel Trabzon/novotel-trabzon-5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Modern hotel with international standards',
       fullDescription: 'Novotel Trabzon offers modern accommodation with international standards, providing comfort and convenience for business and leisure travelers.',
@@ -395,8 +523,14 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 167,
       price: 4800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon.JPEG',
+      gallery: [
+        '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon.JPEG',
+        '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon2.jpeg',
+        '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon3.jpeg',
+        '/hotels/Trabzon/Hilton Trabzon/aHilton-Trabzon4.jpeg',
+        '/hotels/Trabzon/Hilton Trabzon/Hilton-Trabzon5.jpeg'
+      ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'International luxury with Black Sea views',
       fullDescription: 'Hilton Trabzon offers international luxury accommodation with impressive Black Sea views, combining world-class service with modern amenities.',
@@ -421,13 +555,13 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 123,
       price: 3200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-1.jpeg',
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-2.jpeg',
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-3.jpeg',
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-4.jpeg',
+        '/hotels/Trabzon/Grand Tarabya Hotel/Grand-Tarabya-Hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'Comfortable hotel with traditional hospitality',
@@ -452,13 +586,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 178,
       price: 4500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon1-.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon1-.jpeg',
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon2-.jpeg',
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon3-.jpeg',
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon4-.jpeg',
+        '/hotels/Trabzon/Marriott Hotel Trabzon/Marriott-Hotel-Trabzon5-.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Marriott quality with Black Sea charm',
@@ -484,13 +618,13 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 195,
       price: 5200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-1.jpg',
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-2.jpg',
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-3.jpg',
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-4.jpg',
+        '/hotels/Trabzon/Rixos Trabzon/rixos-trabzon-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool', 'beach'],
       description: 'Luxury resort with private beach',
@@ -516,13 +650,29 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 134,
       price: 2800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-      gallery: ['/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg'],
+      image: '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-1.jpg',
+      gallery: [
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-1.jpg',
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-2.jpeg',
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-3.jpg',
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-4.jpg',
+        '/hotels/Trabzon/Wyndham Trabzon/rixos-trabzon-5.jpg'
+      ],
       amenities: ['wifi', 'parking', 'gym', 'restaurant', 'bar'],
       description: 'Comfortable stays with modern amenities',
-      fullDescription: 'Wyndham Trabzon offers reliable service and convenience for travelers.',
-      features: ['Comfortable rooms', 'Modern facilities', 'Fitness center'],
-      contact: { phone: '+90 532 123 4567', email: 'info@fortytravel.com', address: 'Trabzon, Turkey' }
+      fullDescription: 'Wyndham Trabzon offers comfortable stays with modern amenities, providing reliable service and convenience for travelers.',
+      features: [
+        'Comfortable rooms with city views',
+        'Modern facilities',
+        'Fitness center',
+        'Multiple dining options',
+        'Business facilities'
+      ],
+      contact: {
+        phone: '+90 532 123 4567',
+        email: 'info@fortytravel.com',
+        address: 'Mimarsinan Cad. No:45, 61000 Trabzon, Turkey'
+      }
     },
     {
       id: 18,
@@ -531,13 +681,13 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 145,
       price: 3000,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-1.jpg',
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-2.jpg',
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-3.jpg',
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-4.jpg',
+        '/hotels/Trabzon/Hampton by Hilton Trabzon/hampton-trabzon-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'gym', 'restaurant', 'bar'],
       description: 'Modern comfort with Hampton quality',
@@ -562,13 +712,13 @@ const cityHotelsData = {
       rating: 4.2,
       reviews: 112,
       price: 2500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-1.jpg',
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-2.jpg',
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-3.jpg',
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-4.jpg',
+        '/hotels/Trabzon/Trabzon Park Hotel/trabzon-park-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'gym', 'restaurant'],
       description: 'Comfortable hotel with garden views',
@@ -592,13 +742,13 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 128,
       price: 3800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Trabzon/Yazici Hotel/yazici-hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-1.jpeg',
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-2.jpeg',
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-3.jpeg',
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-4.jpeg',
+        '/hotels/Trabzon/Yazici Hotel/yazici-hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'Traditional hospitality with modern comfort',
@@ -646,13 +796,13 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 412,
       price: 5800,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Regnum Carya/Regnum-Carya-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-1.jpeg',
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-2.jpeg',
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-3.jpeg',
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-4.jpeg',
+        '/hotels/Antalya/Regnum Carya/Regnum-Carya-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'Luxury golf resort by the Mediterranean',
@@ -667,13 +817,13 @@ const cityHotelsData = {
       rating: 4.8,
       reviews: 489,
       price: 7200,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Maxx Royal Belek/maxx-royal-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Maxx Royal Belek/maxx-royal-1.jpeg',
+        '/hotels/Antalya/Maxx Royal Belek/maxx-royal-2.jpeg',
+        '/hotels/Antalya/Maxx Royal Belek/maxx-royal-3.jpeg',
+        '/hotels/Antalya/Maxx Royal Belek/maxx-royal-4.jpeg',
+        '/hotels/Antalya/Maxx Royal Belek/maxx-royal-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'Ultra-luxury resort with golf',
@@ -688,13 +838,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 367,
       price: 5200,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-1.jpeg',
+        '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-2.jpeg',
+        '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-3.jpeg',
+        '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-4.jpeg',
+        '/hotels/Antalya/Susesi Luxury Resort/susesi-luxury-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
       description: 'Luxury beachfront resort',
@@ -716,13 +866,13 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 398,
       price: 6000,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Calista Luxury Resort/calista-luxury-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Calista Luxury Resort/calista-luxury-1.jpeg',
+        '/hotels/Antalya/Calista Luxury Resort/calista-luxury-2.jpeg',
+        '/hotels/Antalya/Calista Luxury Resort/calista-luxury-3.jpeg',
+        '/hotels/Antalya/Calista Luxury Resort/calista-luxury-4.jpeg',
+        '/hotels/Antalya/Calista Luxury Resort/calista-luxury-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
       description: 'Premium beachfront resort with luxury amenities',
@@ -744,13 +894,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 345,
       price: 5500,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-1.jpeg',
+        '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-2.jpeg',
+        '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-3.jpeg',
+        '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-4.jpeg',
+        '/hotels/Antalya/Kaya Palazzo/kaya-palazzo-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
       description: 'Elegant Mediterranean resort',
@@ -772,13 +922,13 @@ const cityHotelsData = {
       rating: 4.7,
       reviews: 423,
       price: 6800,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-1.jpeg',
+        '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-2.jpeg',
+        '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-3.jpeg',
+        '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-4.jpeg',
+        '/hotels/Antalya/Rixos Premium Belek/rixos-premium-belek-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach'],
       description: 'Premium all-inclusive luxury resort',
@@ -800,13 +950,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 389,
       price: 6200,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-1.jpeg',
+        '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-2.jpeg',
+        '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-3.jpeg',
+        '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-4.jpeg',
+        '/hotels/Antalya/Cornelia Diamond Golf Resort/cornelia-diamond-golf-resort-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'Luxury golf and beach resort',
@@ -828,13 +978,13 @@ const cityHotelsData = {
       rating: 4.8,
       reviews: 467,
       price: 7500,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-1.jpeg',
+        '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-2.jpeg',
+        '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-3.jpeg',
+        '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-4.jpeg',
+        '/hotels/Antalya/Land of Legends Kingdom/land-of-legends-kingdom-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'water-park'],
       description: 'Theme-park resort with luxury stays',
@@ -856,13 +1006,13 @@ const cityHotelsData = {
       rating: 4.5,
       reviews: 312,
       price: 4800,
-      image: '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
+      image: '/hotels/Antalya/Sirene Belek/sirene-belek-1.jpeg',
       gallery: [
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-1.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-2.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-3.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-4.jpeg',
-        '/hotels/The Land of Legends Kingdom Otel Görselleri/The Land of Legends Kingdom Otel-5.jpeg'
+        '/hotels/Antalya/Sirene Belek/sirene-belek-1.jpeg',
+        '/hotels/Antalya/Sirene Belek/sirene-belek-2.jpeg',
+        '/hotels/Antalya/Sirene Belek/sirene-belek-3.jpeg',
+        '/hotels/Antalya/Sirene Belek/sirene-belek-4.jpeg',
+        '/hotels/Antalya/Sirene Belek/sirene-belek-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'pool', 'spa', 'gym', 'restaurant', 'bar', 'beach', 'golf'],
       description: 'Golf and beach resort',
@@ -886,13 +1036,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 210,
       price: 3800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-1.jpeg',
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-2.jpeg',
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-3.jpeg',
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-4.jpeg',
+        '/hotels/Bursa/Hilton Bursa Convention Center/hilton-bursa-convention-center-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Modern luxury with convention facilities',
@@ -907,13 +1057,13 @@ const cityHotelsData = {
       rating: 4.5,
       reviews: 180,
       price: 3200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-1.jpeg',
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-2.jpeg',
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-3.jpeg',
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-4.jpeg',
+        '/hotels/Bursa/Crowne Plaza Bursa/crowne-plaza-bursa-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Comfortable stays with city access',
@@ -928,13 +1078,13 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 150,
       price: 2800,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Almira Hotel/almira-hotel-1.jpeg',
+        '/hotels/Bursa/Almira Hotel/almira-hotel-2.jpeg',
+        '/hotels/Bursa/Almira Hotel/almira-hotel-3.jpeg',
+        '/hotels/Bursa/Almira Hotel/almira-hotel-4.jpeg',
+        '/hotels/Bursa/Almira Hotel/almira-hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'City-center comfort hotel',
@@ -949,13 +1099,13 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 145,
       price: 2500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Karinna Hotel/karinna-hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-1.jpeg',
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-2.jpeg',
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-3.jpeg',
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-4.jpeg',
+        '/hotels/Bursa/Karinna Hotel/karinna-hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'Boutique hotel with thermal facilities',
@@ -976,13 +1126,13 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 178,
       price: 3000,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-1.jpeg',
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-2.jpeg',
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-3.jpeg',
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-4.jpeg',
+        '/hotels/Bursa/Grand Yazar Hotel/grand-yazar-hotel-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'Modern hotel with thermal spa',
@@ -1003,13 +1153,13 @@ const cityHotelsData = {
       rating: 4.5,
       reviews: 189,
       price: 3500,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/WOW Bursa/wow-bursa-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/WOW Bursa/wow-bursa-1.jpg',
+        '/hotels/Bursa/WOW Bursa/wow-bursa-2.jpg',
+        '/hotels/Bursa/WOW Bursa/wow-bursa-3.jpg',
+        '/hotels/Bursa/WOW Bursa/wow-bursa-4.jpg',
+        '/hotels/Bursa/WOW Bursa/wow-bursa-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Contemporary design hotel',
@@ -1031,13 +1181,13 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 156,
       price: 2700,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-1.jpg',
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-2.jpg',
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-3.jpg',
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-4.jpg',
+        '/hotels/Bursa/Gonluerah Thermal Hotel/gonluerah-thermal-hotel-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant'],
       description: 'Traditional thermal hotel',
@@ -1058,13 +1208,13 @@ const cityHotelsData = {
       rating: 4.6,
       reviews: 223,
       price: 4200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-1.jpg',
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-2.jpg',
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-3.jpg',
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-4.jpg',
+        '/hotels/Bursa/Kervansaray Thermal Hotel/kervansaray-thermal-hotel-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar', 'pool'],
       description: 'Luxury thermal spa resort',
@@ -1086,13 +1236,13 @@ const cityHotelsData = {
       rating: 4.4,
       reviews: 198,
       price: 2200,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Celik Palas/celik-palas-1.jpg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Celik Palas/celik-palas-1.jpg',
+        '/hotels/Bursa/Celik Palas/celik-palas-2.jpg',
+        '/hotels/Bursa/Celik Palas/celik-palas-3.jpg',
+        '/hotels/Bursa/Celik Palas/celik-palas-4.jpg',
+        '/hotels/Bursa/Celik Palas/celik-palas-5.jpg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'Historic hotel with thermal facilities',
@@ -1113,13 +1263,13 @@ const cityHotelsData = {
       rating: 4.3,
       reviews: 145,
       price: 2600,
-      image: '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
+      image: '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-1.jpeg',
       gallery: [
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-1.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-2.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-3.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-4.jpg',
-        '/hotels/The Ritz Carlton Istanbul/ritz-carlton-5.jpg'
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-1.jpeg',
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-2.jpeg',
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-3.jpeg',
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-4.jpeg',
+        '/hotels/Bursa/Bursa Holiday Inn/Holiday-Inn-Bursa-5.jpeg'
       ],
       amenities: ['wifi', 'parking', 'spa', 'gym', 'restaurant', 'bar'],
       description: 'Comfort hotel with international standards',
@@ -1154,6 +1304,16 @@ const amenities = {
 }
 
 export default function CityHotelsPage({ params }: { params: { city: string } }) {
+  const [destinationsTick, setDestinationsTick] = useState(0)
+  
+  // Slideshow effect for destination cards
+  useEffect(() => {
+    const id = setInterval(() => {
+      setDestinationsTick((t) => t + 1)
+    }, 4000)
+    return () => clearInterval(id)
+  }, [])
+
   const cityHotels = cityHotelsData[params.city as keyof typeof cityHotelsData]
 
   if (!cityHotels) {
@@ -1189,6 +1349,24 @@ export default function CityHotelsPage({ params }: { params: { city: string } })
           <div className="absolute bottom-8 left-8 text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-2">{cityName} Hotels</h1>
             <p className="text-xl opacity-90">Discover the best hotels in {cityName}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Destinations Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Explore Turkey's Best Destinations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the beauty and culture of Turkey's most captivating cities
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {popularDestinations.map((destination) => (
+              <DestinationCard key={destination.name} destination={destination} tick={destinationsTick} />
+            ))}
           </div>
         </div>
       </section>
