@@ -514,7 +514,7 @@ export default function HotelsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
         </div>
-        <div className="relative container mx-auto px-4 h-full flex items-center">
+        <div className="relative container mx-auto px-4 h-full flex items-end pb-16">
           <div className="max-w-3xl text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Türkiye'nin En İyi Otelleri
