@@ -94,13 +94,13 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               </p>
             </div>
 
-            {/* Our Services Overview Image from catalog */}
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
+            {/* Our Services Overview Image from catalog (Managers) */}
+            <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-xl bg-white">
               <Image
                 src="/images/catalog/page-09.jpg"
-                alt="Our Services"
+                alt="About Mr. Forty Managers"
                 fill
-                className="object-cover"
+                className="object-contain"
                 unoptimized
               />
             </div>
@@ -108,7 +108,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
           {/* Welcome to Turkey + Map */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20">
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
               <Image
                 src="/images/catalog/page-10.jpg"
                 alt="Welcome to Türkiye"
@@ -139,7 +139,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                   src="/images/catalog/page-01.jpg"
                   alt={t('AboutPage.catalogRealEstateTitle')}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 object-top"
                   unoptimized
                 />
               </div>
