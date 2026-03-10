@@ -1242,3 +1242,5 @@ export const hotelsData = {
     }
   }
 }
+
+export const hotels = Object.values(hotelsData)
