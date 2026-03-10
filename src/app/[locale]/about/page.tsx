@@ -82,7 +82,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       {/* About Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Company Story */}
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('AboutPage.ourStoryTitle')}</h2>
@@ -94,8 +94,30 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               </p>
             </div>
 
-            {/* Mission & Values */}
-            <div>
+            {/* Our Services Overview Image from catalog */}
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/catalog/page-09.jpg"
+                alt="Our Services"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+          </div>
+
+          {/* Welcome to Turkey + Map */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1">
+              <Image
+                src="/images/catalog/page-10.jpg"
+                alt="Welcome to Türkiye"
+                fill
+                className="object-contain bg-white"
+                unoptimized
+              />
+            </div>
+            <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('AboutPage.ourMissionTitle')}</h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 {t('AboutPage.ourMissionDesc')}
@@ -110,25 +132,91 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">{t('AboutPage.catalogServicesTitle')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogRealEstateTitle')}</h3>
-              <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogRealEstateDesc')}</p>
+            {/* Real Estate */}
+            <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src="/images/catalog/page-01.jpg"
+                  alt={t('AboutPage.catalogRealEstateTitle')}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogRealEstateTitle')}</h3>
+                <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogRealEstateDesc')}</p>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogTradeTitle')}</h3>
-              <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogTradeDesc')}</p>
+
+            {/* Trade & Export */}
+            <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src="/images/catalog/page-02.jpg"
+                  alt={t('AboutPage.catalogTradeTitle')}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogTradeTitle')}</h3>
+                <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogTradeDesc')}</p>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogMedicalTitle')}</h3>
-              <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogMedicalDesc')}</p>
+
+            {/* Medical Tourism */}
+            <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src="/images/catalog/page-03.jpg"
+                  alt={t('AboutPage.catalogMedicalTitle')}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogMedicalTitle')}</h3>
+                <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogMedicalDesc')}</p>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogRentCarTitle')}</h3>
-              <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogRentCarDesc')}</p>
+
+            {/* Rent a Car */}
+            <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src="/images/catalog/page-04.jpg"
+                  alt={t('AboutPage.catalogRentCarTitle')}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogRentCarTitle')}</h3>
+                <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogRentCarDesc')}</p>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow md:col-span-2">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogHotelsTitle')}</h3>
-              <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogHotelsDesc')}</p>
+
+            {/* Hotels - Full Width */}
+            <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group md:col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="relative h-72 md:h-auto overflow-hidden">
+                  <Image
+                    src="/images/catalog/page-05.jpg"
+                    alt={t('AboutPage.catalogHotelsTitle')}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    unoptimized
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-center">
+                  <h3 className="text-2xl font-semibold mb-4 text-primary-600">{t('AboutPage.catalogHotelsTitle')}</h3>
+                  <p className="text-gray-600 leading-relaxed">{t('AboutPage.catalogHotelsDesc')}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
