@@ -10,9 +10,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const team = [
     {
       id: 1,
-      name: 'Seyfettin KIRK',
+      name: 'SEYFETTIN KIRK',
       position: t('AboutPage.teamMember1Pos'),
-      image: '/team/seyfettin.jpg',
+      image: '/team/seyfo.jpg',
       bio: t('AboutPage.teamMember1Bio'),
       email: 'seyfettin@mrfortytravel.com',
       phone: '+90 506 641 17 85',
@@ -20,7 +20,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     },
     {
       id: 2,
-      name: 'Mehmet KIRK',
+      name: 'MEHMET KIRK',
       position: t('AboutPage.teamMember2Pos'),
       image: '/team/mehmet.jpg',
       bio: t('AboutPage.teamMember2Bio'),
@@ -28,7 +28,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       phone: '+90 506 641 17 83',
       linkedin: 'https://linkedin.com/in/mehmet-ozkan'
     },
-
   ]
 
   const achievements = [
@@ -79,49 +78,57 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Recreating Catalog Page 09 */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Company Story */}
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('AboutPage.ourStoryTitle')}</h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+        <div className="max-w-6xl mx-auto">
+          {/* Managers Header */}
+          <div className="grid grid-cols-2 gap-8 md:gap-16 mb-16 max-w-4xl mx-auto">
+            {team.map((member) => (
+              <div key={member.id} className="text-center">
+                <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg mb-4 bg-white">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-primary-800 uppercase tracking-wider">{member.name}</h3>
+                <p className="text-xs md:text-sm font-semibold text-gray-500 uppercase">{member.position}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-10 text-primary-800">{t('AboutPage.ourStoryTitle')}</h2>
+
+            <div className="space-y-8 text-xl text-gray-700 leading-relaxed font-light">
+              <p>
                 {t('AboutPage.ourStoryP1')}
               </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p>
                 {t('AboutPage.ourStoryP2')}
               </p>
             </div>
 
-            {/* Our Services Overview Image from catalog (Managers) */}
-            <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-xl bg-white">
-              <Image
-                src="/images/catalog/page-09.jpg"
-                alt="About Mr. Forty Managers"
-                fill
-                className="object-contain"
-                unoptimized
-              />
-            </div>
-          </div>
-
-          {/* Welcome to Turkey + Map */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20">
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
-              <Image
-                src="/images/catalog/page-10.jpg"
-                alt="Welcome to Türkiye"
-                fill
-                className="object-contain bg-white"
-                unoptimized
-              />
-            </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('AboutPage.ourMissionTitle')}</h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                {t('AboutPage.ourMissionDesc')}
-              </p>
+            {/* Welcome to Turkey + Map */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20 text-left">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+                <Image
+                  src="/images/catalog/page-10.jpg"
+                  alt="Welcome to Türkiye"
+                  fill
+                  className="object-contain bg-white"
+                  unoptimized
+                />
+              </div>
+              <div className="order-1 lg:order-2">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('AboutPage.ourMissionTitle')}</h2>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  {t('AboutPage.ourMissionDesc')}
+                </p>
+              </div>
             </div>
           </div>
         </div>
