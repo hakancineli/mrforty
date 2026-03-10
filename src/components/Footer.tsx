@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import {
   Facebook,
@@ -22,7 +22,7 @@ export default function Footer() {
   const footerLinks = {
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Our Story', href: '/story' },
+      { name: 'Our Story', href: '/about' },
       { name: 'Careers', href: '/careers' },
       { name: 'Press', href: '/press' },
     ],
@@ -34,12 +34,12 @@ export default function Footer() {
       { name: 'Experiences', href: '/experiences' },
     ],
     destinations: [
-      { name: 'Istanbul', href: '/destinations/istanbul' },
-      { name: 'Cappadocia', href: '/destinations/cappadocia' },
-      { name: 'Antalya', href: '/destinations/antalya' },
-      { name: 'Bodrum', href: '/destinations/bodrum' },
-      { name: 'Pamukkale', href: '/destinations/pamukkale' },
-      { name: 'Fethiye', href: '/destinations/fethiye' },
+      { name: 'Istanbul', href: '/hotels/city/istanbul' },
+      { name: 'Cappadocia', href: '/hotels/city/cappadocia' },
+      { name: 'Antalya', href: '/hotels/city/antalya' },
+      { name: 'Bodrum', href: '/hotels/city/bodrum' },
+      { name: 'Pamukkale', href: '/hotels/city/pamukkale' },
+      { name: 'Fethiye', href: '/hotels/city/fethiye' },
     ],
     support: [
       { name: 'Help Center', href: '/help' },
@@ -106,10 +106,10 @@ export default function Footer() {
                 <span className="text-2xl font-bold font-serif"></span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Your trusted partner for luxury travel experiences in Turkey. 
+                Your trusted partner for luxury travel experiences in Turkey.
                 We create unforgettable journeys with attention to every detail.
               </p>
-              
+
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-primary-400" />
@@ -136,7 +136,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-colors"
                     >
@@ -152,7 +152,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-colors"
                     >
@@ -168,7 +168,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {footerLinks.destinations.map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-colors"
                     >
@@ -184,7 +184,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-colors"
                     >
